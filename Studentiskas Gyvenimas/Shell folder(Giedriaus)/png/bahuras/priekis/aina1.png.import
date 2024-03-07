@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yavss2i3woac"
-path="res://.godot/imported/aina1.png-5574eca08316210b81af4c50588a1d68.ctex"
+path="res://.godot/imported/aina1.png-00ae0071205ce06245ea94e7ef109bfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shell folder/png/bahuras/priekis/aina1.png"
-dest_files=["res://.godot/imported/aina1.png-5574eca08316210b81af4c50588a1d68.ctex"]
+source_file="res://Shell folder(Giedriaus)/png/bahuras/priekis/aina1.png"
+dest_files=["res://.godot/imported/aina1.png-00ae0071205ce06245ea94e7ef109bfb.ctex"]
 
 [params]
 

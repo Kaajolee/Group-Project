@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlvwdsxka1174"
-path="res://.godot/imported/mside.png-ba7d2baf90d1dfbd1202b476d7a3dffb.ctex"
+path="res://.godot/imported/mside.png-e77647b480ec506a51bbdef6367b19f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shell folder/png/mergina/kaire/mside.png"
-dest_files=["res://.godot/imported/mside.png-ba7d2baf90d1dfbd1202b476d7a3dffb.ctex"]
+source_file="res://Shell folder(Giedriaus)/png/mergina/kaire/mside.png"
+dest_files=["res://.godot/imported/mside.png-e77647b480ec506a51bbdef6367b19f8.ctex"]
 
 [params]
 

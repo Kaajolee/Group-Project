@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsy2kuumdyf3o"
-path="res://.godot/imported/bside.png-57cf90611e095c1645699f356660b914.ctex"
+path="res://.godot/imported/bside.png-93a0ba191c1ee467f63d6dff5373f589.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shell folder/png/bahuras/kaire/bside.png"
-dest_files=["res://.godot/imported/bside.png-57cf90611e095c1645699f356660b914.ctex"]
+source_file="res://Shell folder(Giedriaus)/png/bahuras/kaire/bside.png"
+dest_files=["res://.godot/imported/bside.png-93a0ba191c1ee467f63d6dff5373f589.ctex"]
 
 [params]
 
