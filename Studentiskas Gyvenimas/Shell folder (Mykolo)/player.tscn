@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://bnvs6gw20xhfk"]
+
+[ext_resource type="Script" path="res://Shell folder (Mykolo)/Player.cs" id="1_6qfq1"]
+[ext_resource type="Texture2D" uid="uid://2a1kakdwdyqu" path="res://Shell folder (Mykolo)/player.png" id="2_x5nyd"]
+[ext_resource type="Texture2D" uid="uid://itv8qeogxy80" path="res://Shell folder (Mykolo)/bside.png" id="3_t6nmt"]
+[ext_resource type="Texture2D" uid="uid://nl2unqk3wrcg" path="res://Shell folder (Mykolo)/aina1.png" id="4_qkb5s"]
+[ext_resource type="Texture2D" uid="uid://b4uhkavh0ndyt" path="res://Shell folder (Mykolo)/aina2.png" id="5_mcnaq"]
+[ext_resource type="Texture2D" uid="uid://c5onxrbanwrtd" path="res://Shell folder (Mykolo)/desine.png" id="6_yvqwn"]
+[ext_resource type="Texture2D" uid="uid://bjvvs3ql74k00" path="res://Shell folder (Mykolo)/aina1d.png" id="7_85dvs"]
+[ext_resource type="Texture2D" uid="uid://brqjd8kc3scr5" path="res://Shell folder (Mykolo)/aina2d.png" id="8_70q82"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvcpc"]
+radius = 17.8124
+height = 65.3513
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_piaqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x5nyd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_t6nmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qkb5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mcnaq")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_yvqwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_85dvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_70q82")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 8.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(553, 493)
+script = ExtResource("1_6qfq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -21)
+scale = Vector2(1.06667, 0.948718)
+shape = SubResource("CapsuleShape2D_pvcpc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15, -20)
+scale = Vector2(3.51563, 3.6875)
+sprite_frames = SubResource("SpriteFrames_piaqp")
+animation = &"idle"
+frame_progress = 0.894243

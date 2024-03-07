@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp0aie3xctkwn"]
+
+[ext_resource type="Script" path="res://TarakonuMinigame/CockroachWander.cs" id="1_3rdjg"]
+[ext_resource type="Texture2D" uid="uid://dol1j7qlho78n" path="res://TarakonuMinigame/PNG/18f47c59a384294c1ce956e1311cc572.png" id="2_3rmxb"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_3rdjg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3rmxb")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2gxvn5vqqvgh"]
+
+[ext_resource type="Script" path="res://TarakonuMinigame/CockRoachInstantiation.cs" id="1_g1uyy"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g1uyy")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.792, 16.12)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 17.7827
+offset_top = 28.7841
+offset_right = 27.7827
+offset_bottom = 51.7841
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 10
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
