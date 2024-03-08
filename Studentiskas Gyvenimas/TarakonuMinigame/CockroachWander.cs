@@ -10,12 +10,13 @@ public partial class CockroachWander : Node2D
 	Tween tween;
 	Sprite2D sprite;
 	Timer timer;
+	CockRoachInstantiation crInstantiation;
 	public override void _Ready()
 	{
         rnd = new Random();
 		sprite = (Sprite2D)GetNode("Sprite2D");
-
-		timer = (Timer)GetNode("Timer");
+		var scoreNode = GetTree().Root.GetNode<CockRoachInstantiation>("res://TarakonuMinigame/CockRoachInstantiation.cs");
+        timer = (Timer)GetNode("Timer");
 
 
 		float random = rnd.Next(8) / 10;
@@ -26,6 +27,7 @@ public partial class CockroachWander : Node2D
 		}
 		else
 			timer.WaitTime = random;
+        
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,12 +55,26 @@ public partial class CockroachWander : Node2D
 		{
 			if(mbEvent.Pressed && mbEvent.ButtonIndex == MouseButton.Left)
 			{
-				CockRoachInstantiation.score += 1;
+				AddScore();
                 QueueFree();
+				
             }
 
         }
 
+	}
+	void AddScore()
+	{
+		try
+        {
+            crInstantiation = GetNode<CockRoachInstantiation>(".");
+            crInstantiation.score += 1;
+			Debug.WriteLine("Score: " + crInstantiation.score);
+		}
+		catch (NullReferenceException)
+		{
+			Debug.Fail("Score script refference null");
+		}
 	}
 
 }

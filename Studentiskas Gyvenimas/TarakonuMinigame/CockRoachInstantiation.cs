@@ -7,12 +7,17 @@ public partial class CockRoachInstantiation : Node2D
 	// Called when the node enters the scene tree for the first time.
 	PackedScene cockRoachScene;
     Random rnd;
-    public static int score;
+    public int score;
     Label scoreLabel;
+
+    [Signal]
+    public delegate void AddpointEventHandler(int addAmount);
+
+
 	public override void _Ready()
 	{
         cockRoachScene = ResourceLoader.Load<PackedScene>("res://TarakonuMinigame/CockRoach.tscn");
-        scoreLabel = GetNode<Label>("Control/Label");
+        //scoreLabel = GetNode<Label>("Control/Label");
 
         rnd = new Random();
     }
@@ -63,7 +68,12 @@ public partial class CockRoachInstantiation : Node2D
     }
     void UpdateLabelText()
     {
-        scoreLabel.Text = score.ToString();
+        //scoreLabel.Text = score.ToString();
+    }
+    public void AddPoint()
+    {
+        score += 1;
+        EmitSignal(nameof(AddpointEventHandler));
     }
 
 }
