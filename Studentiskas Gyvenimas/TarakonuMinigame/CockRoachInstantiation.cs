@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class CockRoachInstantiation : Node2D
 {
@@ -12,6 +13,7 @@ public partial class CockRoachInstantiation : Node2D
 	{
         cockRoachScene = ResourceLoader.Load<PackedScene>("res://TarakonuMinigame/CockRoach.tscn");
         scoreLabel = GetNode<Label>("Control/Label");
+
         rnd = new Random();
     }
 
@@ -28,13 +30,14 @@ public partial class CockRoachInstantiation : Node2D
     {
         Vector2 position = PositionGenerator();
         Node2D scene = (Node2D)cockRoachScene.Instantiate();
-        float randomScale = rnd.NextSingle();
-        float randomY = rnd.NextSingle();
+        float randomFloat = rnd.NextSingle();
+        float randomScale = randomFloat <= 0.2f ? 0.2f : randomFloat;
+        Debug.WriteLine(randomScale);
         scene.Scale = new Vector2(randomScale, randomScale);
         scene.Position = position;
         AddChild(scene);
 
-        //Debug.WriteLine("Object instantiated | pos : " + position.ToString());
+        Debug.WriteLine($"Object instantiated: {position}, scale: {randomScale}");
     }
     Vector2 PositionGenerator()
     {
@@ -60,7 +63,7 @@ public partial class CockRoachInstantiation : Node2D
     }
     void UpdateLabelText()
     {
-        scoreLabel.Text = "Score: " + score;
+        scoreLabel.Text = score.ToString();
     }
 
 }

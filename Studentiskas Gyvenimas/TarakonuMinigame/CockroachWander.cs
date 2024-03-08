@@ -16,7 +16,16 @@ public partial class CockroachWander : Node2D
 		sprite = (Sprite2D)GetNode("Sprite2D");
 
 		timer = (Timer)GetNode("Timer");
-        timer.WaitTime = rnd.NextSingle();
+
+
+		float random = rnd.Next(8) / 10;
+		if (random == 0)
+		{
+			timer.WaitTime = 0.3f;
+
+		}
+		else
+			timer.WaitTime = random;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +46,19 @@ public partial class CockroachWander : Node2D
 
 		sprite.LookAt(generatedPosition);
         return generatedPosition;
+	}
+	void OnAreaInputEvent(Node viewport, InputEvent @event, int shape_idx)
+	{
+		if(@event is InputEventMouseButton mbEvent)
+		{
+			if(mbEvent.Pressed && mbEvent.ButtonIndex == MouseButton.Left)
+			{
+				CockRoachInstantiation.score += 1;
+                QueueFree();
+            }
+
+        }
+
 	}
 
 }

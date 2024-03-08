@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp0aie3xctkwn"]
+[gd_scene load_steps=4 format=3 uid="uid://dp0aie3xctkwn"]
 
 [ext_resource type="Script" path="res://TarakonuMinigame/CockroachWander.cs" id="1_3rdjg"]
 [ext_resource type="Texture2D" uid="uid://dol1j7qlho78n" path="res://TarakonuMinigame/PNG/18f47c59a384294c1ce956e1311cc572.png" id="2_3rmxb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq2oc"]
+radius = 144.0
+height = 288.0
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.5, 0.5)
@@ -13,4 +17,10 @@ texture = ExtResource("2_3rmxb")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_aq2oc")
+
 [connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
+[connection signal="input_event" from="Area2D" to="." method="OnAreaInputEvent"]
