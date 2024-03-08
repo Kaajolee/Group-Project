@@ -10,7 +10,7 @@ public partial class CockRoachInstantiation : Node2D
     Label scoreLabel;
 	public override void _Ready()
 	{
-        cockRoachScene = ResourceLoader.Load<PackedScene>("res://CockRoach.tscn");
+        cockRoachScene = ResourceLoader.Load<PackedScene>("res://TarakonuMinigame/CockRoach.tscn");
         scoreLabel = GetNode<Label>("Control/Label");
         rnd = new Random();
     }
@@ -28,6 +28,9 @@ public partial class CockRoachInstantiation : Node2D
     {
         Vector2 position = PositionGenerator();
         Node2D scene = (Node2D)cockRoachScene.Instantiate();
+        float randomScale = rnd.NextSingle();
+        float randomY = rnd.NextSingle();
+        scene.Scale = new Vector2(randomScale, randomScale);
         scene.Position = position;
         AddChild(scene);
 
