@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://5mmkvqmwnvk0"]
+
+[ext_resource type="Script" path="res://Main/Scenes/selectionScreen/SelectionScreen.gd" id="1_jnpio"]
+
+[node name="SelectionScreen" type="Node2D"]
+script = ExtResource("1_jnpio")
+
+[node name="Type A" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 64.0
+offset_right = 744.0
+offset_bottom = 256.0
+text = "Type A"
+
+[node name="Type B" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 392.0
+offset_right = 744.0
+offset_bottom = 584.0
+text = "Type B"
+
+[connection signal="pressed" from="Type A" to="." method="_on_type_a_pressed"]
+[connection signal="pressed" from="Type B" to="." method="_on_type_b_pressed"]
