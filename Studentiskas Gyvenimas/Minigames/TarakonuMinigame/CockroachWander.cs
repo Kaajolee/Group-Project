@@ -15,7 +15,7 @@ public partial class CockroachWander : Node2D
 	{
         rnd = new Random();
 		sprite = (Sprite2D)GetNode("Sprite2D");
-		var scoreNode = GetTree().Root.GetNode<CockRoachInstantiation>("res://TarakonuMinigame/CockRoachInstantiation.cs");
+	
         timer = (Timer)GetNode("Timer");
 
 
@@ -27,6 +27,8 @@ public partial class CockroachWander : Node2D
 		}
 		else
 			timer.WaitTime = random;
+
+		//crInstantiation = GetTree().Root.GetNode<CockRoachInstantiation>("/root/HitTheBug/CockrachInstantiation");
         
     }
 
@@ -56,6 +58,7 @@ public partial class CockroachWander : Node2D
 			if(mbEvent.Pressed && mbEvent.ButtonIndex == MouseButton.Left)
 			{
 				AddScore();
+				Debug.WriteLine("cockroach clicked");
                 QueueFree();
 				
             }
@@ -67,7 +70,7 @@ public partial class CockroachWander : Node2D
 	{
 		try
         {
-            crInstantiation = GetNode<CockRoachInstantiation>(".");
+            crInstantiation = GetNode("res://Minigames/TarakonuMinigame/HitTheBug.tscn");
             crInstantiation.score += 1;
 			Debug.WriteLine("Score: " + crInstantiation.score);
 		}

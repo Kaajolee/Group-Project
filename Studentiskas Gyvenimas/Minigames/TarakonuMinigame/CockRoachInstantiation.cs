@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Diagnostics;
+using System.Linq.Expressions;
 
 public partial class CockRoachInstantiation : Node2D
 {
@@ -11,12 +12,12 @@ public partial class CockRoachInstantiation : Node2D
     Label scoreLabel;
 
     [Signal]
-    public delegate void AddpointEventHandler(int addAmount);
+    public delegate void AddpointEventHandler();
 
 
 	public override void _Ready()
 	{
-        cockRoachScene = ResourceLoader.Load<PackedScene>("res://TarakonuMinigame/CockRoach.tscn");
+        cockRoachScene = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/CockRoach.tscn");
         //scoreLabel = GetNode<Label>("Control/Label");
 
         rnd = new Random();
@@ -37,9 +38,10 @@ public partial class CockRoachInstantiation : Node2D
         Node2D scene = (Node2D)cockRoachScene.Instantiate();
         float randomFloat = rnd.NextSingle();
         float randomScale = randomFloat <= 0.2f ? 0.2f : randomFloat;
-        Debug.WriteLine(randomScale);
+        Debug.WriteLine("Scale: " + randomScale);
         scene.Scale = new Vector2(randomScale, randomScale);
         scene.Position = position;
+        
         AddChild(scene);
 
         Debug.WriteLine($"Object instantiated: {position}, scale: {randomScale}");
