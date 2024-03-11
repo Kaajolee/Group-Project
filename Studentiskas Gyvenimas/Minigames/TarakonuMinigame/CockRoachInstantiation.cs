@@ -11,13 +11,12 @@ public partial class CockRoachInstantiation : Node2D
     public int score;
     Label scoreLabel;
 
-    [Signal]
-    public delegate void AddpointEventHandler();
 
 
 	public override void _Ready()
 	{
         cockRoachScene = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/CockRoach.tscn");
+        scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
         //scoreLabel = GetNode<Label>("Control/Label");
 
         rnd = new Random();
@@ -34,6 +33,7 @@ public partial class CockRoachInstantiation : Node2D
     }
     void InstantiateCockroach()
     {
+        Debug.WriteLine("--------------------------");
         Vector2 position = PositionGenerator();
         Node2D scene = (Node2D)cockRoachScene.Instantiate();
         float randomFloat = rnd.NextSingle();
@@ -41,7 +41,9 @@ public partial class CockRoachInstantiation : Node2D
         Debug.WriteLine("Scale: " + randomScale);
         scene.Scale = new Vector2(randomScale, randomScale);
         scene.Position = position;
-        
+
+        Debug.WriteLine(Global.cockroachScore.ToString());
+
         AddChild(scene);
 
         Debug.WriteLine($"Object instantiated: {position}, scale: {randomScale}");
@@ -70,12 +72,7 @@ public partial class CockRoachInstantiation : Node2D
     }
     void UpdateLabelText()
     {
-        //scoreLabel.Text = score.ToString();
-    }
-    public void AddPoint()
-    {
-        score += 1;
-        EmitSignal(nameof(AddpointEventHandler));
+        scoreLabel.Text = "Score: " + Global.cockroachScore.ToString();
     }
 
 }

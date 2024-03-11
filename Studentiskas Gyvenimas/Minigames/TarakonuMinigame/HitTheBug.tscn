@@ -9,4 +9,42 @@ script = ExtResource("1_g1uyy")
 wait_time = 3.0
 autostart = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -89.0
+offset_right = 20.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 2)
+pivot_offset = Vector2(19, 0)
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.25
+offset_top = -11.0
+offset_right = 49.75
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.36, 1)
+theme_override_font_sizes/font_size = 10
+text = "Score: 0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

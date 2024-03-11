@@ -1,9 +1,7 @@
 using Godot;
 using System;
 
-public partial class Global
+public static class Global
 {
-	public int cockroachScore = 0;
-
-
+	public static int cockroachScore { get; set; } = 0;
 }
