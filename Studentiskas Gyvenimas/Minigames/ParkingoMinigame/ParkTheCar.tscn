@@ -12,16 +12,18 @@ scale = Vector2(1, 0.993593)
 script = ExtResource("1_5kfo6")
 
 [node name="Player" type="Area2D" parent="." groups=["player"]]
+position = Vector2(571, 330.115)
+rotation = 3.14159
 script = ExtResource("2_ohsxy")
 tweenSpeed = 0.3
 duration = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(567.5, 358.296)
+position = Vector2(5.06128, -7.00122)
 shape = SubResource("RectangleShape2D_bkf46")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(565, 355)
+position = Vector2(2.08783, -10.0466)
 scale = Vector2(2.8, 2.844)
 texture = ExtResource("3_17aig")
 

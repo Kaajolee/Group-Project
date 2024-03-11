@@ -10,15 +10,16 @@ public partial class CockroachWander : Node2D
 	Tween tween;
 	Sprite2D sprite;
 	Timer timer;
+	Global global;
 	public override void _Ready()
 	{
         rnd = new Random();
 		sprite = (Sprite2D)GetNode("Sprite2D");
 	
         timer = (Timer)GetNode("Timer");
+        global = GetNode<Global>("/root/Global");
 
-
-		float random = rnd.Next(8) / 10;
+        float random = rnd.Next(8) / 10;
 		if (random == 0)
 		{
 			timer.WaitTime = 0.3f;
@@ -68,9 +69,9 @@ public partial class CockroachWander : Node2D
 	{
 		try
         {
-            var score = Global.cockroachScore += 1;
+			global.cockroachScore += 1;
 
-			Debug.WriteLine("Score: " + score);
+			Debug.WriteLine("Score: " + global.cockroachScore);
 		}
 		catch (NullReferenceException)
 		{

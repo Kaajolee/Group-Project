@@ -17,6 +17,7 @@ public partial class TextInput : RichTextLabel
     private bool isGameEnded;
 
     private CustomSignals customSignals;
+    private Global global;
     private PackedScene gameEndedScene;
     [Export]
     public int CharacterCap;
@@ -31,6 +32,7 @@ public partial class TextInput : RichTextLabel
         isGameEnded = false;
         timeStart = Time.GetTicksMsec();
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        global = GetNode<Global>("/root/Global");
         gameEndedScene = ResourceLoader.Load<PackedScene>("res://Minigames/GreitoRasymoMinigame/GameEnded.tscn");
         //gameEndedWindowLabel = GetNode<Label>();
 
@@ -88,6 +90,7 @@ public partial class TextInput : RichTextLabel
     {
         int score = PointCounter();
         Debug.WriteLine("event triggered");
+        global.typerScore += score;
         InstantiateWindow(gameEndedScene, score);
     }
     int PointCounter()

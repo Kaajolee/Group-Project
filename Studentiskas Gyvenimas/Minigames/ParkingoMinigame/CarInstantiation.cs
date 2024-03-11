@@ -12,7 +12,7 @@ public partial class CarInstantiation : Node2D
 	Random rnd;
 
 	float spawnLocationX;
-    public Vector2 rectSize;
+
 
 	public bool isGameStopped;
 	public override void _Ready()
@@ -21,9 +21,10 @@ public partial class CarInstantiation : Node2D
 		rnd = new Random();
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		customSignals.ParkingMinigameEnded += GameStopped;
-        rectSize = GetViewport().GetVisibleRect().Size;
+        customSignals.ParkingMinigamePoint += GameStopped;
 
-		isGameStopped = false;
+
+        isGameStopped = false;
 
     }
     void InstantiateCar()

@@ -11,7 +11,7 @@ public partial class objectFallScript : Sprite2D
 
     private Sprite2D sprite;
 	private Tween tween;
-
+	Global global;
 	CustomSignals customSignals;
 	
 	public override void _Ready()
@@ -20,7 +20,9 @@ public partial class objectFallScript : Sprite2D
         screenBottomY = GetViewportRect().Size.Y;
 
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		customSignals.ParkingMinigameEnded += StopCar;
+        global = GetNode<Global>("/root/Global");
+        customSignals.ParkingMinigameEnded += StopCar;
+        customSignals.ParkingMinigamePoint += StopCar;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,7 +47,16 @@ public partial class objectFallScript : Sprite2D
 	{
 		if (area.IsInGroup("player"))
 		{
+			if(Visible == false)
+			{
+				customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigamePoint));
+				global.parkingScore += 1;
+				global.CurrentScore();
+                Debug.WriteLine("Point earned");
+			}
+			else
             customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameEnded));
         }
+
 	}
 }

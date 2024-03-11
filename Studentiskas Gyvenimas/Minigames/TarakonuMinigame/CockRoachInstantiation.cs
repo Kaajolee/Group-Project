@@ -10,16 +10,20 @@ public partial class CockRoachInstantiation : Node2D
     Random rnd;
     public int score;
     Label scoreLabel;
-
-
+    Global global;
+    CustomSignals customSignals;
 
 	public override void _Ready()
 	{
         cockRoachScene = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/CockRoach.tscn");
         scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
-        //scoreLabel = GetNode<Label>("Control/Label");
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        global = GetNode<Global>("/root/Global");
+
+        //customSignals.CockroachMinigameEnded += GameEnded;
 
         rnd = new Random();
+
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,7 +46,6 @@ public partial class CockRoachInstantiation : Node2D
         scene.Scale = new Vector2(randomScale, randomScale);
         scene.Position = position;
 
-        Debug.WriteLine(Global.cockroachScore.ToString());
 
         AddChild(scene);
 
@@ -72,7 +75,7 @@ public partial class CockRoachInstantiation : Node2D
     }
     void UpdateLabelText()
     {
-        scoreLabel.Text = "Score: " + Global.cockroachScore.ToString();
+        scoreLabel.Text = "Score: " + global.cockroachScore.ToString();
     }
 
 }

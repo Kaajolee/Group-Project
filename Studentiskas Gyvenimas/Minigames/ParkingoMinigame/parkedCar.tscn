@@ -8,6 +8,7 @@ size = Vector2(34.5, 59)
 
 [node name="Icon" type="Sprite2D" groups=["car"]]
 position = Vector2(-0.100011, 0)
+rotation = 3.14159
 scale = Vector2(2.8, 2.798)
 texture = ExtResource("1_nupne")
 script = ExtResource("2_iwd6q")
