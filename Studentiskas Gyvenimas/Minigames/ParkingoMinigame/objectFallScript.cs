@@ -12,14 +12,15 @@ public partial class objectFallScript : Sprite2D
     private Sprite2D sprite;
 	private Tween tween;
 
+	CustomSignals customSignals;
 	
 	public override void _Ready()
 	{
         sprite = GetNode<Sprite2D>(".");
-		screenBottomY = GetViewportRect().Size.Y;
+        screenBottomY = GetViewportRect().Size.Y;
 
-        //tween = CreateTween();
-        //MoveSprite();
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		customSignals.ParkingMinigameEnded += StopCar;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,22 +37,15 @@ public partial class objectFallScript : Sprite2D
 			QueueFree();
 
 	}
-	private void MoveSprite()
+	void StopCar()
 	{
-        //Vector2 spritePos = sprite.Position;
-        //Vector2 shiftedPos = new Vector2(spritePos.X, spritePos.Y + tweenDestination);
-    }
-	void OnTimerTimeout()
-	{
-        //Vector2 spritePos = sprite.Position;
-		//float Xlerp = Mathf.Lerp(spritePos.Y, spritePos.Y + deltaY, lerpTime);
-        //Vector2 shiftedPos = new Vector2(spritePos.X, Xlerp);
-		//Position = shiftedPos;
-        //Debug.Write("test");
+		speed = 0;
 	}
-
-
-
-
-
+	void OnCarAreaEntered(Area2D area)
+	{
+		if (area.IsInGroup("player"))
+		{
+            customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameEnded));
+        }
+	}
 }

@@ -8,61 +8,74 @@ public partial class CarInstantiation : Node2D
 
 	// Called when the node enters the scene tree for the first time.
 	PackedScene parkedCarScene;
+	CustomSignals customSignals;
 	Random rnd;
-	[Export]
-	public Vector2 spawnLocation; 
+
+	float spawnLocationX;
+    public Vector2 rectSize;
+
+	public bool isGameStopped;
 	public override void _Ready()
 	{
-		parkedCarScene = ResourceLoader.Load<PackedScene>("res://parkedCar.tscn");
+		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
 		rnd = new Random();
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		customSignals.ParkingMinigameEnded += GameStopped;
+        rectSize = GetViewport().GetVisibleRect().Size;
 
-        Vector2 rectSize = GetViewport().GetVisibleRect().Size;
-
-       // carSpawnPosX = windowX / 1.2f;
+		isGameStopped = false;
 
     }
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		/*if (Input.IsActionJustPressed("space"))
-		{
-			InstantiateObject();
-		}*/
-	}
-
     void InstantiateCar()
 	{
-		Vector2 position = PositionGenerator(); 
-		Node2D scene = (Sprite2D)parkedCarScene.Instantiate();
-		scene.Position = position;
+		int randomInt = rnd.Next(2);
+        spawnLocationX = characterMovement.spawnDestinationX;
+        Vector2 position = new Vector2(spawnLocationX, 0);
+        Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
+
+        if (randomInt == 0)
+		{
+			Sprite2D newSpriteCar = ChangeSprite(scene, true);
+            scene = newSpriteCar;
+
+        }
+		else if(randomInt == 1)
+		{
+            Sprite2D newSpriteCar = ChangeSprite(scene, false);
+            scene = newSpriteCar;
+        }
+        scene.Position = position;
         AddChild(scene);
 
-        //Debug.WriteLine("Object instantiated | pos : " + position.ToString());
     }
-	Vector2 PositionGenerator()
-	{
-		Vector2 rectSize = GetViewport().GetVisibleRect().Size;
-        //Debug.WriteLine("Screen size: " + rectSize);
-        //float windowY = rectSize.Y;
-        Vector2 pos = spawnLocation;
-		//carSpawnPos.X = windowX / 1.5f;
-        //Debug.WriteLine(pos);
-        return pos;
-
-	}
     void OnTimerTimeout()
     {
-		if (rnd.Next(2) == 1)
-		{
+		if (isGameStopped == false)
 			InstantiateCar();
-		}
-		else
-			return;
-		
-		
+
     }
+	Sprite2D ChangeSprite(Sprite2D currentSprite, bool isACar)
+	{
+		Sprite2D sprite2D = currentSprite;
+		if (isACar == true)
+		{
+            Color randomColor = new Color(
+			(float)GD.Randf(),
+			(float)GD.Randf(),
+            (float)GD.Randf()
+            );
 
+			sprite2D.Modulate = randomColor;
+        }
+		else if(isACar == false)
+		{
+			sprite2D.Visible = false;
+		}
+		return sprite2D;
+	}
+	void GameStopped()
+	{
+		isGameStopped = true;
 
-
+    }
 }

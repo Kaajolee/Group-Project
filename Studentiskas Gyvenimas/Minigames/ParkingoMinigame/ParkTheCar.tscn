@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbq7dwul2dwc5"]
+[gd_scene load_steps=5 format=3 uid="uid://bbq7dwul2dwc5"]
 
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_5kfo6"]
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/characterMovement.cs" id="2_ohsxy"]
@@ -7,17 +7,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bkf46"]
 size = Vector2(95, 167.07)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_biqnr"]
-size = Vector2(54, 358.296)
-
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1, 0.993593)
 script = ExtResource("1_5kfo6")
-spawnLocation = Vector2(800, 0)
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="Area2D" parent="." groups=["player"]]
 script = ExtResource("2_ohsxy")
 tweenSpeed = 0.3
+duration = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(567.5, 358.296)
@@ -34,13 +31,5 @@ position = Vector2(576, 323)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
-
-[node name="Area2D" type="Area2D" parent="." groups=["point"]]
-position = Vector2(-198, -3.01935)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["point"]]
-position = Vector2(850, 337.16)
-shape = SubResource("RectangleShape2D_biqnr")
-metadata/tag = "emptySpace"
 
 [connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
