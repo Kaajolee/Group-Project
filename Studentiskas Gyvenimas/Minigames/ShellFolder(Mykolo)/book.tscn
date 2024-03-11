@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dri5vfmsthlpk"]
+
+[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/Book.cs" id="1_ns0rl"]
+[ext_resource type="Texture2D" uid="uid://bcrypog7jilv3" path="res://Minigames/ShellFolder(Mykolo)/assets/knyga.png" id="2_3k0bo"]
+
+[node name="Book" type="CharacterBody2D"]
+position = Vector2(-566, -174)
+scale = Vector2(0.869565, 0.882353)
+script = ExtResource("1_ns0rl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5.75, 2.26667)
+scale = Vector2(2.9116, 2.53411)
+texture = ExtResource("2_3k0bo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(12.65, 11.3333, 23, 4.53334, 23, -2.26666, 5.75, -14.7333, -23, -2.26666, -23, 4.53334, -6.89996, 19.2667)

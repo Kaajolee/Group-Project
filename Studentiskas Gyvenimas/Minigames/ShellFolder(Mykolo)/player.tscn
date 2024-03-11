@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://bnvs6gw20xhfk"]
 
-[ext_resource type="Script" path="res://Minigames/Shell folder (Mykolo)/Player.cs" id="1_6qfq1"]
-[ext_resource type="Texture2D" uid="uid://2a1kakdwdyqu" path="res://Minigames/Shell folder (Mykolo)/player.png" id="2_x5nyd"]
-[ext_resource type="Texture2D" uid="uid://itv8qeogxy80" path="res://Minigames/Shell folder (Mykolo)/bside.png" id="3_t6nmt"]
-[ext_resource type="Texture2D" uid="uid://nl2unqk3wrcg" path="res://Minigames/Shell folder (Mykolo)/aina1.png" id="4_qkb5s"]
-[ext_resource type="Texture2D" uid="uid://b4uhkavh0ndyt" path="res://Minigames/Shell folder (Mykolo)/aina2.png" id="5_mcnaq"]
-[ext_resource type="Texture2D" uid="uid://c5onxrbanwrtd" path="res://Minigames/Shell folder (Mykolo)/desine.png" id="6_yvqwn"]
-[ext_resource type="Texture2D" uid="uid://bjvvs3ql74k00" path="res://Minigames/Shell folder (Mykolo)/aina1d.png" id="7_85dvs"]
-[ext_resource type="Texture2D" uid="uid://brqjd8kc3scr5" path="res://Minigames/Shell folder (Mykolo)/aina2d.png" id="8_70q82"]
+[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/Player.cs" id="1_6qfq1"]
+[ext_resource type="Texture2D" uid="uid://2a1kakdwdyqu" path="res://Minigames/ShellFolder(Mykolo)/player.png" id="2_x5nyd"]
+[ext_resource type="Texture2D" uid="uid://itv8qeogxy80" path="res://Minigames/ShellFolder(Mykolo)/bside.png" id="3_t6nmt"]
+[ext_resource type="Texture2D" uid="uid://nl2unqk3wrcg" path="res://Minigames/ShellFolder(Mykolo)/aina1.png" id="4_qkb5s"]
+[ext_resource type="Texture2D" uid="uid://b4uhkavh0ndyt" path="res://Minigames/ShellFolder(Mykolo)/aina2.png" id="5_mcnaq"]
+[ext_resource type="Texture2D" uid="uid://c5onxrbanwrtd" path="res://Minigames/ShellFolder(Mykolo)/desine.png" id="6_yvqwn"]
+[ext_resource type="Texture2D" uid="uid://bjvvs3ql74k00" path="res://Minigames/ShellFolder(Mykolo)/aina1d.png" id="7_85dvs"]
+[ext_resource type="Texture2D" uid="uid://brqjd8kc3scr5" path="res://Minigames/ShellFolder(Mykolo)/aina2d.png" id="8_70q82"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvcpc"]
 radius = 17.8124
