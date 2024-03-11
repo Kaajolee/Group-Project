@@ -53,8 +53,6 @@ public partial class TextInput : RichTextLabel
         {
             Text += GenerateRandomWord(rnd.Next(MinWordLength, MaxWordLength));
         }
-            //Debug.WriteLine(@event.AsText());
-		//Text += @event.AsText();
 
     }
     string GenerateRandomWord(int length)

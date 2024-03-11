@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbq7dwul2dwc5"]
 
-[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_25dt5"]
-[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/characterMovement.cs" id="2_hrjqm"]
-[ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="3_s4imh"]
+[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_5kfo6"]
+[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/characterMovement.cs" id="2_ohsxy"]
+[ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="3_17aig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bkf46"]
 size = Vector2(95, 167.07)
@@ -12,11 +12,11 @@ size = Vector2(54, 358.296)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1, 0.993593)
-script = ExtResource("1_25dt5")
+script = ExtResource("1_5kfo6")
 spawnLocation = Vector2(800, 0)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("2_hrjqm")
+script = ExtResource("2_ohsxy")
 tweenSpeed = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -26,7 +26,7 @@ shape = SubResource("RectangleShape2D_bkf46")
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 position = Vector2(565, 355)
 scale = Vector2(2.8, 2.844)
-texture = ExtResource("3_s4imh")
+texture = ExtResource("3_17aig")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 323)
