@@ -14,16 +14,29 @@ public partial class TextInput : RichTextLabel
     private float timeStart;
 
     public bool inputEnabled;
+    private bool isGameEnded;
 
+    private CustomSignals customSignals;
+    private PackedScene gameEndedScene;
     [Export]
     public int CharacterCap;
-    
+
+    [Export]
+    public int PointBase;
+
     private Random rnd = new Random();
     public override void _Ready()
 	{
         inputEnabled = true;
+        isGameEnded = false;
         timeStart = Time.GetTicksMsec();
-	}
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        gameEndedScene = ResourceLoader.Load<PackedScene>("res://Minigames/GreitoRasymoMinigame/GameEnded.tscn");
+        //gameEndedWindowLabel = GetNode<Label>();
+
+        customSignals.TyperMinigameEnded += GameEnded;
+
+    }
 
     public override void _Input(InputEvent @event)
     {
@@ -58,22 +71,43 @@ public partial class TextInput : RichTextLabel
         
     }
     void TextCheck()
-    { 
-        int textLength = Text.Length;
-        if (textLength >= CharacterCap)
+    {
+        if (isGameEnded == false)
         {
-            Debug.WriteLine("CHARACTER LIMIT REACHED");
-            inputEnabled = false;
-            PointCounter();
+            int textLength = Text.Length;
+            if (textLength >= CharacterCap)
+            {
+                Debug.WriteLine("CHARACTER LIMIT REACHED");
+                customSignals.EmitSignal(nameof(CustomSignals.TyperMinigameEnded));
+                inputEnabled = false;
+                isGameEnded = true;
+            }
         }
+
             
     }
-    void PointCounter()
+    public void GameEnded()
+    {
+        int score = PointCounter();
+        Debug.WriteLine("event triggered");
+        InstantiateWindow(gameEndedScene, score);
+    }
+    int PointCounter()
     {
         float elapsedTime = Time.GetTicksMsec() - timeStart;
-        int pointAmount = Mathf.RoundToInt(elapsedTime / 1000);
-        Debug.WriteLine(pointAmount);
+        int elaTimeInt = Mathf.RoundToInt(elapsedTime / 1000);
+        int pointAmount = PointBase - elaTimeInt < 0 ? 0 : PointBase - elaTimeInt;
+        Debug.WriteLine("Total score: " + pointAmount);
+        return pointAmount;
 
+    }
+    void InstantiateWindow(PackedScene scene, int pointAmount)
+    {
+        Node2D instantiatedScene = (Node2D)scene.Instantiate();
+        instantiatedScene.Position = GetViewport().GetVisibleRect().Size / 2;
+        Label label = instantiatedScene.GetNode<Label>("CanvasLayer/Panel/Label");
+        label.Text = string.Format("Game over\nScore: " + pointAmount.ToString());
+        AddChild(instantiatedScene);
     }
     
 }
