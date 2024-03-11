@@ -13,7 +13,7 @@ public partial class spawn : Node2D
     {
         timer = GetNode<Timer>("Timer");
         Posit = GetNode<Node2D>("POSITION");
-        book = ResourceLoader.Load<PackedScene>("res://book.tscn");
+        book = ResourceLoader.Load<PackedScene>("res://Minigames/ShellFolder(Mykolo)/book.tscn");
         timer.Timeout += () => spawnBook();
     }
 

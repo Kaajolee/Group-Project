@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nl2unqk3wrcg"
-path="res://.godot/imported/aina1.png-f44306b00ec9a9e6586bad0476aa72d4.ctex"
+uid="uid://b4uhkavh0ndyt"
+path="res://.godot/imported/aina2.png-9817f990c45ef3625a3017441da7dd4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/Shell folder (Mykolo)/aina1.png"
-dest_files=["res://.godot/imported/aina1.png-f44306b00ec9a9e6586bad0476aa72d4.ctex"]
+source_file="res://Minigames/ShellFolder(Mykolo)/aina2.png"
+dest_files=["res://.godot/imported/aina2.png-9817f990c45ef3625a3017441da7dd4c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5onxrbanwrtd"
-path="res://.godot/imported/desine.png-af75e7989ad8418704eb01a21f0816f9.ctex"
+uid="uid://2a1kakdwdyqu"
+path="res://.godot/imported/player.png-aa8b3740e84d96a37ba3bd418a6c373e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/Shell folder (Mykolo)/desine.png"
-dest_files=["res://.godot/imported/desine.png-af75e7989ad8418704eb01a21f0816f9.ctex"]
+source_file="res://Minigames/ShellFolder(Mykolo)/player.png"
+dest_files=["res://.godot/imported/player.png-aa8b3740e84d96a37ba3bd418a6c373e.ctex"]
 
 [params]
 

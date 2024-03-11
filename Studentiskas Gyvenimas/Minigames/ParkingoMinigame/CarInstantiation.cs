@@ -17,7 +17,7 @@ public partial class CarInstantiation : Node2D
 	public bool isGameStopped;
 	public override void _Ready()
 	{
-		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
+		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ShellFolder(Mykolo)/book.tscn");
 		rnd = new Random();
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		customSignals.ParkingMinigameEnded += GameStopped;

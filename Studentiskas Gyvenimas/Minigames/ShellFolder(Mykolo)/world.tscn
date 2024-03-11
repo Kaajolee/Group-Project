@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dx8qmuoqpiee6"]
+[gd_scene load_steps=11 format=3 uid="uid://dx8qmuoqpiee6"]
 
-[ext_resource type="Script" path="res://Minigames/Shell folder (Mykolo)/world.cs" id="1_r43t4"]
-[ext_resource type="PackedScene" uid="uid://bnvs6gw20xhfk" path="res://Minigames/Shell folder (Mykolo)/player.tscn" id="1_vvvir"]
-[ext_resource type="PackedScene" uid="uid://c8ao14hrf2rnd" path="res://Minigames/Shell folder (Mykolo)/spawn.tscn" id="3_oa7g8"]
+[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/world.cs" id="1_r43t4"]
+[ext_resource type="PackedScene" uid="uid://bnvs6gw20xhfk" path="res://Minigames/ShellFolder(Mykolo)/player.tscn" id="1_vvvir"]
+[ext_resource type="PackedScene" uid="uid://c8ao14hrf2rnd" path="res://Minigames/ShellFolder(Mykolo)/spawn.tscn" id="3_oa7g8"]
+[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/ScoreLabel.cs" id="4_p6erk"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_iyy72"]
 
@@ -39,7 +40,7 @@ shape = SubResource("RectangleShape2D_j8fr5")
 position = Vector2(549, 579)
 
 [node name="SPAWN" parent="." instance=ExtResource("3_oa7g8")]
-position = Vector2(126, 16)
+position = Vector2(72, -22)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(-31, 554)
@@ -69,3 +70,4 @@ offset_right = 56.0
 offset_bottom = 20.0
 theme = SubResource("Theme_3qjmy")
 text = "Score: "
+script = ExtResource("4_p6erk")

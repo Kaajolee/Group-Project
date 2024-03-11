@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl170i486ojnr"
-path="res://.godot/imported/fallbook.png-05986fa9c904f1cb16b3f64504bc52a2.ctex"
+uid="uid://b08rx7qoixlti"
+path="res://.godot/imported/aina1.png-09e567eff308d548e66e1b123ed42397.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/Shell folder (Mykolo)/fallbook.png"
-dest_files=["res://.godot/imported/fallbook.png-05986fa9c904f1cb16b3f64504bc52a2.ctex"]
+source_file="res://Minigames/ShellFolder(Mykolo)/assets/berniukas/aina1.png"
+dest_files=["res://.godot/imported/aina1.png-09e567eff308d548e66e1b123ed42397.ctex"]
 
 [params]
 
