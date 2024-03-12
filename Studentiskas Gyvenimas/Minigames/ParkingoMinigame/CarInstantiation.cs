@@ -7,7 +7,12 @@ public partial class CarInstantiation : Node2D
 {
 
 	// Called when the node enters the scene tree for the first time.
+
+	[Export]
+	public float parkingSpaceOffset;
+	public float playerSpawnOffset = 50;
 	PackedScene parkedCarScene;
+	PackedScene playerScene;
 	CustomSignals customSignals;
 	Random rnd;
 
@@ -17,11 +22,12 @@ public partial class CarInstantiation : Node2D
 	public bool isGameStopped;
 	public override void _Ready()
 	{
-		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ShellFolder(Mykolo)/book.tscn");
-		rnd = new Random();
+		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
+		playerScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/player.tscn");
+        rnd = new Random();
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		customSignals.ParkingMinigameEnded += GameStopped;
-        customSignals.ParkingMinigamePoint += GameStopped;
+		customSignals.ParkingMinigameEnded += CarCrashed;
+        customSignals.ParkingMinigamePoint += PointEarned;
 
 
         isGameStopped = false;
@@ -34,14 +40,17 @@ public partial class CarInstantiation : Node2D
         Vector2 position = new Vector2(spawnLocationX, 0);
         Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
 
+		//masina
         if (randomInt == 0)
 		{
 			Sprite2D newSpriteCar = ChangeSprite(scene, true);
             scene = newSpriteCar;
 
         }
+		//tuscia vieta
 		else if(randomInt == 1)
 		{
+			position += new Vector2(parkingSpaceOffset, 0);
             Sprite2D newSpriteCar = ChangeSprite(scene, false);
             scene = newSpriteCar;
         }
@@ -71,12 +80,27 @@ public partial class CarInstantiation : Node2D
 		else if(isACar == false)
 		{
 			sprite2D.Visible = false;
+
 		}
 		return sprite2D;
 	}
-	void GameStopped()
+	void CarCrashed()
 	{
 		isGameStopped = true;
+
+    }
+	void InstantiatePlayer()
+	{
+        spawnLocationX = characterMovement.spawnDestinationX;
+        Vector2 position = new Vector2(GetWindow().Size.X/2, GetWindow().Size.Y + playerSpawnOffset);
+        Area2D playerSceneObj = (Area2D)playerScene.Instantiate();
+        playerSceneObj.Position = position;
+		AddChild(playerSceneObj);
+    }
+    void PointEarned()
+    {
+		InstantiatePlayer();
+        //isGameStopped = true;
 
     }
 }

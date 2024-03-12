@@ -1,34 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbq7dwul2dwc5"]
+[gd_scene load_steps=3 format=3 uid="uid://bbq7dwul2dwc5"]
 
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_5kfo6"]
-[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/characterMovement.cs" id="2_ohsxy"]
-[ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="3_17aig"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkf46"]
-size = Vector2(95, 167.07)
+[ext_resource type="PackedScene" uid="uid://b2lf5lgb76o21" path="res://Minigames/ParkingoMinigame/player.tscn" id="2_nljka"]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1, 0.993593)
 script = ExtResource("1_5kfo6")
+parkingSpaceOffset = 70.0
 
-[node name="Player" type="Area2D" parent="." groups=["player"]]
-position = Vector2(571, 330.115)
-rotation = 3.14159
-script = ExtResource("2_ohsxy")
-tweenSpeed = 0.3
-duration = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(5.06128, -7.00122)
-shape = SubResource("RectangleShape2D_bkf46")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(2.08783, -10.0466)
-scale = Vector2(2.8, 2.844)
-texture = ExtResource("3_17aig")
+[node name="Player" parent="." instance=ExtResource("2_nljka")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 323)
+position = Vector2(576, 325.083)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

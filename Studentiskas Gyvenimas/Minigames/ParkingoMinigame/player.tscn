@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2lf5lgb76o21"]
+
+[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/characterMovement.cs" id="1_aqee4"]
+[ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="2_pyduk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkf46"]
+size = Vector2(95, 167.07)
+
+[node name="Player" type="Area2D" groups=["player"]]
+position = Vector2(571, 330.115)
+rotation = 3.14159
+script = ExtResource("1_aqee4")
+tweenSpeed = 0.2
+duration = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.06128, -7.00122)
+shape = SubResource("RectangleShape2D_bkf46")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08783, -10.0466)
+scale = Vector2(2.8, 2.844)
+texture = ExtResource("2_pyduk")

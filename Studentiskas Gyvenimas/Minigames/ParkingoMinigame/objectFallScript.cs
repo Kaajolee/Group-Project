@@ -13,7 +13,7 @@ public partial class objectFallScript : Sprite2D
 	private Tween tween;
 	Global global;
 	CustomSignals customSignals;
-	
+	public static float fallSpeed;
 	public override void _Ready()
 	{
         sprite = GetNode<Sprite2D>(".");
@@ -22,7 +22,7 @@ public partial class objectFallScript : Sprite2D
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
         global = GetNode<Global>("/root/Global");
         customSignals.ParkingMinigameEnded += StopCar;
-        customSignals.ParkingMinigamePoint += StopCar;
+        customSignals.ParkingMinigamePoint += PointEarned;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,8 +31,10 @@ public partial class objectFallScript : Sprite2D
         screenBottomY = GetViewportRect().Size.Y;
 
 		var position = Position;
+		var deltaY = speed * (float)delta * 50;
+		fallSpeed = deltaY;
 
-        position.Y += speed * (float)delta * 50;
+        position.Y += deltaY;
 		Position = position;
 
 		if (Position.Y >= screenBottomY)
@@ -43,6 +45,10 @@ public partial class objectFallScript : Sprite2D
 	{
 		speed = 0;
 	}
+	void PointEarned()
+	{
+        Debug.WriteLine("Point earned");
+    }
 	void OnCarAreaEntered(Area2D area)
 	{
 		if (area.IsInGroup("player"))
@@ -52,7 +58,7 @@ public partial class objectFallScript : Sprite2D
 				customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigamePoint));
 				global.parkingScore += 1;
 				global.CurrentScore();
-                Debug.WriteLine("Point earned");
+                
 			}
 			else
             customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameEnded));
