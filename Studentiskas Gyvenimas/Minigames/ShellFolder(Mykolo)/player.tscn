@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnvs6gw20xhfk"]
+[gd_scene load_steps=15 format=3 uid="uid://bnvs6gw20xhfk"]
 
 [ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/Player.cs" id="1_6qfq1"]
-[ext_resource type="Texture2D" uid="uid://2a1kakdwdyqu" path="res://Minigames/ShellFolder(Mykolo)/player.png" id="2_x5nyd"]
-[ext_resource type="Texture2D" uid="uid://itv8qeogxy80" path="res://Minigames/ShellFolder(Mykolo)/bside.png" id="3_t6nmt"]
-[ext_resource type="Texture2D" uid="uid://nl2unqk3wrcg" path="res://Minigames/ShellFolder(Mykolo)/aina1.png" id="4_qkb5s"]
-[ext_resource type="Texture2D" uid="uid://b4uhkavh0ndyt" path="res://Minigames/ShellFolder(Mykolo)/aina2.png" id="5_mcnaq"]
-[ext_resource type="Texture2D" uid="uid://c5onxrbanwrtd" path="res://Minigames/ShellFolder(Mykolo)/desine.png" id="6_yvqwn"]
-[ext_resource type="Texture2D" uid="uid://bjvvs3ql74k00" path="res://Minigames/ShellFolder(Mykolo)/aina1d.png" id="7_85dvs"]
-[ext_resource type="Texture2D" uid="uid://brqjd8kc3scr5" path="res://Minigames/ShellFolder(Mykolo)/aina2d.png" id="8_70q82"]
+[ext_resource type="Texture2D" uid="uid://bgaq2vykpur8" path="res://Minigames/ShellFolder(Mykolo)/assets/mergina/mfront.png" id="7_harpt"]
+[ext_resource type="Texture2D" uid="uid://b43ovlrc1vuwq" path="res://Minigames/ShellFolder(Mykolo)/assets/mergina/aina0kair.png" id="8_vo360"]
+[ext_resource type="Texture2D" uid="uid://cnvj8ciul06xu" path="res://Minigames/ShellFolder(Mykolo)/assets/mergina/aina2kair.png" id="9_6qm72"]
+[ext_resource type="Texture2D" uid="uid://cl6jpeb1ppdxi" path="res://Minigames/ShellFolder(Mykolo)/assets/berniukas/priekis.png" id="9_ew17w"]
+[ext_resource type="Texture2D" uid="uid://bpvd6fkasr205" path="res://Minigames/ShellFolder(Mykolo)/assets/berniukas/aina0.png" id="10_k201y"]
+[ext_resource type="Texture2D" uid="uid://ccbbdylf030gn" path="res://Minigames/ShellFolder(Mykolo)/assets/mergina/aina0.png" id="10_yatly"]
+[ext_resource type="Texture2D" uid="uid://b08rx7qoixlti" path="res://Minigames/ShellFolder(Mykolo)/assets/berniukas/aina1.png" id="11_703n1"]
+[ext_resource type="Texture2D" uid="uid://dt2ggaduld7kw" path="res://Minigames/ShellFolder(Mykolo)/assets/mergina/aina2.png" id="11_faqip"]
+[ext_resource type="Texture2D" uid="uid://brjkat56g2xt4" path="res://Minigames/ShellFolder(Mykolo)/assets/berniukas/aina0des.png" id="12_di2je"]
+[ext_resource type="Texture2D" uid="uid://dfmrwtc7a50wi" path="res://Minigames/ShellFolder(Mykolo)/assets/berniukas/aina1des.png" id="13_m2da1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvcpc"]
 radius = 17.8124
@@ -17,7 +20,7 @@ height = 65.3513
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x5nyd")
+"texture": ExtResource("9_ew17w")
 }],
 "loop": true,
 "name": &"idle",
@@ -25,31 +28,58 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_t6nmt")
+"texture": ExtResource("10_k201y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_qkb5s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_mcnaq")
+"texture": ExtResource("11_703n1")
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_yvqwn")
+"texture": ExtResource("12_di2je")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_85dvs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_70q82")
+"texture": ExtResource("13_m2da1")
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 8.0
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y7a8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_harpt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vo360")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6qm72")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_yatly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_faqip")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 7.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -61,9 +91,16 @@ position = Vector2(15, -21)
 scale = Vector2(1.06667, 0.948718)
 shape = SubResource("CapsuleShape2D_pvcpc")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Berniukas" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(15, -20)
 scale = Vector2(3.51563, 3.6875)
 sprite_frames = SubResource("SpriteFrames_piaqp")
-animation = &"idle"
-frame_progress = 0.894243
+animation = &"walk_right"
+
+[node name="Mergina" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(14.875, -19.0625)
+scale = Vector2(3.57031, 4.05859)
+sprite_frames = SubResource("SpriteFrames_y7a8e")
+animation = &"walk_right"

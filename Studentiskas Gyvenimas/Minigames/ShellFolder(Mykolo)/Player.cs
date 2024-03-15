@@ -10,9 +10,22 @@ public partial class Player : CharacterBody2D
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 	AnimatedSprite2D animations;
 
+	public string playerGender = "b";
+
     public override void _Ready()
     {
-		animations = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		switch(playerGender) 
+		{
+			case "a":
+                animations = GetNode<AnimatedSprite2D>("Berniukas");
+				break;
+			case "b":
+                animations = GetNode<AnimatedSprite2D>("Mergina");
+				break;
+        }
+        animations.Visible = true;
+
+        //animations = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     }
 
     public override void _PhysicsProcess(double delta)
