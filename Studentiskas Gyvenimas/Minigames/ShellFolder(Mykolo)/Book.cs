@@ -5,12 +5,14 @@ public partial class Book : CharacterBody2D
 {
 	private float Speed = 2.5f;
 
+	CustomSignals customSignals;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
         //this.ContactMonitor = true;
         //this.MaxContactsReported = 1;
-		
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		//customSignals.BookMinigamePoint += 
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,6 +24,8 @@ public partial class Book : CharacterBody2D
 			if (collision.GetCollider() is Player)
 			{
                 GD.Print("HIT");
+				//EmitSignal(nameof(customSignals.BookMinigamePoint));
+				customSignals.EmitSignal(nameof(customSignals.BookMinigamePoint));
             }
 			QueueFree();
 		}

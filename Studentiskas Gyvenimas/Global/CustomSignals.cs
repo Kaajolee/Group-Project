@@ -15,5 +15,7 @@ public partial class CustomSignals : Node
     [Signal]
     public delegate void CockroachMinigameEndedEventHandler();
 
+    [Signal]
+    public delegate void BookMinigamePointEventHandler();
 
 }
