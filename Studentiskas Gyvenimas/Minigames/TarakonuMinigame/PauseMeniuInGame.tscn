@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2evyftxhiu3t"]
+[gd_scene load_steps=3 format=3 uid="uid://d2evyftxhiu3t"]
+
+[ext_resource type="Script" path="res://Minigames/TarakonuMinigame/PauseMeniuScript.cs" id="1_8y3qs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8nj3"]
 bg_color = Color(0, 0, 0, 0.235294)
 
-[node name="PauseMeniuInGame" type="Node2D"]
+[node name="PauseMeniuInGame" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8y3qs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
