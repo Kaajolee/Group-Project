@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpr1nn8n11pht"]
+
+[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/ScoreLabel.cs" id="1_ch2s4"]
+
+[sub_resource type="FontVariation" id="FontVariation_2614x"]
+
+[sub_resource type="FontVariation" id="FontVariation_lw1p1"]
+base_font = SubResource("FontVariation_2614x")
+
+[sub_resource type="Theme" id="Theme_3qjmy"]
+default_font = SubResource("FontVariation_lw1p1")
+
+[node name="ScoreLabel" type="Label"]
+offset_left = 4.0
+offset_top = -3.0
+offset_right = 56.0
+offset_bottom = 20.0
+theme = SubResource("Theme_3qjmy")
+text = "Score: "
+script = ExtResource("1_ch2s4")

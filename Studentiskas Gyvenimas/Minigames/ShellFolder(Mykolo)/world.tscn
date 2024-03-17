@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dx8qmuoqpiee6"]
+[gd_scene load_steps=9 format=3 uid="uid://dx8qmuoqpiee6"]
 
 [ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/world.cs" id="1_r43t4"]
 [ext_resource type="PackedScene" uid="uid://bnvs6gw20xhfk" path="res://Minigames/ShellFolder(Mykolo)/player.tscn" id="1_vvvir"]
 [ext_resource type="PackedScene" uid="uid://c8ao14hrf2rnd" path="res://Minigames/ShellFolder(Mykolo)/spawn.tscn" id="3_oa7g8"]
-[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/ScoreLabel.cs" id="4_p6erk"]
+[ext_resource type="PackedScene" uid="uid://bpr1nn8n11pht" path="res://Minigames/ShellFolder(Mykolo)/score_label.tscn" id="4_sydaf"]
+[ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/HealthLabel.cs" id="5_bqvrt"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_iyy72"]
 
@@ -12,14 +13,6 @@ size = Vector2(1271, 121)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjgao"]
 size = Vector2(62, 82)
-
-[sub_resource type="FontVariation" id="FontVariation_2614x"]
-
-[sub_resource type="FontVariation" id="FontVariation_lw1p1"]
-base_font = SubResource("FontVariation_2614x")
-
-[sub_resource type="Theme" id="Theme_3qjmy"]
-default_font = SubResource("FontVariation_lw1p1")
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_r43t4")
@@ -62,12 +55,21 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ScoreLabel" type="Label" parent="UI"]
+[node name="ScoreLabel" parent="UI" instance=ExtResource("4_sydaf")]
 layout_mode = 0
-offset_left = 4.0
-offset_top = -3.0
-offset_right = 56.0
-offset_bottom = 20.0
-theme = SubResource("Theme_3qjmy")
-text = "Score: "
-script = ExtResource("4_p6erk")
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 52.0
+offset_bottom = 23.0
+
+[node name="HealthLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 28.719
+anchor_right = 28.719
+offset_left = -78.76
+offset_top = 7.0
+offset_right = -12.76
+offset_bottom = 30.0
+text = "❤❤❤"
+script = ExtResource("5_bqvrt")

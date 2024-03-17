@@ -3,9 +3,10 @@ using System;
 
 public partial class Book : CharacterBody2D
 {
-	private float Speed = 2.5f;
+	//public float Speed = 2.5f;
+    public float Speed = GD.RandRange(2,5) + GD.Randf();
 
-	CustomSignals customSignals;
+    CustomSignals customSignals;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -23,10 +24,15 @@ public partial class Book : CharacterBody2D
 		{
 			if (collision.GetCollider() is Player)
 			{
-				GD.Print("HIT");
+				GD.Print("HIT" + Speed);
 				//EmitSignal(nameof(customSignals.BookMinigamePoint));
 				customSignals.EmitSignal(nameof(customSignals.BookMinigamePoint));
 			}
+			else if (collision.GetCollider() is StaticBody2D) 
+			{
+				GD.Print("YIKES");
+                customSignals.EmitSignal(nameof(customSignals.BookMinigamePointDeduct));
+            }
 			QueueFree();
 		}
 	}

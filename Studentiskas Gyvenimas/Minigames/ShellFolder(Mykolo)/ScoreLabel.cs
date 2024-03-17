@@ -10,6 +10,7 @@ public partial class ScoreLabel : Label
 	{
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		customSignals.BookMinigamePoint += () => scorePoint();
+        customSignals.BookMinigamePointDeduct += () => scoreDeduct();
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,4 +23,13 @@ public partial class ScoreLabel : Label
 		Score++; 
 		Text = $"Score: " + Score;
 	}
+
+	void scoreDeduct()
+	{
+		if(Score > 0)
+		{
+			Score--;
+		}
+        Text = $"Score: " + Score;
+    }
 }

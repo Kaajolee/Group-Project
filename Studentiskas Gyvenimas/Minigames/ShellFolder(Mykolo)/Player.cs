@@ -5,16 +5,20 @@ public partial class Player : CharacterBody2D
 {
 	public const float Speed = 400.0f;
 	public const float JumpVelocity = -400.0f;
+	public bool isGameFinished = false;
+    CustomSignals customSignals;
 
-	// Get the gravity from the project settings to be synced with RigidBody nodes.
-	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+    // Get the gravity from the project settings to be synced with RigidBody nodes.
+    public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 	AnimatedSprite2D animations;
 
 	public string playerGender = "b";
 
 	public override void _Ready()
 	{
-		switch(playerGender) 
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        customSignals.BookMinigameEnded += () => gameFinished();
+        switch (playerGender) 
 		{
 			case "a":
 				animations = GetNode<AnimatedSprite2D>("Berniukas");
@@ -30,6 +34,12 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+
+		if (isGameFinished)
+		{
+			return;
+		}
+
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
@@ -75,5 +85,10 @@ public partial class Player : CharacterBody2D
 			//else { GD.Print("NEPAVYKO " + collision.GetCollider().GetType()); }
 		}
 
+	}
+
+	void gameFinished()
+	{
+		isGameFinished = true;
 	}
 }
