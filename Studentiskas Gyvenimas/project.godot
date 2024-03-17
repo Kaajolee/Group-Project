@@ -20,7 +20,7 @@ Game="*res://Global/Game.gd"
 Utils="*res://Global/Utils.gd"
 Global="*res://Global/Global.cs"
 CustomSignals="*res://Global/CustomSignals.cs"
-BgMusic="*res://bg_music.tscn"
+BgMusic="*res://Music/bg_music.tscn"
 
 [dotnet]
 

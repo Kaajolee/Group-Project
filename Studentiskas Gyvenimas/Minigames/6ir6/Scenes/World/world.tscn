@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://eyjq8skm7ydo"]
+[gd_scene load_steps=3 format=3 uid="uid://eyjq8skm7ydo"]
 
-[ext_resource type="PackedScene" uid="uid://bxewjhkq654bh" path="res://Minigames/6ir6/Scenes/goose.tscn" id="1_ifomg"]
-[ext_resource type="PackedScene" uid="uid://b7mvl5m3nlgte" path="res://Minigames/6ir6/Scenes/gosling.tscn" id="2_rboek"]
+[ext_resource type="Script" path="res://Minigames/6ir6/Scenes/World/Gooses.gd" id="2_0qxgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd2wr"]
 size = Vector2(235, 684)
@@ -20,8 +19,7 @@ shape = SubResource("RectangleShape2D_cd2wr")
 position = Vector2(1609, 335)
 shape = SubResource("RectangleShape2D_cd2wr")
 
-[node name="Goose" parent="." instance=ExtResource("1_ifomg")]
-position = Vector2(591, 371)
+[node name="Gooses" type="Node2D" parent="."]
+script = ExtResource("2_0qxgd")
 
-[node name="gosling" parent="." instance=ExtResource("2_rboek")]
-position = Vector2(588, 273)
+[node name="Timer" type="Timer" parent="Gooses"]

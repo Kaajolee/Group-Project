@@ -9,11 +9,11 @@ public partial class Book : CharacterBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        //this.ContactMonitor = true;
-        //this.MaxContactsReported = 1;
-        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		//this.ContactMonitor = true;
+		//this.MaxContactsReported = 1;
+		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		//customSignals.BookMinigamePoint += 
-    }
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -23,10 +23,10 @@ public partial class Book : CharacterBody2D
 		{
 			if (collision.GetCollider() is Player)
 			{
-                GD.Print("HIT");
+				GD.Print("HIT");
 				//EmitSignal(nameof(customSignals.BookMinigamePoint));
 				customSignals.EmitSignal(nameof(customSignals.BookMinigamePoint));
-            }
+			}
 			QueueFree();
 		}
 	}

@@ -12,23 +12,23 @@ public partial class Player : CharacterBody2D
 
 	public string playerGender = "b";
 
-    public override void _Ready()
-    {
+	public override void _Ready()
+	{
 		switch(playerGender) 
 		{
 			case "a":
-                animations = GetNode<AnimatedSprite2D>("Berniukas");
+				animations = GetNode<AnimatedSprite2D>("Berniukas");
 				break;
 			case "b":
-                animations = GetNode<AnimatedSprite2D>("Mergina");
+				animations = GetNode<AnimatedSprite2D>("Mergina");
 				break;
-        }
-        animations.Visible = true;
+		}
+		animations.Visible = true;
 
-        //animations = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-    }
+		//animations = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+	}
 
-    public override void _PhysicsProcess(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 
@@ -60,18 +60,18 @@ public partial class Player : CharacterBody2D
 			animations.Play("idle");
 
 
-        Velocity = velocity;
+		Velocity = velocity;
 		MoveAndSlide();
 		var collision = MoveAndCollide(Velocity * (float)delta);
 		if (collision != null)
 		{
-            //if (collision.GetCollider().ToString() == "<StaticBody2D#27715962064>")
-           // if (collision.GetCollider() is Book)
+			//if (collision.GetCollider().ToString() == "<StaticBody2D#27715962064>")
+		   // if (collision.GetCollider() is Book)
 			//{
-           //     GD.Print(collision.GetCollider().GetType());
-           //     Score++;
-           //     GD.Print("KNYGA! Score:" + Score);
-          //  }
+		   //     GD.Print(collision.GetCollider().GetType());
+		   //     Score++;
+		   //     GD.Print("KNYGA! Score:" + Score);
+		  //  }
 			//else { GD.Print("NEPAVYKO " + collision.GetCollider().GetType()); }
 		}
 
