@@ -24,59 +24,59 @@ public partial class CarInstantiation : Node2D
 	{
 		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
 		playerScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/player.tscn");
-        rnd = new Random();
-        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		rnd = new Random();
+		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		customSignals.ParkingMinigameEnded += CarCrashed;
-        customSignals.ParkingMinigamePoint += PointEarned;
+		customSignals.ParkingMinigamePoint += PointEarned;
 
 
-        isGameStopped = false;
+		isGameStopped = false;
 
-    }
-    void InstantiateCar()
+	}
+	void InstantiateCar()
 	{
 		int randomInt = rnd.Next(2);
-        spawnLocationX = characterMovement.spawnDestinationX;
-        Vector2 position = new Vector2(spawnLocationX, 0);
-        Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
+		spawnLocationX = characterMovement.spawnDestinationX;
+		Vector2 position = new Vector2(spawnLocationX, 0);
+		Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
 
 		//masina
-        if (randomInt == 0)
+		if (randomInt == 0)
 		{
 			Sprite2D newSpriteCar = ChangeSprite(scene, true);
-            scene = newSpriteCar;
+			scene = newSpriteCar;
 
-        }
+		}
 		//tuscia vieta
 		else if(randomInt == 1)
 		{
 			position += new Vector2(parkingSpaceOffset, 0);
-            Sprite2D newSpriteCar = ChangeSprite(scene, false);
-            scene = newSpriteCar;
-        }
-        scene.Position = position;
-        AddChild(scene);
+			Sprite2D newSpriteCar = ChangeSprite(scene, false);
+			scene = newSpriteCar;
+		}
+		scene.Position = position;
+		AddChild(scene);
 
-    }
-    void OnTimerTimeout()
-    {
+	}
+	void OnTimerTimeout()
+	{
 		if (isGameStopped == false)
 			InstantiateCar();
 
-    }
+	}
 	Sprite2D ChangeSprite(Sprite2D currentSprite, bool isACar)
 	{
 		Sprite2D sprite2D = currentSprite;
 		if (isACar == true)
 		{
-            Color randomColor = new Color(
+			Color randomColor = new Color(
 			(float)GD.Randf(),
 			(float)GD.Randf(),
-            (float)GD.Randf()
-            );
+			(float)GD.Randf()
+			);
 
 			sprite2D.Modulate = randomColor;
-        }
+		}
 		else if(isACar == false)
 		{
 			sprite2D.Visible = false;
@@ -88,19 +88,19 @@ public partial class CarInstantiation : Node2D
 	{
 		isGameStopped = true;
 
-    }
+	}
 	void InstantiatePlayer()
 	{
-        spawnLocationX = characterMovement.spawnDestinationX;
-        Vector2 position = new Vector2(GetWindow().Size.X/2, GetWindow().Size.Y + playerSpawnOffset);
-        Area2D playerSceneObj = (Area2D)playerScene.Instantiate();
-        playerSceneObj.Position = position;
+		spawnLocationX = characterMovement.spawnDestinationX;
+		Vector2 position = new Vector2(GetWindow().Size.X/2, GetWindow().Size.Y + playerSpawnOffset);
+		Area2D playerSceneObj = (Area2D)playerScene.Instantiate();
+		playerSceneObj.Position = position;
 		AddChild(playerSceneObj);
-    }
-    void PointEarned()
-    {
+	}
+	void PointEarned()
+	{
 		InstantiatePlayer();
-        //isGameStopped = true;
+		//isGameStopped = true;
 
-    }
+	}
 }

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxewjhkq654bh"]
+
+[ext_resource type="Texture2D" uid="uid://dvwb1u188ookp" path="res://Minigames/6ir6/png/goose.png" id="1_egudx"]
+[ext_resource type="Script" path="res://Minigames/6ir6/Scenes/goose.gd" id="1_sxfma"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jhrvr"]
+radius = 17.1172
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1iwl8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_egudx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Goose" type="Area2D"]
+script = ExtResource("1_sxfma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jhrvr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.250001, -2.45604e-06)
+scale = Vector2(0.178846, 0.178082)
+sprite_frames = SubResource("SpriteFrames_1iwl8")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://eyjq8skm7ydo"]
+
+[ext_resource type="PackedScene" uid="uid://bxewjhkq654bh" path="res://Minigames/6ir6/Scenes/goose.tscn" id="1_ifomg"]
+[ext_resource type="PackedScene" uid="uid://b7mvl5m3nlgte" path="res://Minigames/6ir6/Scenes/gosling.tscn" id="2_rboek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd2wr"]
+size = Vector2(235, 684)
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-484, 333)
+shape = SubResource("RectangleShape2D_cd2wr")
+
+[node name="StaticBody2D_2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_2"]
+position = Vector2(1609, 335)
+shape = SubResource("RectangleShape2D_cd2wr")
+
+[node name="Goose" parent="." instance=ExtResource("1_ifomg")]
+position = Vector2(591, 371)
+
+[node name="gosling" parent="." instance=ExtResource("2_rboek")]
+position = Vector2(588, 273)
