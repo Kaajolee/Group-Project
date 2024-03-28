@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cufm2owrwtf08"]
+
+[ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="1_107re"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2puqp"]
+size = Vector2(31, 58)
+
+[node name="PlayerCar" type="Area2D"]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_2puqp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.280621, 2.45326e-08)
+rotation = 3.14159
+scale = Vector2(1.00877, 1)
+texture = ExtResource("1_107re")

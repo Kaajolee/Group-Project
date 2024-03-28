@@ -29,6 +29,7 @@ public partial class CarInstantiation : Node2D
 		customSignals.ParkingMinigameEnded += CarCrashed;
 		customSignals.ParkingMinigamePoint += PointEarned;
 
+		InstantiatePlayer();
 
 		isGameStopped = false;
 
@@ -36,7 +37,7 @@ public partial class CarInstantiation : Node2D
 	void InstantiateCar()
 	{
 		int randomInt = rnd.Next(2);
-		spawnLocationX = characterMovement.spawnDestinationX;
+		spawnLocationX = playerCarInstantiation.spawnDestinationX;
 		Vector2 position = new Vector2(spawnLocationX, 0);
 		Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
 
@@ -91,15 +92,16 @@ public partial class CarInstantiation : Node2D
 	}
 	void InstantiatePlayer()
 	{
-		spawnLocationX = characterMovement.spawnDestinationX;
+		spawnLocationX = playerCarInstantiation.spawnDestinationX;
 		Vector2 position = new Vector2(GetWindow().Size.X/2, GetWindow().Size.Y + playerSpawnOffset);
-		Area2D playerSceneObj = (Area2D)playerScene.Instantiate();
+		Debug.WriteLine("Player pos: " + position);
+		Node2D playerSceneObj = (Node2D)playerScene.Instantiate();
 		playerSceneObj.Position = position;
 		AddChild(playerSceneObj);
 	}
 	void PointEarned()
 	{
-		InstantiatePlayer();
+		//InstantiatePlayer();
 		//isGameStopped = true;
 
 	}
