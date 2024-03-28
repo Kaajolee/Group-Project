@@ -6,39 +6,51 @@ public partial class playerCarInstantiation : Node2D
 {
 
     [Export]
-    public float tweenSpeed;
+    public float parkTweenSpeed, parkTeenDuration;
 
     [Export]
-    private float duration;
+    public float spawnTweenSpeed, spawnTeenDuration;
 
+
+    [Export]
+    float playerSpawnOffset;
     float fallSpeed;
-    float axisYOffest = 85;
+    float axisYOffest = 100;
 
     public static float spawnDestinationX;
 
     Vector2 tweenDestination;
     Vector2 rectSize;
-
+    Vector2 playerSpawnLocation;
     CustomSignals customSignals;
     Tween tween;
+
     PackedScene playerCarScene;
     Area2D currentCar;
+
+
+
     public override void _Ready()
     {
         rectSize = GetWindow().Size;
-        float startX = rectSize.X/ 1.5f;
+        float startX = rectSize.X / 1.5f;
         spawnDestinationX = startX;
         tweenDestination = new Vector2(startX, Position.Y);
-        Debug.WriteLine(tweenDestination);
+        Console.WriteLine(tweenDestination);
 
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
         customSignals.ParkingMinigameEnded += GameStoped;
         customSignals.ParkingMinigamePoint += PointEarned;
+        customSignals.ParkingMinigameBottomLine += OnBottomReached;
+
+        playerSpawnLocation = new Vector2(GetWindow().Size.X / 2, GetWindow().Size.Y);
+        Position = playerSpawnLocation;
 
         playerCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/playerCar.tscn");
         currentCar = (Area2D)playerCarScene.Instantiate();
-        currentCar.Position = Position;
-        //InstantiatePlayerCar();
+        AddChild(currentCar);
+
+        MovePlayerCarUpwards();
 
     }
     public override void _PhysicsProcess(double delta)
@@ -50,15 +62,19 @@ public partial class playerCarInstantiation : Node2D
         fallSpeed = objectFallScript.fallSpeed;
         if (Input.IsActionJustPressed("space"))
         {
-             MovePlayerCar(currentCar);
-             InstantiatePlayerCar();
+            MovePlayerCar();
+            //InstantiatePlayerCar();
+            Debug.WriteLine("space pressed");
+        }
+        if (Position.Y >= rectSize.Y + 85)
+        {
+            customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameBottomLine));
         }
     }
-    void MovePlayerCar(Area2D currentCar)
+    void MovePlayerCar()
     {
         tween = CreateTween();
-        tween.TweenProperty(currentCar, "position:x", tweenDestination.X, tweenSpeed);
-        
+        tween.TweenProperty(this, "position:x", tweenDestination.X, parkTweenSpeed);
 
     }
     void GameStoped()
@@ -68,12 +84,22 @@ public partial class playerCarInstantiation : Node2D
     void PointEarned()
     {
         tween = CreateTween();
-        tween.TweenProperty(this, "position:y", rectSize.Y + axisYOffest, 4.1f/fallSpeed);
+        tween.TweenProperty(this, "position:y", rectSize.Y + axisYOffest, 4.1f / fallSpeed + 0.12);
 
     }
     void InstantiatePlayerCar()
     {
         currentCar = (Area2D)playerCarScene.Instantiate();
         currentCar.Position = Position;
+    }
+    void MovePlayerCarUpwards()
+    {
+        tween = CreateTween();
+        tween.TweenProperty(this, "position:y", rectSize.Y - 280, spawnTweenSpeed);
+    }
+    void OnBottomReached()
+    {
+        Position = playerSpawnLocation;
+        MovePlayerCarUpwards();
     }
 }

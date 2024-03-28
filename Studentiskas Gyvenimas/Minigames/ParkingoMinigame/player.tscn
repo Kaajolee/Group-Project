@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/playerCarInstantiation.cs" id="1_aqee4"]
 
 [node name="Player" type="Node2D" groups=["player"]]
-position = Vector2(571, 330.115)
 rotation = 3.14159
 script = ExtResource("1_aqee4")
 tweenSpeed = 0.2

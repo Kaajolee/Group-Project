@@ -1,11 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbq7dwul2dwc5"]
+[gd_scene load_steps=3 format=3 uid="uid://bbq7dwul2dwc5"]
 
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_5kfo6"]
+[ext_resource type="PackedScene" uid="uid://b2lf5lgb76o21" path="res://Minigames/ParkingoMinigame/player.tscn" id="2_ojtgv"]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1, 0.993593)
 script = ExtResource("1_5kfo6")
 parkingSpaceOffset = 70.0
+
+[node name="Player" parent="." instance=ExtResource("2_ojtgv")]
+rotation = 0.0
+parkTweenSpeed = 0.2
+parkTeenDuration = 1.0
+spawnTweenSpeed = 1.0
+spawnTeenDuration = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 325.083)

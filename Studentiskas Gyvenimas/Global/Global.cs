@@ -9,9 +9,10 @@ public partial class Global : Node
 
 	public void CurrentScore()
 	{
-		string.Format("Cockroach: {0}\nParking: {1}\nTyper: {2}\nTotal: {3}",
+		string rez = string.Format("Cockroach: {0}\nParking: {1}\nTyper: {2}\nTotal: {3}",
 			cockroachScore, parkingScore, typerScore, Sum());
-	}
+        Console.WriteLine(rez);
+    }
 	int Sum()
 	{
 		return cockroachScore + parkingScore + typerScore;
