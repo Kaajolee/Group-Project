@@ -10,9 +10,11 @@ public partial class CarInstantiation : Node2D
     [Export]
     public float parkingSpaceOffset;
     public float playerSpawnOffset = 50;
+
     PackedScene parkedCarScene;
     CustomSignals customSignals;
     Random rnd;
+    Label label;
 
     float spawnLocationX;
 
@@ -31,6 +33,9 @@ public partial class CarInstantiation : Node2D
 
         isGameStopped = false;
 
+    }
+    public override void _Process(double delta)
+    {
     }
     void InstantiateCar()
     {
@@ -106,4 +111,5 @@ public partial class CarInstantiation : Node2D
 
         return new Color(r / 255f, g / 255f, b / 255f, a / 255f);
     }
+
 }

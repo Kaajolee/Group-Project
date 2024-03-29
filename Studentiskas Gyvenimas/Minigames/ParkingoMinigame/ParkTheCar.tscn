@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbq7dwul2dwc5"]
+[gd_scene load_steps=4 format=3 uid="uid://bbq7dwul2dwc5"]
 
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_5kfo6"]
 [ext_resource type="PackedScene" uid="uid://b2lf5lgb76o21" path="res://Minigames/ParkingoMinigame/player.tscn" id="2_ojtgv"]
+[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/scoreUpdate.cs" id="3_6jn87"]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1, 0.993593)
@@ -21,5 +22,39 @@ position = Vector2(576, 325.083)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+scale = Vector2(2.72, 1.6)
+pivot_offset = Vector2(20, 0)
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -17.5
+offset_right = 47.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.299999, 0.57234)
+pivot_offset = Vector2(47, 10)
+theme_override_font_sizes/font_size = 25
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_6jn87")
 
 [connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
