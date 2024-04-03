@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvag0b6cag4nv"]
+[gd_scene load_steps=3 format=3 uid="uid://dvag0b6cag4nv"]
 
 [ext_resource type="Script" path="res://Main/Scenes/main/main.gd" id="1_t8u01"]
+[ext_resource type="Texture2D" uid="uid://bgen51q6ng8ao" path="res://Main/pngfiles/background/game_background3_1_updated.png" id="2_sdxnh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_t8u01")
+
+[node name="GameBackground31Updated" type="Sprite2D" parent="."]
+position = Vector2(574.559, 324.355)
+scale = Vector2(1.76073, 1.32924)
+texture = ExtResource("2_sdxnh")
 
 [node name="Play" type="Button" parent="."]
 offset_left = 408.0
