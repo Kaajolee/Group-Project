@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=14 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="Texture2D" uid="uid://3jnyweimqcrg" path="res://Main/pngfiles/tileset/tiles 1/Tileset_inside_base.png" id="2_6nckp"]
 [ext_resource type="Texture2D" uid="uid://lr8k0k55s4ho" path="res://Main/pngfiles/tileset/tiles 1/TileSet_outside_base.png" id="3_3jd4l"]
 [ext_resource type="Texture2D" uid="uid://cvbfv3eyir7nc" path="res://Main/pngfiles/tileset/tiles 1/TileSet_inside_props.png" id="3_8votm"]
 [ext_resource type="PackedScene" uid="uid://ci200npjdxtk2" path="res://Main/Scenes/NPC/PonasP/ponas_p.tscn" id="5_2rsdg"]
+[ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="6_l63kp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_og7t8"]
 texture = ExtResource("2_6nckp")
@@ -188,6 +189,9 @@ texture = ExtResource("2_6nckp")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_pybns")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfn82"]
+size = Vector2(112, 96)
+
 [node name="World" type="Node2D"]
 position = Vector2(560, 308)
 script = ExtResource("1_48re0")
@@ -204,3 +208,14 @@ layer_0/tile_data = PackedInt32Array(-1638396, 131072, 1, -1572860, 131072, 1, -
 
 [node name="PonasP" parent="." instance=ExtResource("5_2rsdg")]
 position = Vector2(107, -476)
+
+[node name="PonasP2" parent="." instance=ExtResource("5_2rsdg")]
+position = Vector2(51, -487)
+
+[node name="InteractionArea" parent="." instance=ExtResource("6_l63kp")]
+position = Vector2(-184, -144)
+action_name = "go up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_nfn82")
+metadata/_edit_lock_ = true
