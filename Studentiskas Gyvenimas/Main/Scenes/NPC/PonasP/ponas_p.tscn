@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://ci200npjdxtk2"]
+
+[ext_resource type="Script" path="res://Main/Scenes/NPC/PonasP/ponas_p.gd" id="1_gm3ue"]
+[ext_resource type="Texture2D" uid="uid://bnvwakbc02mvd" path="res://Main/ponas P/priekis/bfront.png" id="2_6m6yg"]
+[ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="3_dipph"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hnq4g"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m81hc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6m6yg")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xki1x"]
+radius = 42.4382
+
+[node name="PonasP" type="CharacterBody2D"]
+script = ExtResource("1_gm3ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hnq4g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m81hc")
+animation = &"Idle"
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_dipph")]
+action_name = "talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_xki1x")
