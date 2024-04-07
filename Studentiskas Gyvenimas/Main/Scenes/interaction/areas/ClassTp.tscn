@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://gaat1x6xm0cn"]
+
+[ext_resource type="Script" path="res://Main/Scenes/interaction/areas/ClassTp.gd" id="1_ocb7h"]
+[ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="2_6t0gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db3ts"]
+size = Vector2(124, 20)
+
+[node name="ClassTp" type="Node2D"]
+script = ExtResource("1_ocb7h")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_6t0gl")]
+action_name = "go to class"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_db3ts")
