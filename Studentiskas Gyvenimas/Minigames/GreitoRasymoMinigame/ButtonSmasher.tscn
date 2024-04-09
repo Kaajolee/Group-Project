@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cilrsbi1p6p1v"]
+[gd_scene load_steps=4 format=3 uid="uid://cilrsbi1p6p1v"]
 
 [ext_resource type="Texture2D" uid="uid://b82vcmnnpnsf0" path="res://Minigames/GreitoRasymoMinigame/PNG/Sasiuvinys.png" id="1_3kcy6"]
+[ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/pauseMeniuInstantiation.cs" id="1_qp50g"]
 [ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/TextInput.cs" id="2_jdo5x"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_qp50g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

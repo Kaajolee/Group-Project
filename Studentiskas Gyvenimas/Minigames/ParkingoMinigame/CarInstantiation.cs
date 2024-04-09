@@ -12,9 +12,11 @@ public partial class CarInstantiation : Node2D
 	public float playerSpawnOffset = 50;
 
 	PackedScene parkedCarScene;
+	PackedScene pauseMenu;
 	CustomSignals customSignals;
 	Random rnd;
 	Label label;
+	Control menuNode;
 
 	float spawnLocationX;
 
@@ -24,6 +26,13 @@ public partial class CarInstantiation : Node2D
 	{
 		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
 		rnd = new Random();
+
+        pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
+        menuNode = (Control)pauseMenu.Instantiate();
+        AddChild(menuNode);
+        menuNode.Visible = false;
+        
+		
 		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		customSignals.ParkingMinigameEnded += CarCrashed;
 		customSignals.ParkingMinigamePoint += PointEarned;
