@@ -1,16 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cilrsbi1p6p1v"]
+[gd_scene load_steps=5 format=3 uid="uid://cilrsbi1p6p1v"]
 
 [ext_resource type="Texture2D" uid="uid://b82vcmnnpnsf0" path="res://Minigames/GreitoRasymoMinigame/PNG/Sasiuvinys.png" id="1_3kcy6"]
 [ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/pauseMeniuInstantiation.cs" id="1_qp50g"]
 [ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/TextInput.cs" id="2_jdo5x"]
+[ext_resource type="Texture2D" uid="uid://cet0fo8nn0hc" path="res://Minigames/GreitoRasymoMinigame/PNG/tableBG.png" id="2_papgj"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qp50g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_papgj")
+
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(574, 315)
+position = Vector2(574, 282)
 scale = Vector2(0.18, 0.17)
 texture = ExtResource("1_3kcy6")
 
