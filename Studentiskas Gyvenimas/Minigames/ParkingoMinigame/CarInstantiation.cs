@@ -12,8 +12,12 @@ public partial class CarInstantiation : Node2D
 	public float playerSpawnOffset = 50;
 
 	PackedScene parkedCarScene;
+	PackedScene parkingSpaceScene;
 	PackedScene pauseMenu;
+
 	CustomSignals customSignals;
+
+	Texture2D parkingSpaceTexture;
 	Random rnd;
 	Label label;
 	Control menuNode;
@@ -25,7 +29,8 @@ public partial class CarInstantiation : Node2D
 	public override void _Ready()
 	{
 		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
-		rnd = new Random();
+        parkingSpaceScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkingSpace.tscn");
+        rnd = new Random();
 
         pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
         menuNode = (Control)pauseMenu.Instantiate();
@@ -53,8 +58,12 @@ public partial class CarInstantiation : Node2D
 		Vector2 position = new Vector2(spawnLocationX, 0);
 		Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
 
-		//masina
-		if (randomInt == 0)
+		Sprite2D parkingSpace = (Sprite2D)parkingSpaceScene.Instantiate();
+		parkingSpace.Position = position;
+		AddChild(parkingSpace);
+
+        //masina
+        if (randomInt == 0)
 		{
 			Sprite2D newSpriteCar = ChangeSprite(scene, true);
 			scene = newSpriteCar;

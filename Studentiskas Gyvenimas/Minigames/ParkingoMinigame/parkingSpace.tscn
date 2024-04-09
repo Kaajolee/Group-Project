@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://vxcf0lggudkh"]
+
+[ext_resource type="Texture2D" uid="uid://dsd0he7mdn5x0" path="res://Minigames/ParkingoMinigame/PNG/parkingSpace.png" id="1_0fovc"]
+[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/parkingSpaceFallScript.cs" id="1_yn5yv"]
+
+[node name="Node2D" type="Sprite2D"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_0fovc")
+script = ExtResource("1_yn5yv")
+speed = 10.0
