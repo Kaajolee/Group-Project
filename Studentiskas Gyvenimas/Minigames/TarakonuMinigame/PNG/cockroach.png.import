@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dol1j7qlho78n"
-path="res://.godot/imported/18f47c59a384294c1ce956e1311cc572.png-536285782f4eaf43dce9badc0e7cd69a.ctex"
+uid="uid://b8bb0euojlax4"
+path="res://.godot/imported/cockroach.png-205ce399c5c5dfe0c723e6e7982c8780.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/TarakonuMinigame/PNG/18f47c59a384294c1ce956e1311cc572.png"
-dest_files=["res://.godot/imported/18f47c59a384294c1ce956e1311cc572.png-536285782f4eaf43dce9badc0e7cd69a.ctex"]
+source_file="res://Minigames/TarakonuMinigame/PNG/cockroach.png"
+dest_files=["res://.godot/imported/cockroach.png-205ce399c5c5dfe0c723e6e7982c8780.ctex"]
 
 [params]
 
