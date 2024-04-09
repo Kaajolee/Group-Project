@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Diagnostics;
+using System.Text;
 
 public partial class CockRoachInstantiation : Node2D
 {
@@ -21,6 +22,7 @@ public partial class CockRoachInstantiation : Node2D
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
 		menuNode = (Control)pauseMenu.Instantiate();
 		AddChild(menuNode);
+		menuNode.Visible = false;
 
 		scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
 		customSignals = GetNode<CustomSignals>("/root/CustomSignals");

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dx8qmuoqpiee6"]
+[gd_scene load_steps=10 format=3 uid="uid://dx8qmuoqpiee6"]
 
 [ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/world.cs" id="1_r43t4"]
 [ext_resource type="PackedScene" uid="uid://bnvs6gw20xhfk" path="res://Minigames/ShellFolder(Mykolo)/player.tscn" id="1_vvvir"]
+[ext_resource type="Texture2D" uid="uid://hp7si4gdg664" path="res://Minigames/ShellFolder(Mykolo)/biblioteka.png" id="2_ad54f"]
 [ext_resource type="PackedScene" uid="uid://c8ao14hrf2rnd" path="res://Minigames/ShellFolder(Mykolo)/spawn.tscn" id="3_oa7g8"]
 [ext_resource type="PackedScene" uid="uid://bpr1nn8n11pht" path="res://Minigames/ShellFolder(Mykolo)/score_label.tscn" id="4_sydaf"]
 [ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/HealthLabel.cs" id="5_bqvrt"]
@@ -17,20 +18,26 @@ size = Vector2(62, 82)
 [node name="World" type="Node2D"]
 script = ExtResource("1_r43t4")
 
+[node name="Biblioteka" type="Sprite2D" parent="."]
+position = Vector2(583.5, 317.344)
+scale = Vector2(0.681771, 0.618544)
+texture = ExtResource("2_ad54f")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(171, 575)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(399.25, 65.75)
 scale = Vector2(1252.28, 109.592)
 mesh = SubResource("QuadMesh_iyy72")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(398.5, 76.5)
+position = Vector2(396.5, 110.5)
 shape = SubResource("RectangleShape2D_j8fr5")
 
 [node name="Player" parent="." instance=ExtResource("1_vvvir")]
-position = Vector2(549, 579)
+position = Vector2(547, 613)
 
 [node name="SPAWN" parent="." instance=ExtResource("3_oa7g8")]
 position = Vector2(72, -22)
@@ -39,14 +46,14 @@ position = Vector2(72, -22)
 position = Vector2(-31, 554)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(0, -4)
+position = Vector2(-2, 30)
 shape = SubResource("RectangleShape2D_xjgao")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(1184, 555)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(0, -4)
+position = Vector2(-2, 30)
 shape = SubResource("RectangleShape2D_xjgao")
 
 [node name="UI" type="Control" parent="."]
@@ -67,9 +74,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 28.719
 anchor_right = 28.719
-offset_left = -78.76
+offset_left = -71.76
 offset_top = 7.0
-offset_right = -12.76
+offset_right = -5.76001
 offset_bottom = 30.0
 text = "❤❤❤"
 script = ExtResource("5_bqvrt")
