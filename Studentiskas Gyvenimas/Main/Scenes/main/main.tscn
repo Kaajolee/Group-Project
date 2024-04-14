@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvag0b6cag4nv"]
+[gd_scene load_steps=11 format=3 uid="uid://dvag0b6cag4nv"]
 
 [ext_resource type="Script" path="res://Main/Scenes/main/main.gd" id="1_t8u01"]
 [ext_resource type="Texture2D" uid="uid://bgen51q6ng8ao" path="res://Main/pngfiles/background/game_background3_1_updated.png" id="2_sdxnh"]
+[ext_resource type="Texture2D" uid="uid://djjwo4nxhbqu5" path="res://Main/pngfiles/buttons/play_button.png" id="3_g25yt"]
+[ext_resource type="Texture2D" uid="uid://gyqjrl3at4ix" path="res://Main/pngfiles/buttons/play_button_hover.png" id="4_red14"]
+[ext_resource type="Texture2D" uid="uid://c6n1dl2hmwh0g" path="res://Main/pngfiles/buttons/quit_button.png" id="5_aflfp"]
+[ext_resource type="Texture2D" uid="uid://dxn4na53mphj1" path="res://Main/pngfiles/buttons/quit_button_hover.png" id="6_gmi1a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg2to"]
+texture = ExtResource("3_g25yt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yuhte"]
+texture = ExtResource("4_red14")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adim6"]
+texture = ExtResource("5_aflfp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1hyl1"]
+texture = ExtResource("6_gmi1a")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_t8u01")
@@ -16,7 +32,9 @@ offset_left = 408.0
 offset_top = 64.0
 offset_right = 744.0
 offset_bottom = 256.0
-text = "Play
+theme_override_styles/normal = SubResource("StyleBoxTexture_jg2to")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yuhte")
+text = "
 "
 
 [node name="Quit" type="Button" parent="."]
@@ -24,7 +42,9 @@ offset_left = 408.0
 offset_top = 392.0
 offset_right = 744.0
 offset_bottom = 584.0
-text = "Quit
+theme_override_styles/normal = SubResource("StyleBoxTexture_adim6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1hyl1")
+text = "
 "
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
