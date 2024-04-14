@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=15 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="TileSet" uid="uid://dnlslf7ovxa5g" path="res://Main/pngfiles/tileset/firsttilemap.tres" id="2_jpeox"]
@@ -6,6 +6,61 @@
 [ext_resource type="PackedScene" uid="uid://gaat1x6xm0cn" path="res://Main/Scenes/interaction/areas/ClassTp.tscn" id="6_7ktcg"]
 [ext_resource type="PackedScene" uid="uid://123nwhk5iv3a" path="res://Main/Scenes/interaction/areas/FirstFloorTp.tscn" id="7_383yd"]
 [ext_resource type="PackedScene" uid="uid://ru56owfhl1da" path="res://Main/Scenes/interaction/areas/OutsideTp.tscn" id="7_j67dm"]
+[ext_resource type="Script" path="res://Main/Scenes/worlds/SceneTransitionTrigger.cs" id="7_w8u6k"]
+[ext_resource type="Script" path="res://Main/Scenes/worlds/testScript.cs" id="8_xih2k"]
+[ext_resource type="Texture2D" uid="uid://b82vcmnnpnsf0" path="res://Minigames/GreitoRasymoMinigame/PNG/Sasiuvinys.png" id="9_5li1a"]
+
+[sub_resource type="Animation" id="Animation_c2sje"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tecy7"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tac6l"]
+_data = {
+"fade_in": SubResource("Animation_tecy7"),
+"fade_out": SubResource("Animation_c2sje")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x77au"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ehhg"]
 
 [node name="World" type="Node2D"]
 position = Vector2(560, 308)
@@ -35,3 +90,47 @@ position = Vector2(-33, 280)
 
 [node name="ClassTp" parent="." instance=ExtResource("6_7ktcg")]
 position = Vector2(-208, -617)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tac6l")
+}
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CockroachMinigameTrigger" type="Area2D" parent="."]
+position = Vector2(124, -96)
+script = ExtResource("7_w8u6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CockroachMinigameTrigger"]
+shape = SubResource("CircleShape2D_x77au")
+
+[node name="Label" type="Label" parent="CockroachMinigameTrigger"]
+offset_left = -14.0
+offset_top = -4.0
+offset_right = 205.0
+offset_bottom = 31.0
+scale = Vector2(0.16, 0.28)
+theme_override_font_sizes/font_size = 25
+text = "tarakonu triggeris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("8_xih2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("9_5li1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_2ehhg")
+
+[connection signal="body_entered" from="CockroachMinigameTrigger" to="CockroachMinigameTrigger" method="OnBodyEntered"]
