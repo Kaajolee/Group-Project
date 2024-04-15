@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2gxvn5vqqvgh"]
+[gd_scene load_steps=6 format=3 uid="uid://d2gxvn5vqqvgh"]
 
 [ext_resource type="Script" path="res://Minigames/TarakonuMinigame/CockRoachInstantiation.cs" id="1_g1uyy"]
+[ext_resource type="Texture2D" uid="uid://csahhdq2548w5" path="res://Minigames/TarakonuMinigame/PNG/cockRoachBG.png" id="2_3y1kf"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -52,6 +53,11 @@ _data = {
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_g1uyy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(573, 296)
+scale = Vector2(1.2, 0.879999)
+texture = ExtResource("2_3y1kf")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

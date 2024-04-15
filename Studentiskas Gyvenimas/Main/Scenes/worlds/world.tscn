@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=16 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="TileSet" uid="uid://dnlslf7ovxa5g" path="res://Main/pngfiles/tileset/firsttilemap.tres" id="2_jpeox"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://123nwhk5iv3a" path="res://Main/Scenes/interaction/areas/FirstFloorTp.tscn" id="7_383yd"]
 [ext_resource type="PackedScene" uid="uid://ru56owfhl1da" path="res://Main/Scenes/interaction/areas/OutsideTp.tscn" id="7_j67dm"]
 [ext_resource type="Script" path="res://Main/Scenes/worlds/SceneTransitionTrigger.cs" id="7_w8u6k"]
+[ext_resource type="Texture2D" uid="uid://b82vcmnnpnsf0" path="res://Minigames/GreitoRasymoMinigame/PNG/Sasiuvinys.png" id="8_spplf"]
+[ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="9_n5g4q"]
+[ext_resource type="Texture2D" uid="uid://dl170i486ojnr" path="res://Minigames/ShellFolder(Mykolo)/fallbook.png" id="10_oioys"]
+[ext_resource type="Texture2D" uid="uid://b8bb0euojlax4" path="res://Minigames/TarakonuMinigame/PNG/cockroach.png" id="11_0ounr"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -122,16 +126,9 @@ color = Color(0, 0, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TyperMinigameTrigger"]
 shape = SubResource("CircleShape2D_x77au")
 
-[node name="Label" type="Label" parent="TyperMinigameTrigger"]
-offset_left = -14.0
-offset_top = -4.0
-offset_right = 205.0
-offset_bottom = 31.0
-scale = Vector2(0.16, 0.28)
-theme_override_font_sizes/font_size = 25
-text = "rasymo triggeris"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Sprite2D" type="Sprite2D" parent="TyperMinigameTrigger"]
+scale = Vector2(0.005, 0.005)
+texture = ExtResource("8_spplf")
 
 [node name="ParkingMinigameTrigger" type="Area2D" parent="."]
 position = Vector2(189, -131)
@@ -156,16 +153,10 @@ color = Color(0, 0, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingMinigameTrigger"]
 shape = SubResource("CircleShape2D_x77au")
 
-[node name="Label" type="Label" parent="ParkingMinigameTrigger"]
-offset_left = -14.0
-offset_top = -4.0
-offset_right = 205.0
-offset_bottom = 31.0
-scale = Vector2(0.16, 0.28)
-theme_override_font_sizes/font_size = 25
-text = "parkingo triggeris"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Sprite2D" type="Sprite2D" parent="ParkingMinigameTrigger"]
+rotation = 1.56035
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_n5g4q")
 
 [node name="BookMinigameTrigger" type="Area2D" parent="."]
 position = Vector2(313, -131)
@@ -175,17 +166,6 @@ script = ExtResource("7_w8u6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BookMinigameTrigger"]
 shape = SubResource("CircleShape2D_x77au")
-
-[node name="Label" type="Label" parent="BookMinigameTrigger"]
-offset_left = -14.0
-offset_top = -4.0
-offset_right = 205.0
-offset_bottom = 31.0
-scale = Vector2(0.16, 0.28)
-theme_override_font_sizes/font_size = 25
-text = "knyga triggeris"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BookMinigameTrigger"]
 libraries = {
@@ -201,6 +181,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Sprite2D" type="Sprite2D" parent="BookMinigameTrigger"]
+position = Vector2(1, 0)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("10_oioys")
+
 [node name="CockroachMinigameTrigger" type="Area2D" parent="."]
 position = Vector2(129, -131)
 collision_layer = 3
@@ -209,17 +194,6 @@ script = ExtResource("7_w8u6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CockroachMinigameTrigger"]
 shape = SubResource("CircleShape2D_x77au")
-
-[node name="Label" type="Label" parent="CockroachMinigameTrigger"]
-offset_left = -14.0
-offset_top = -4.0
-offset_right = 205.0
-offset_bottom = 31.0
-scale = Vector2(0.16, 0.28)
-theme_override_font_sizes/font_size = 25
-text = "tarakonu triggeris"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CockroachMinigameTrigger"]
 libraries = {
@@ -234,6 +208,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CockroachMinigameTrigger"]
+position = Vector2(-3, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_0ounr")
 
 [connection signal="body_entered" from="TyperMinigameTrigger" to="TyperMinigameTrigger" method="OnBodyEntered"]
 [connection signal="animation_finished" from="TyperMinigameTrigger/AnimationPlayer" to="TyperMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]

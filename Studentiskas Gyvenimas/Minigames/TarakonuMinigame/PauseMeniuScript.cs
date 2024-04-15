@@ -6,10 +6,12 @@ public partial class PauseMeniuScript : Control
 {
 	// Called when the node enters the scene tree for the first time.
 	CanvasLayer layer;
+    bool isPaused;
 	public override void _Ready()
 	{
         layer = GetNode<CanvasLayer>("./CanvasLayer");
         layer.Visible = false;
+        isPaused = false;
         //Hide();
     }
 
@@ -23,14 +25,29 @@ public partial class PauseMeniuScript : Control
         if (@event.IsActionPressed("escape") && @event.IsEcho() == false)
         {
             //Debug.WriteLine("escape pressed");
+
             ToggleWindow();
         }
     }
 	void ToggleWindow()
 	{
-
         layer.Visible = !layer.Visible;
-		//Visible = !Visible;
-		Debug.WriteLine("method acessed");
-	}
+        Debug.WriteLine("method acessed");
+        GetTree().Paused = !GetTree().Paused;
+    }
+    void Pause()
+    {
+        layer.Visible = true;
+        GetTree().Paused = !GetTree().Paused;
+    }
+    void UnPause()
+    {
+        if(isPaused == true)
+        {
+            isPaused = false;
+            layer.Visible = false;
+            GetTree().Paused = !GetTree().Paused;
+        }
+
+    }
 }

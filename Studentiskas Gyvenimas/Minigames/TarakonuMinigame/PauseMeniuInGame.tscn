@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2evyftxhiu3t"]
+[gd_scene load_steps=8 format=3 uid="uid://d2evyftxhiu3t"]
 
 [ext_resource type="Script" path="res://Minigames/TarakonuMinigame/PauseMeniuScript.cs" id="1_8y3qs"]
 [ext_resource type="Script" path="res://Minigames/TarakonuMinigame/playButtonClick.cs" id="2_m3btc"]
@@ -7,6 +7,12 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8nj3"]
 bg_color = Color(0, 0, 0, 0.235294)
+
+[sub_resource type="InputEventAction" id="InputEventAction_0k2qn"]
+action = &"escape"
+
+[sub_resource type="Shortcut" id="Shortcut_u4abk"]
+events = [SubResource("InputEventAction_0k2qn")]
 
 [node name="PauseMeniuInGame" type="Control"]
 process_mode = 3
@@ -31,7 +37,7 @@ grow_vertical = 2
 pivot_offset = Vector2(135, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_o8nj3")
 
-[node name="playB" type="Button" parent="CanvasLayer/Panel"]
+[node name="resumeB" type="Button" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -46,7 +52,8 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
-text = "Play"
+shortcut = SubResource("Shortcut_u4abk")
+text = "Resume"
 script = ExtResource("2_m3btc")
 
 [node name="optionsB" type="Button" parent="CanvasLayer/Panel"]
@@ -84,3 +91,5 @@ pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 text = "Exit"
 script = ExtResource("4_ksvt5")
+
+[connection signal="pressed" from="CanvasLayer/Panel/resumeB" to="." method="UnPause"]

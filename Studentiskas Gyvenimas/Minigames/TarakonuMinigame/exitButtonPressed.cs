@@ -17,5 +17,8 @@ public partial class exitButtonPressed : Button
     void DoSomething()
     {
         Debug.WriteLine("Exit button pressed");
+        PackedScene main = ResourceLoader.Load<PackedScene>("res://Main/Scenes/worlds/world.tscn");
+        GetTree().Paused = false;
+        GetTree().ChangeSceneToPacked(main);
     }
 }
