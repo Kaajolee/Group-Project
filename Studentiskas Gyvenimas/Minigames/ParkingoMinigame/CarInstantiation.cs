@@ -21,6 +21,7 @@ public partial class CarInstantiation : Node2D
 	Random rnd;
 	Label label;
 	Control menuNode;
+	AnimationPlayer animPlayer;
 
 	float spawnLocationX;
 
@@ -31,6 +32,9 @@ public partial class CarInstantiation : Node2D
 		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
         parkingSpaceScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkingSpace.tscn");
         rnd = new Random();
+
+		animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
+        animPlayer.Play("fade_in");
 
         pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
         menuNode = (Control)pauseMenu.Instantiate();

@@ -8,9 +8,13 @@ public partial class CockRoachInstantiation : Node2D
 	// Called when the node enters the scene tree for the first time.
 	PackedScene cockRoachScene;
 	PackedScene pauseMenu;
+
 	Control menuNode;
 	Random rnd;
+
 	public int score;
+
+	AnimationPlayer animPlayer;
 	Label scoreLabel;
 	Global global;
 	CustomSignals customSignals;
@@ -18,9 +22,12 @@ public partial class CockRoachInstantiation : Node2D
 	public override void _Ready()
 	{
 		cockRoachScene = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/CockRoach.tscn");
-
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
-		menuNode = (Control)pauseMenu.Instantiate();
+
+        animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
+        animPlayer.Play("fade_in");
+
+        menuNode = (Control)pauseMenu.Instantiate();
 		AddChild(menuNode);
 		menuNode.Visible = false;
 

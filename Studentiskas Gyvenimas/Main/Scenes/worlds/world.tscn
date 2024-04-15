@@ -8,12 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://ru56owfhl1da" path="res://Main/Scenes/interaction/areas/OutsideTp.tscn" id="7_j67dm"]
 [ext_resource type="Script" path="res://Main/Scenes/worlds/SceneTransitionTrigger.cs" id="7_w8u6k"]
 
-[sub_resource type="Animation" id="Animation_c2sje"]
-resource_name = "fade_out"
+[sub_resource type="Animation" id="Animation_tecy7"]
+resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
+tracks/0/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -25,7 +25,34 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
+tracks/1/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_c2sje"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -33,21 +60,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_tecy7"]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tac6l"]
@@ -87,13 +99,101 @@ position = Vector2(-33, 280)
 [node name="ClassTp" parent="." instance=ExtResource("6_7ktcg")]
 position = Vector2(-208, -617)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="TyperMinigameTrigger" type="Area2D" parent="."]
+position = Vector2(254, -131)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("7_w8u6k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TyperMinigameTrigger"]
 libraries = {
 "": SubResource("AnimationLibrary_tac6l")
 }
 
-[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
-visible = false
+[node name="ColorRect" type="ColorRect" parent="TyperMinigameTrigger/AnimationPlayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TyperMinigameTrigger"]
+shape = SubResource("CircleShape2D_x77au")
+
+[node name="Label" type="Label" parent="TyperMinigameTrigger"]
+offset_left = -14.0
+offset_top = -4.0
+offset_right = 205.0
+offset_bottom = 31.0
+scale = Vector2(0.16, 0.28)
+theme_override_font_sizes/font_size = 25
+text = "rasymo triggeris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ParkingMinigameTrigger" type="Area2D" parent="."]
+position = Vector2(189, -131)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("7_w8u6k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParkingMinigameTrigger"]
+libraries = {
+"": SubResource("AnimationLibrary_tac6l")
+}
+
+[node name="ColorRect" type="ColorRect" parent="ParkingMinigameTrigger/AnimationPlayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingMinigameTrigger"]
+shape = SubResource("CircleShape2D_x77au")
+
+[node name="Label" type="Label" parent="ParkingMinigameTrigger"]
+offset_left = -14.0
+offset_top = -4.0
+offset_right = 205.0
+offset_bottom = 31.0
+scale = Vector2(0.16, 0.28)
+theme_override_font_sizes/font_size = 25
+text = "parkingo triggeris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BookMinigameTrigger" type="Area2D" parent="."]
+position = Vector2(313, -131)
+collision_layer = 3
+collision_mask = 2
+script = ExtResource("7_w8u6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BookMinigameTrigger"]
+shape = SubResource("CircleShape2D_x77au")
+
+[node name="Label" type="Label" parent="BookMinigameTrigger"]
+offset_left = -14.0
+offset_top = -4.0
+offset_right = 205.0
+offset_bottom = 31.0
+scale = Vector2(0.16, 0.28)
+theme_override_font_sizes/font_size = 25
+text = "knyga triggeris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BookMinigameTrigger"]
+libraries = {
+"": SubResource("AnimationLibrary_tac6l")
+}
+
+[node name="ColorRect" type="ColorRect" parent="BookMinigameTrigger/AnimationPlayer"]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -102,7 +202,9 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CockroachMinigameTrigger" type="Area2D" parent="."]
-position = Vector2(124, -96)
+position = Vector2(129, -131)
+collision_layer = 3
+collision_mask = 2
 script = ExtResource("7_w8u6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CockroachMinigameTrigger"]
@@ -119,4 +221,25 @@ text = "tarakonu triggeris"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CockroachMinigameTrigger"]
+libraries = {
+"": SubResource("AnimationLibrary_tac6l")
+}
+
+[node name="ColorRect" type="ColorRect" parent="CockroachMinigameTrigger/AnimationPlayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="TyperMinigameTrigger" to="TyperMinigameTrigger" method="OnBodyEntered"]
+[connection signal="animation_finished" from="TyperMinigameTrigger/AnimationPlayer" to="TyperMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]
+[connection signal="body_entered" from="ParkingMinigameTrigger" to="ParkingMinigameTrigger" method="OnBodyEntered"]
+[connection signal="animation_finished" from="ParkingMinigameTrigger/AnimationPlayer" to="ParkingMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]
+[connection signal="body_entered" from="BookMinigameTrigger" to="BookMinigameTrigger" method="OnBodyEntered"]
+[connection signal="animation_finished" from="BookMinigameTrigger/AnimationPlayer" to="BookMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]
 [connection signal="body_entered" from="CockroachMinigameTrigger" to="CockroachMinigameTrigger" method="OnBodyEntered"]
+[connection signal="animation_finished" from="CockroachMinigameTrigger/AnimationPlayer" to="CockroachMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]
