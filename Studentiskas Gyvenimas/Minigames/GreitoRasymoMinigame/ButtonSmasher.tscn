@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cilrsbi1p6p1v"]
+[gd_scene load_steps=9 format=3 uid="uid://cilrsbi1p6p1v"]
 
 [ext_resource type="Texture2D" uid="uid://b82vcmnnpnsf0" path="res://Minigames/GreitoRasymoMinigame/PNG/Sasiuvinys.png" id="1_3kcy6"]
 [ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/pauseMeniuInstantiation.cs" id="1_qp50g"]
 [ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/TextInput.cs" id="2_jdo5x"]
 [ext_resource type="Texture2D" uid="uid://cet0fo8nn0hc" path="res://Minigames/GreitoRasymoMinigame/PNG/tableBG.png" id="2_papgj"]
+[ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/GameOverWindowInst.cs" id="2_r1fmt"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -57,18 +58,22 @@ _data = {
 script = ExtResource("1_qp50g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_r1fmt")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+visibility_layer = 2
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_papgj")
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
+visibility_layer = 2
 position = Vector2(574, 282)
 scale = Vector2(0.18, 0.17)
 texture = ExtResource("1_3kcy6")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Background"]
+visibility_layer = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -96,6 +101,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/AnimationPlayer"]
+visibility_layer = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

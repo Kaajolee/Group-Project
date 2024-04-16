@@ -90,8 +90,8 @@ public partial class TextInput : RichTextLabel
     {
         int score = PointCounter();
         Debug.WriteLine("event triggered");
-        global.typerScore += score;
-        InstantiateWindow(gameEndedScene, score);
+        global.typerScore = score;
+        //InstantiateWindow(gameEndedScene, score);
     }
     int PointCounter()
     {

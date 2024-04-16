@@ -21,4 +21,8 @@ public partial class exitButtonPressed : Button
         GetTree().Paused = false;
         GetTree().ChangeSceneToPacked(main);
     }
+    void ExitGameWhenCompleted()
+    {
+        Debug.WriteLine("exit game when completed button pressed");
+    }
 }
