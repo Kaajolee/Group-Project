@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=17 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="TileSet" uid="uid://dnlslf7ovxa5g" path="res://Main/pngfiles/tileset/firsttilemap.tres" id="2_jpeox"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dglg45xjoltj1" path="res://Minigames/ParkingoMinigame/PNG/masina.png" id="9_n5g4q"]
 [ext_resource type="Texture2D" uid="uid://dl170i486ojnr" path="res://Minigames/ShellFolder(Mykolo)/fallbook.png" id="10_oioys"]
 [ext_resource type="Texture2D" uid="uid://b8bb0euojlax4" path="res://Minigames/TarakonuMinigame/PNG/cockroach.png" id="11_0ounr"]
+[ext_resource type="Script" path="res://Main/Scenes/worlds/GlobalScore.cs" id="12_32ado"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -213,6 +214,42 @@ color = Color(0, 0, 0, 1)
 position = Vector2(-3, 0)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("11_0ounr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -57.0
+offset_right = 20.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2.96, 1)
+pivot_offset = Vector2(20, 0)
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.1621
+offset_top = -12.0
+offset_right = 86.8379
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.216217, 0.680002)
+pivot_offset = Vector2(87, 0)
+theme_override_font_sizes/font_size = 25
+text = "Total score: 50"
+script = ExtResource("12_32ado")
 
 [connection signal="body_entered" from="TyperMinigameTrigger" to="TyperMinigameTrigger" method="OnBodyEntered"]
 [connection signal="animation_finished" from="TyperMinigameTrigger/AnimationPlayer" to="TyperMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]

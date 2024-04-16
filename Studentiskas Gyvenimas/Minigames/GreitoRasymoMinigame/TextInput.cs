@@ -18,7 +18,6 @@ public partial class TextInput : RichTextLabel
 
     private CustomSignals customSignals;
     private Global global;
-    private PackedScene gameEndedScene;
     [Export]
     public int CharacterCap;
 
@@ -33,8 +32,7 @@ public partial class TextInput : RichTextLabel
         timeStart = Time.GetTicksMsec();
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
         global = GetNode<Global>("/root/Global");
-        gameEndedScene = ResourceLoader.Load<PackedScene>("res://Minigames/GreitoRasymoMinigame/GameEnded.tscn");
-        //gameEndedWindowLabel = GetNode<Label>();
+     
 
         customSignals.TyperMinigameEnded += GameEnded;
 
@@ -90,6 +88,7 @@ public partial class TextInput : RichTextLabel
     {
         int score = PointCounter();
         Debug.WriteLine("event triggered");
+        global.typerTotalScore += score;
         global.typerScore = score;
         //InstantiateWindow(gameEndedScene, score);
     }
@@ -101,14 +100,5 @@ public partial class TextInput : RichTextLabel
         Debug.WriteLine("Total score: " + pointAmount);
         return pointAmount;
 
-    }
-    void InstantiateWindow(PackedScene scene, int pointAmount)
-    {
-        Node2D instantiatedScene = (Node2D)scene.Instantiate();
-        instantiatedScene.Position = GetViewport().GetVisibleRect().Size / 2;
-        Label label = instantiatedScene.GetNode<Label>("CanvasLayer/Panel/Label");
-        label.Text = string.Format("Game over\nScore: " + pointAmount.ToString());
-        AddChild(instantiatedScene);
-    }
-    
+    }    
 }

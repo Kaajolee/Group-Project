@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class GameOverWindowInst : CanvasLayer
 {
@@ -12,16 +13,41 @@ public partial class GameOverWindowInst : CanvasLayer
         global = GetNode<Global>("/root/Global");
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
         customSignals.TyperMinigameEnded += GameEnded;
+        customSignals.ParkingMinigameEnded += GameEnded;
+        customSignals.CockroachMinigameEnded += GameEnded;
         gameEndedScene = ResourceLoader.Load<PackedScene>("res://Minigames/GreitoRasymoMinigame/GameEnded.tscn");
     }
+    public override void _ExitTree()
+    {
+        customSignals.TyperMinigameEnded -= GameEnded;
+        customSignals.ParkingMinigameEnded -= GameEnded;
+        customSignals.CockroachMinigameEnded -= GameEnded;
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
     public void GameEnded()
     {
-        int score = global.typerScore;
+        string sceneName = GetTree().CurrentScene.Name;
+        Debug.WriteLine(sceneName);
+        int score = 0;
+        switch (sceneName)
+        {
+            case "HitTheBug":
+               score = global.cockroachScore;
+                break;
+
+            case "ParkTheCar":
+                score = global.parkingScore;
+                break;
+
+            case "ButtonSmasher":
+                score = global.typerScore;
+                break;
+        }
+
         InstantiateWindow(gameEndedScene, score);
     }
     void InstantiateWindow(PackedScene scene, int pointAmount)

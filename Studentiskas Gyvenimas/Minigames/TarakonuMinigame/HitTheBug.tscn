@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2gxvn5vqqvgh"]
+[gd_scene load_steps=7 format=3 uid="uid://d2gxvn5vqqvgh"]
 
 [ext_resource type="Script" path="res://Minigames/TarakonuMinigame/CockRoachInstantiation.cs" id="1_g1uyy"]
 [ext_resource type="Texture2D" uid="uid://csahhdq2548w5" path="res://Minigames/TarakonuMinigame/PNG/cockRoachBG.png" id="2_3y1kf"]
+[ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/GameOverWindowInst.cs" id="3_o5wlh"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -51,8 +52,9 @@ _data = {
 "fade_out": SubResource("Animation_c2sje")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="HitTheBug" type="Node2D"]
 script = ExtResource("1_g1uyy")
+totalSpawnAmount = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(573, 296)
@@ -64,6 +66,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_o5wlh")
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchors_preset = 7

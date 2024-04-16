@@ -22,4 +22,5 @@ public partial class pauseMeniuInstantiation : Node2D
 	public override void _Process(double delta)
 	{
 	}
+
 }

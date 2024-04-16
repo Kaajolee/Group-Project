@@ -10,6 +10,7 @@ public partial class CarInstantiation : Node2D
 	[Export]
 	public float parkingSpaceOffset;
 	public float playerSpawnOffset = 50;
+	public int totalScore;
 
 	PackedScene parkedCarScene;
 	PackedScene parkingSpaceScene;
@@ -22,6 +23,7 @@ public partial class CarInstantiation : Node2D
 	Label label;
 	Control menuNode;
 	AnimationPlayer animPlayer;
+	Global global;
 
 	float spawnLocationX;
 
@@ -31,29 +33,36 @@ public partial class CarInstantiation : Node2D
 	{
 		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
         parkingSpaceScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkingSpace.tscn");
-        rnd = new Random();
+        pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
+
 
 		animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        global = GetNode<Global>("/root/Global");
         animPlayer.Play("fade_in");
 
-        pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
+
         menuNode = (Control)pauseMenu.Instantiate();
         AddChild(menuNode);
         menuNode.Visible = false;
-        
-		
-		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		customSignals.ParkingMinigameEnded += CarCrashed;
+
+
+
+		totalScore = 0;
+		global.parkingScore = 0; 
+
+
+        customSignals.ParkingMinigameEnded += CarCrashed;
 		customSignals.ParkingMinigamePoint += PointEarned;
-		
 
-		//InstantiatePlayer();
+        rnd = new Random();
 
-		isGameStopped = false;
+        isGameStopped = false;
 
 	}
 	public override void _Process(double delta)
 	{
+		global.parkingScore = totalScore;
 	}
 	void InstantiateCar()
 	{
@@ -107,8 +116,10 @@ public partial class CarInstantiation : Node2D
 	void CarCrashed()
 	{
 		isGameStopped = true;
+		global.parkingTotalScore += totalScore;
 
-	}
+
+    }
 	void InstantiatePlayer()
 	{
 		spawnLocationX = playerCarInstantiation.spawnDestinationX;

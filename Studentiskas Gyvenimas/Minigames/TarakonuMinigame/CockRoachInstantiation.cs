@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
 
@@ -12,7 +13,12 @@ public partial class CockRoachInstantiation : Node2D
 	Control menuNode;
 	Random rnd;
 
+
+	[Export]
+	public int totalSpawnAmount;
 	public int score;
+	public int cockroachesLeft;
+	bool gameEnded = false;
 
 	AnimationPlayer animPlayer;
 	Label scoreLabel;
@@ -25,19 +31,21 @@ public partial class CockRoachInstantiation : Node2D
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
 
         animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
-        animPlayer.Play("fade_in");
+        scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        global = GetNode<Global>("/root/Global");
 
+        animPlayer.Play("fade_in");
         menuNode = (Control)pauseMenu.Instantiate();
 		AddChild(menuNode);
 		menuNode.Visible = false;
 
-		scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
-		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		global = GetNode<Global>("/root/Global");
 
-		//customSignals.CockroachMinigameEnded += GameEnded;
 
-		rnd = new Random();
+		customSignals.CockroachMinigameEnded += GameEnded;
+		score = totalSpawnAmount;
+        cockroachesLeft = totalSpawnAmount;
+        rnd = new Random();
 
 	}
 
@@ -45,10 +53,22 @@ public partial class CockRoachInstantiation : Node2D
 	public override void _Process(double delta)
 	{
 		UpdateLabelText();
+		if(cockroachesLeft == 0 && gameEnded == false)
+		{
+			Debug.WriteLine("test");
+			gameEnded = true;
+
+            customSignals.EmitSignal(nameof(CustomSignals.CockroachMinigameEnded));
+        }
 	}
 	void OnTimerTimeout()
 	{
-		InstantiateCockroach();
+		if(totalSpawnAmount > 0)
+		{
+            InstantiateCockroach();
+			totalSpawnAmount--;
+        }
+		
 	}
 	void InstantiateCockroach()
 	{
@@ -91,4 +111,9 @@ public partial class CockRoachInstantiation : Node2D
 	{
 		scoreLabel.Text = "Score: " + global.cockroachScore.ToString();
 	}
+	void GameEnded()
+	{
+        global.cockroachScore = score;
+        global.cockroachTotalScore += score;
+    }
 }

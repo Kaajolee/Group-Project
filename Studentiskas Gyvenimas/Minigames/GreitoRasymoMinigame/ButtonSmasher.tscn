@@ -54,7 +54,7 @@ _data = {
 "fade_out": SubResource("Animation_c2sje")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="ButtonSmasher" type="Node2D"]
 script = ExtResource("1_qp50g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
