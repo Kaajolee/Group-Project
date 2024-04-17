@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=18 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="TileSet" uid="uid://dnlslf7ovxa5g" path="res://Main/pngfiles/tileset/firsttilemap.tres" id="2_jpeox"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dl170i486ojnr" path="res://Minigames/ShellFolder(Mykolo)/fallbook.png" id="10_oioys"]
 [ext_resource type="Texture2D" uid="uid://b8bb0euojlax4" path="res://Minigames/TarakonuMinigame/PNG/cockroach.png" id="11_0ounr"]
 [ext_resource type="Script" path="res://Main/Scenes/worlds/GlobalScore.cs" id="12_32ado"]
+[ext_resource type="Script" path="res://Main/Scenes/worlds/PrimaryMenuInstantiation.cs" id="12_s8fu4"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -216,6 +217,7 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("11_0ounr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("12_s8fu4")
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchors_preset = 7

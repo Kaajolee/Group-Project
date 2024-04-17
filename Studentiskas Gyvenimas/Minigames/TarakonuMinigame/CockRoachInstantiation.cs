@@ -55,7 +55,6 @@ public partial class CockRoachInstantiation : Node2D
 		UpdateLabelText();
 		if(cockroachesLeft == 0 && gameEnded == false)
 		{
-			Debug.WriteLine("test");
 			gameEnded = true;
 
             customSignals.EmitSignal(nameof(CustomSignals.CockroachMinigameEnded));
@@ -72,7 +71,6 @@ public partial class CockRoachInstantiation : Node2D
 	}
 	void InstantiateCockroach()
 	{
-		Debug.WriteLine("--------------------------");
 		Vector2 position = PositionGenerator();
 		Node2D scene = (Node2D)cockRoachScene.Instantiate();
 		float randomFloat = rnd.NextSingle();

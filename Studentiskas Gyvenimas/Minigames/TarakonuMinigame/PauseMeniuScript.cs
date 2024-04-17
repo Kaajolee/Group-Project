@@ -32,7 +32,7 @@ public partial class PauseMeniuScript : Control
 	void ToggleWindow()
 	{
         layer.Visible = !layer.Visible;
-        Debug.WriteLine("method acessed");
+        Debug.WriteLine("Game paused");
         GetTree().Paused = !GetTree().Paused;
     }
     void Pause()

@@ -36,6 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(135, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_o8nj3")
+metadata/_edit_use_anchors_ = true
 
 [node name="resumeB" type="Button" parent="CanvasLayer/Panel"]
 layout_mode = 1
@@ -55,6 +56,7 @@ theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 
 shortcut = SubResource("Shortcut_u4abk")
 text = "Resume"
 script = ExtResource("2_m3btc")
+metadata/_edit_use_anchors_ = true
 
 [node name="optionsB" type="Button" parent="CanvasLayer/Panel"]
 layout_mode = 1
@@ -73,6 +75,7 @@ pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 text = "Options"
 script = ExtResource("3_hhkg3")
+metadata/_edit_use_anchors_ = true
 
 [node name="exitB" type="Button" parent="CanvasLayer/Panel"]
 layout_mode = 1
@@ -91,5 +94,6 @@ pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 text = "Exit"
 script = ExtResource("4_ksvt5")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/Panel/resumeB" to="." method="UnPause"]

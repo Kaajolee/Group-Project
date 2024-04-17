@@ -20,4 +20,5 @@ public partial class Global : Node
 	{
 		return cockroachTotalScore + parkingTotalScore + typerTotalScore;
 	}
+
 }

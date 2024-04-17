@@ -60,9 +60,10 @@ script = ExtResource("1_5kfo6")
 parkingSpaceOffset = 70.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(506, 158.012)
+position = Vector2(507, -342.192)
 scale = Vector2(0.8, 1)
 texture = ExtResource("4_w4q05")
+offset = Vector2(-1.25, 500.204)
 
 [node name="Player" parent="." instance=ExtResource("2_ojtgv")]
 rotation = 0.0
