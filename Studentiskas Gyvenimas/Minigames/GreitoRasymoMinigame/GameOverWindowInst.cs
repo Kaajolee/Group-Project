@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 public partial class GameOverWindowInst : CanvasLayer
 {
-    // Called when the node enters the scene tree for the first time.
+
     private CustomSignals customSignals;
     private PackedScene gameEndedScene;
     private Global global;
@@ -26,7 +26,7 @@ public partial class GameOverWindowInst : CanvasLayer
         customSignals.BookMinigameEnded -= GameEnded;
     }
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
+
     public override void _Process(double delta)
 	{
 	}
@@ -35,6 +35,7 @@ public partial class GameOverWindowInst : CanvasLayer
         string sceneName = GetTree().CurrentScene.Name;
         Debug.WriteLine(sceneName);
         int score = 0;
+
         switch (sceneName)
         {
             case "HitTheBug":
