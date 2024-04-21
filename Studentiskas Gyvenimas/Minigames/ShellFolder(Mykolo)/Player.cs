@@ -3,24 +3,25 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
-	public const float Speed = 400.0f;
+	public const float Speed = 900.0f;
 	public const float JumpVelocity = -400.0f;
 	public bool isGameFinished = false;
 	CustomSignals customSignals;
+	Node game;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 	AnimatedSprite2D animations;
 
-	public string playerGender = "b";
-
 	public override void _Ready()
 	{
 		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		game = GetNode<Node>("/root/Game");
 		customSignals.BookMinigameEnded += () => gameFinished();
-		switch (playerGender) 
-		{
+        switch (game.Call("getCharacter").AsString())
+        {
 			case "a":
+			case "none":
 				animations = GetNode<AnimatedSprite2D>("Berniukas");
 				break;
 			case "b":
@@ -71,7 +72,6 @@ public partial class Player : CharacterBody2D
 
 
 		Velocity = velocity;
-		MoveAndSlide();
 		var collision = MoveAndCollide(Velocity * (float)delta);
 		if (collision != null)
 		{

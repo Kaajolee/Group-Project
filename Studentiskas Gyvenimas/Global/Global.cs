@@ -9,16 +9,17 @@ public partial class Global : Node
 	public int cockroachScore { get; set; } = 0;
 	public int parkingScore { get; set; } = 0;
 	public int typerScore { get; set; } = 0;
+    public int bookScore { get; set; } = 0;
 
-	public void CurrentScore()
+    public void CurrentScore()
 	{
-		string rez = string.Format("Cockroach: {0}\nParking: {1}\nTyper: {2}\nTotal: {3}",
-			cockroachScore, parkingScore, typerScore, Sum());
-		Console.WriteLine(rez);
+        string rez = string.Format("Cockroach: {0}\nParking: {1}\nTyper: {2}\nTotal: {3}",
+            cockroachScore, parkingScore, typerScore, Sum());
+        Console.WriteLine(rez);
 	}
 	public int Sum()
 	{
-		return cockroachTotalScore + parkingTotalScore + typerTotalScore;
+		return cockroachTotalScore + parkingTotalScore + typerTotalScore + bookScore;
 	}
 
 }
