@@ -15,6 +15,7 @@ public partial class GameOverWindowInst : CanvasLayer
         customSignals.TyperMinigameEnded += GameEnded;
         customSignals.ParkingMinigameEnded += GameEnded;
         customSignals.CockroachMinigameEnded += GameEnded;
+        customSignals.BookMinigameEnded += GameEnded;
         gameEndedScene = ResourceLoader.Load<PackedScene>("res://Minigames/GreitoRasymoMinigame/GameEnded.tscn");
     }
     public override void _ExitTree()
@@ -22,6 +23,7 @@ public partial class GameOverWindowInst : CanvasLayer
         customSignals.TyperMinigameEnded -= GameEnded;
         customSignals.ParkingMinigameEnded -= GameEnded;
         customSignals.CockroachMinigameEnded -= GameEnded;
+        customSignals.BookMinigameEnded -= GameEnded;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,6 +47,9 @@ public partial class GameOverWindowInst : CanvasLayer
 
             case "ButtonSmasher":
                 score = global.typerScore;
+                break;
+            case "BookFall":
+                score = global.bookScore;
                 break;
         }
 

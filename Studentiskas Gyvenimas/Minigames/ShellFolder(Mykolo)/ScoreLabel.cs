@@ -6,10 +6,12 @@ public partial class ScoreLabel : Label
 	public int Score { get; set; }
 	// Called when the node enters the scene tree for the first time.
 	CustomSignals customSignals;
+	Global global;
 	public override void _Ready()
 	{
         customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		customSignals.BookMinigamePoint += () => scorePoint();
+        global = GetNode<Global>("/root/Global");
+        customSignals.BookMinigamePoint += () => scorePoint();
         customSignals.BookMinigamePointDeduct += () => scoreDeduct();
     }
 
@@ -20,7 +22,8 @@ public partial class ScoreLabel : Label
 
 	void scorePoint() 
 	{ 
-		Score++; 
+		Score++;
+		global.bookScore += global.bookScore;
 		Text = $"Score: " + Score;
 	}
 
@@ -28,7 +31,8 @@ public partial class ScoreLabel : Label
 	{
 		if(Score > 0)
 		{
-			Score--;
+            global.bookScore -= global.bookScore;
+            Score--;
 		}
         Text = $"Score: " + Score;
     }
