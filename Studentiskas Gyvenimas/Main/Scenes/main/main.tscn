@@ -12,18 +12,18 @@ scale = Vector2(1.76073, 1.32924)
 texture = ExtResource("2_sdxnh")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 64.0
-offset_right = 744.0
-offset_bottom = 256.0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 464.0
+offset_bottom = 576.0
 text = "Play
 "
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 392.0
-offset_right = 744.0
-offset_bottom = 584.0
+offset_left = 688.0
+offset_top = 384.0
+offset_right = 1024.0
+offset_bottom = 576.0
 text = "Quit
 "
 

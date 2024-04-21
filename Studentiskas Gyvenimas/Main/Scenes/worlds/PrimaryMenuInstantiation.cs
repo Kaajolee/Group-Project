@@ -7,15 +7,15 @@ public partial class PrimaryMenuInstantiation : CanvasLayer
 	PackedScene pauseMenu;
 	CanvasLayer menuNode;
 
-    public override void _Ready()
+	public override void _Ready()
 	{
-        pauseMenu = ResourceLoader.Load<PackedScene>("res://Main/Scenes/worlds/MainPauseMeniu.tscn");
-        menuNode = (CanvasLayer)pauseMenu.Instantiate();
-        AddChild(menuNode);
-    }
+		pauseMenu = ResourceLoader.Load<PackedScene>("res://Main/Scenes/worlds/MainPauseMeniu.tscn");
+		menuNode = (CanvasLayer)pauseMenu.Instantiate();
+		AddChild(menuNode);
+	}
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
 	{
 	}
 }

@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://djqcg62e08fm"]
+[gd_scene load_steps=13 format=3 uid="uid://djqcg62e08fm"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world2.gd" id="1_5qwb8"]
 [ext_resource type="Texture2D" uid="uid://3jnyweimqcrg" path="res://Main/pngfiles/tileset/tiles 1/Tileset_inside_base.png" id="1_ekain"]
 [ext_resource type="Texture2D" uid="uid://cvbfv3eyir7nc" path="res://Main/pngfiles/tileset/tiles 1/TileSet_inside_props.png" id="2_pt0j8"]
 [ext_resource type="Texture2D" uid="uid://lr8k0k55s4ho" path="res://Main/pngfiles/tileset/tiles 1/TileSet_outside_base.png" id="3_bt4v6"]
+[ext_resource type="PackedScene" uid="uid://wt2mcq3tufmr" path="res://Main/Scenes/interaction/areas/GroundFloorTp.tscn" id="5_f7vwn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_niymr"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -199,3 +200,6 @@ layer_0/tile_data = PackedInt32Array(1179639, 65538, 1, 1179640, 65538, 1, 11796
 [node name="TileMapObjects" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_qq3nc")
 format = 2
+
+[node name="GroundFloorTp" parent="." instance=ExtResource("5_f7vwn")]
+position = Vector2(-189, -146)
