@@ -15,7 +15,7 @@ size = Vector2(1271, 121)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjgao"]
 size = Vector2(62, 82)
 
-[node name="BookFall" type="Node2D"]
+[node name="World" type="Node2D"]
 script = ExtResource("1_r43t4")
 
 [node name="Biblioteka" type="Sprite2D" parent="."]
