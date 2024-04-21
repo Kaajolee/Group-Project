@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dd2mqh1ibxiaa"
+path="res://.godot/imported/part-Slice 441.png-c1788428cd1fe04d2b548a2752db4ecd.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Main/pngfiles/tileset/PLACEHOLDER/sierrassets furniture pack/furniture/individual sprites grey outline/part-Slice 441.png"
+dest_files=["res://.godot/imported/part-Slice 441.png-c1788428cd1fe04d2b548a2752db4ecd.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

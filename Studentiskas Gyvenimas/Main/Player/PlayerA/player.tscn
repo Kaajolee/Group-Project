@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://d1k3da85y7c72" path="res://Main/Player/PlayerA/bahuras/nugara/aina2.png" id="9_2pl82"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_susug"]
-radius = 6.0
-height = 16.0
+radius = 5.0
+height = 10.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c07e8"]
 animations = [{
@@ -75,6 +75,7 @@ collision_layer = 2
 script = ExtResource("1_evlpv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_susug")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -83,4 +84,5 @@ sprite_frames = SubResource("SpriteFrames_c07e8")
 animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 zoom = Vector2(3, 3)
