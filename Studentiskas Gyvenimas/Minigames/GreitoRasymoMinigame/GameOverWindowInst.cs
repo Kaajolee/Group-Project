@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 public partial class GameOverWindowInst : CanvasLayer
 {
-
+    // Called when the node enters the scene tree for the first time.
     private CustomSignals customSignals;
     private PackedScene gameEndedScene;
     private Global global;
@@ -15,7 +15,6 @@ public partial class GameOverWindowInst : CanvasLayer
         customSignals.TyperMinigameEnded += GameEnded;
         customSignals.ParkingMinigameEnded += GameEnded;
         customSignals.CockroachMinigameEnded += GameEnded;
-        customSignals.BookMinigameEnded += GameEnded;
         gameEndedScene = ResourceLoader.Load<PackedScene>("res://Minigames/GreitoRasymoMinigame/GameEnded.tscn");
     }
     public override void _ExitTree()
@@ -23,10 +22,9 @@ public partial class GameOverWindowInst : CanvasLayer
         customSignals.TyperMinigameEnded -= GameEnded;
         customSignals.ParkingMinigameEnded -= GameEnded;
         customSignals.CockroachMinigameEnded -= GameEnded;
-        customSignals.BookMinigameEnded -= GameEnded;
     }
 
-
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
 	{
 	}
@@ -35,7 +33,6 @@ public partial class GameOverWindowInst : CanvasLayer
         string sceneName = GetTree().CurrentScene.Name;
         Debug.WriteLine(sceneName);
         int score = 0;
-
         switch (sceneName)
         {
             case "HitTheBug":
@@ -48,9 +45,6 @@ public partial class GameOverWindowInst : CanvasLayer
 
             case "ButtonSmasher":
                 score = global.typerScore;
-                break;
-            case "BookFall":
-                score = global.bookScore;
                 break;
         }
 
