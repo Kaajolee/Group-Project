@@ -1,0 +1,17 @@
+~ this_is_a_node_title
+
+Destytojas: [[Labas|Sveiki|Laba diena]], ar galiu kaip nors padėti?
+Destytojas: Štai jūsų pasirinkimai.
+- Knygos
+	Destytojas: Studente?! Kodėl vėluojate???
+- Greitas rašymas
+	Destytojas: Studente?! Kur tavo laboratorinis darbas???
+- Tarakonų gaudymas
+	Destytojas: Kas čia darosi?! Iš kur čia tiek daug tarakonų???
+- Parkingas:
+	Destytojas: Na ir sudėtinga čia su tuo parkingu, galbūt kas nors galit padėti parkuoti mano automobilį?
+- Pradeti iš naujo => this_is_a_node_title
+- Pabaigti pokalbį => END
+
+
+=> END
