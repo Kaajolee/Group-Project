@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvag0b6cag4nv"]
+[gd_scene load_steps=13 format=3 uid="uid://dvag0b6cag4nv"]
 
 [ext_resource type="Script" path="res://Main/Scenes/main/main.gd" id="1_t8u01"]
 [ext_resource type="Texture2D" uid="uid://bgen51q6ng8ao" path="res://Main/pngfiles/background/game_background3_1_updated.png" id="2_sdxnh"]
@@ -13,10 +13,16 @@ texture = ExtResource("3_g25yt")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yuhte"]
 texture = ExtResource("4_red14")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jmaci"]
+texture = ExtResource("4_red14")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adim6"]
 texture = ExtResource("5_aflfp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1hyl1"]
+texture = ExtResource("6_gmi1a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srar4"]
 texture = ExtResource("6_gmi1a")
 
 [node name="Main" type="Node2D"]
@@ -34,6 +40,7 @@ offset_right = 536.0
 offset_bottom = 552.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_jg2to")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yuhte")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jmaci")
 text = "
 "
 
@@ -44,6 +51,7 @@ offset_right = 956.0
 offset_bottom = 552.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_adim6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1hyl1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_srar4")
 text = "
 "
 
