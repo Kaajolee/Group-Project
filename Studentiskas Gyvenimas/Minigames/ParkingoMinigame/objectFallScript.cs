@@ -12,14 +12,14 @@ public partial class objectFallScript : Sprite2D
 
 	Global global;
 	CustomSignals customSignals;
-
+	CarInstantiation parentScript;
 	public static float fallSpeed;
 
 	public override void _Ready()
 	{
 		screenBottomY = GetViewportRect().Size.Y;
-
-		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		parentScript = GetNode<CarInstantiation>("..");
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		global = GetNode<Global>("/root/Global");
 		customSignals.ParkingMinigameEnded += StopCar;
 	}
@@ -56,7 +56,7 @@ public partial class objectFallScript : Sprite2D
 			if (Visible == false)
 			{
 				customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigamePoint));
-				global.parkingScore += 1;
+				parentScript.totalScore += 1;
 				Debug.WriteLine("Point earned");
 				QueueFree();
 				//global.CurrentScore();

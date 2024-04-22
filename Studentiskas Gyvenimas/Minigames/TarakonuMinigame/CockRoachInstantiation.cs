@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
 
@@ -8,9 +9,18 @@ public partial class CockRoachInstantiation : Node2D
 	// Called when the node enters the scene tree for the first time.
 	PackedScene cockRoachScene;
 	PackedScene pauseMenu;
+
 	Control menuNode;
 	Random rnd;
+
+
+	[Export]
+	public int totalSpawnAmount;
 	public int score;
+	public int cockroachesLeft;
+	bool gameEnded = false;
+
+	AnimationPlayer animPlayer;
 	Label scoreLabel;
 	Global global;
 	CustomSignals customSignals;
@@ -18,19 +28,24 @@ public partial class CockRoachInstantiation : Node2D
 	public override void _Ready()
 	{
 		cockRoachScene = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/CockRoach.tscn");
-
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
-		menuNode = (Control)pauseMenu.Instantiate();
+
+        animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
+        scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        global = GetNode<Global>("/root/Global");
+
+        animPlayer.Play("fade_in");
+        menuNode = (Control)pauseMenu.Instantiate();
 		AddChild(menuNode);
 		menuNode.Visible = false;
 
-		scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
-		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		global = GetNode<Global>("/root/Global");
 
-		//customSignals.CockroachMinigameEnded += GameEnded;
 
-		rnd = new Random();
+		customSignals.CockroachMinigameEnded += GameEnded;
+		score = totalSpawnAmount;
+        cockroachesLeft = totalSpawnAmount;
+        rnd = new Random();
 
 	}
 
@@ -38,14 +53,24 @@ public partial class CockRoachInstantiation : Node2D
 	public override void _Process(double delta)
 	{
 		UpdateLabelText();
+		if(cockroachesLeft == 0 && gameEnded == false)
+		{
+			gameEnded = true;
+
+            customSignals.EmitSignal(nameof(CustomSignals.CockroachMinigameEnded));
+        }
 	}
 	void OnTimerTimeout()
 	{
-		InstantiateCockroach();
+		if(totalSpawnAmount > 0)
+		{
+            InstantiateCockroach();
+			totalSpawnAmount--;
+        }
+		
 	}
 	void InstantiateCockroach()
 	{
-		Debug.WriteLine("--------------------------");
 		Vector2 position = PositionGenerator();
 		Node2D scene = (Node2D)cockRoachScene.Instantiate();
 		float randomFloat = rnd.NextSingle();
@@ -84,4 +109,9 @@ public partial class CockRoachInstantiation : Node2D
 	{
 		scoreLabel.Text = "Score: " + global.cockroachScore.ToString();
 	}
+	void GameEnded()
+	{
+        global.cockroachScore = score;
+        global.cockroachTotalScore += score;
+    }
 }

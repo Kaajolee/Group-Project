@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class parkingSpaceFallScript : Sprite2D
 {
@@ -10,11 +11,14 @@ public partial class parkingSpaceFallScript : Sprite2D
 
     public static float fallSpeed;
 
+    CustomSignals customSignals;
+
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Ready()
     {
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
         screenBottomY = GetViewport().GetVisibleRect().Size.Y;
-
+        customSignals.ParkingMinigameEnded += StopParkingSpace;
     }
     public override void _Process(double delta)
 	{
@@ -30,5 +34,9 @@ public partial class parkingSpaceFallScript : Sprite2D
         if (Position.Y >= screenBottomY)
             QueueFree();
 
+    }
+    void StopParkingSpace()
+    {
+        speed = 0;
     }
 }

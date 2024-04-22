@@ -11,6 +11,7 @@ public partial class CockroachWander : Node2D
 	Sprite2D sprite;
 	Timer timer;
 	Global global;
+	CockRoachInstantiation parentNodeScript;
 	public override void _Ready()
 	{
 		rnd = new Random();
@@ -19,7 +20,10 @@ public partial class CockroachWander : Node2D
 		timer = (Timer)GetNode("Timer");
 		global = GetNode<Global>("/root/Global");
 
-		float random = rnd.Next(8) / 10;
+		parentNodeScript = GetNode<CockRoachInstantiation>("..");
+
+
+        float random = rnd.Next(8) / 10;
 		if (random == 0)
 		{
 			timer.WaitTime = 0.3f;
@@ -58,6 +62,7 @@ public partial class CockroachWander : Node2D
 			{
 				AddScore();
 				Debug.WriteLine("Cockroach clicked");
+				parentNodeScript.cockroachesLeft--;
 				QueueFree();
 				
 			}

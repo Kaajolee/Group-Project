@@ -22,6 +22,7 @@ Global="*res://Global/Global.cs"
 CustomSignals="*res://Global/CustomSignals.cs"
 BgMusic="*res://Music/bg_music.tscn"
 InteractionManager="*res://Main/Scenes/interaction/InteractionManager.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 
@@ -30,6 +31,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="Studentiskas Gyvenimas"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -53,6 +58,10 @@ testButton={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":79,"key_label":0,"unicode":111,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Main.dialogue")
 
 [layer_names]
 

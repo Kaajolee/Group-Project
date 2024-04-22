@@ -1,0 +1,133 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckf0vcgguwnt5"]
+
+[ext_resource type="Script" path="res://Main/Scenes/worlds/MainPauseMeniu.cs" id="1_djm34"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syqit"]
+bg_color = Color(0, 0, 0, 0.235294)
+
+[node name="MainPauseMeniu" type="CanvasLayer"]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.63
+offset_top = -257.0
+offset_right = 79.3705
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.41207, 1.62819)
+pivot_offset = Vector2(135, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_syqit")
+script = ExtResource("1_djm34")
+metadata/_edit_use_anchors_ = true
+
+[node name="resumeB" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496812
+anchor_top = 0.460552
+anchor_right = 0.496812
+anchor_bottom = 0.460552
+offset_left = -65.0
+offset_top = -105.0
+offset_right = 65.0
+offset_bottom = -58.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.886691, 0.656059)
+pivot_offset = Vector2(65, 0)
+theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+theme_override_font_sizes/font_size = 28
+text = "Resume"
+metadata/_edit_use_anchors_ = true
+
+[node name="optionsB" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499435
+anchor_top = 0.395095
+anchor_right = 0.499435
+anchor_bottom = 0.395095
+offset_left = -65.0
+offset_top = -35.0
+offset_right = 65.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88669, 0.631492)
+pivot_offset = Vector2(65, 0)
+theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+theme_override_font_sizes/font_size = 28
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="SaveGame" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.429271
+anchor_top = 0.5896
+anchor_right = 0.570012
+anchor_bottom = 0.652934
+offset_left = -65.1766
+offset_top = -41.1463
+offset_right = 64.8234
+offset_bottom = -13.1464
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.689835, 0.619197)
+pivot_offset = Vector2(84, 0)
+theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+theme_override_font_sizes/font_size = 28
+text = "Save Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="LoadGame" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.502329
+anchor_top = 0.849918
+anchor_right = 0.502329
+anchor_bottom = 0.849918
+offset_left = -79.9448
+offset_top = -69.493
+offset_right = 79.0552
+offset_bottom = -22.493
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.716727, 0.582358)
+pivot_offset = Vector2(79, 0)
+theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+theme_override_font_sizes/font_size = 28
+text = "Load Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="exitB" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499435
+anchor_top = 0.655153
+anchor_right = 0.499435
+anchor_bottom = 0.655153
+offset_left = -65.0
+offset_top = 35.0
+offset_right = 65.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.858365, 0.55779)
+pivot_offset = Vector2(65, 0)
+theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+theme_override_font_sizes/font_size = 28
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/resumeB" to="Panel" method="Resume"]
+[connection signal="pressed" from="Panel/optionsB" to="Panel" method="Options"]
+[connection signal="pressed" from="Panel/SaveGame" to="Panel" method="SaveGame"]
+[connection signal="pressed" from="Panel/LoadGame" to="Panel" method="LoadGame"]
+[connection signal="pressed" from="Panel/exitB" to="Panel" method="Exit"]
