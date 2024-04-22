@@ -28,20 +28,20 @@ scale = Vector2(1.76073, 1.32924)
 texture = ExtResource("2_sdxnh")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 64.0
-offset_right = 744.0
-offset_bottom = 256.0
+offset_left = 200.0
+offset_top = 360.0
+offset_right = 536.0
+offset_bottom = 552.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_jg2to")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yuhte")
 text = "
 "
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 392.0
-offset_right = 744.0
-offset_bottom = 584.0
+offset_left = 620.0
+offset_top = 360.0
+offset_right = 956.0
+offset_bottom = 552.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_adim6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1hyl1")
 text = "
