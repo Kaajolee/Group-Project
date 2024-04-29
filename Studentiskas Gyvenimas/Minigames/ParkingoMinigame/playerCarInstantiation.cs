@@ -53,6 +53,12 @@ public partial class playerCarInstantiation : Node2D
         MovePlayerCarUpwards();
 
     }
+    public override void _ExitTree()
+    {
+        customSignals.ParkingMinigameEnded -= GameStoped;
+        customSignals.ParkingMinigamePoint -= PointEarned;
+        customSignals.ParkingMinigameBottomLine -= OnBottomReached;
+    }
     public override void _PhysicsProcess(double delta)
     {
 
@@ -75,6 +81,7 @@ public partial class playerCarInstantiation : Node2D
     {
         tween = CreateTween();
         tween.TweenProperty(this, "position:x", tweenDestination.X, parkTweenSpeed);
+        
 
     }
     void GameStoped()
