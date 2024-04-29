@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 using System.Diagnostics;
 
@@ -48,8 +49,8 @@ public partial class CarInstantiation : Node2D
 
 
 
-		totalScore = 0;
-		global.parkingScore = 0; 
+		//totalScore = 0;
+		global.parkingScore = 0;
 
 
         customSignals.ParkingMinigameEnded += CarCrashed;
@@ -60,9 +61,15 @@ public partial class CarInstantiation : Node2D
         isGameStopped = false;
 
 	}
-	public override void _Process(double delta)
+    public override void _ExitTree()
+    {
+        customSignals.ParkingMinigameEnded -= CarCrashed;
+        customSignals.ParkingMinigamePoint -= PointEarned;
+    }
+
+    public override void _Process(double delta)
 	{
-		global.parkingScore = totalScore;
+
 	}
 	void InstantiateCar()
 	{
@@ -116,7 +123,7 @@ public partial class CarInstantiation : Node2D
 	void CarCrashed()
 	{
 		isGameStopped = true;
-		global.parkingTotalScore += totalScore;
+		global.parkingTotalScore += global.parkingScore;
 
 
     }
