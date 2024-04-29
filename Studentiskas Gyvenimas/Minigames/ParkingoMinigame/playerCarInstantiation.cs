@@ -31,6 +31,7 @@ public partial class playerCarInstantiation : Node2D
 
     public override void _Ready()
     {
+        DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
         //GetViewportRect();
         rectSize = GetViewportRect().Size;
         float startX = rectSize.X / 1.5f;
@@ -72,7 +73,7 @@ public partial class playerCarInstantiation : Node2D
             //InstantiatePlayerCar();
             Debug.WriteLine("space pressed");
         }
-        if (Position.Y >= rectSize.Y + 85)
+        if (Position.Y >= rectSize.Y)
         {
             customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameBottomLine));
         }
