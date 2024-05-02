@@ -9,7 +9,7 @@ public partial class MainPauseMeniu : Panel
 	public override void _Ready()
 	{
         canvasLayer = GetNode<CanvasLayer>("..");
-        canvasLayer.Visible = false;
+        //canvasLayer.Visible = false;
 
     }
     public override void _Input(InputEvent @event)
