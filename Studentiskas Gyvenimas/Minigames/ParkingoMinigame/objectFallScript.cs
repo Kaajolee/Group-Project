@@ -23,9 +23,13 @@ public partial class objectFallScript : Sprite2D
 		global = GetNode<Global>("/root/Global");
 		customSignals.ParkingMinigameEnded += StopCar;
 	}
+    public override void _ExitTree()
+    {
+        customSignals.ParkingMinigameEnded -= StopCar;
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 		screenBottomY = GetViewportRect().Size.Y;
 
@@ -56,7 +60,7 @@ public partial class objectFallScript : Sprite2D
 			if (Visible == false)
 			{
 				customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigamePoint));
-				parentScript.totalScore += 1;
+				global.parkingScore += 1;
 				Debug.WriteLine("Point earned");
 				QueueFree();
 				//global.CurrentScore();
