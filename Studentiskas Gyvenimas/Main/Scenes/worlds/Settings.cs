@@ -12,8 +12,8 @@ public partial class Settings : Panel
 
 	private MenuButton menuButton;
 
-	private float musicSliderValue;
-	private float masterSliderValue;
+	private float musicSliderValue = 0;
+	private float masterSliderValue = 0;
 
 	public override void _Ready()
 	{
@@ -24,7 +24,7 @@ public partial class Settings : Panel
 
 		menuButton = GetNode<MenuButton>("./ScreenSizeContainer/MenuButton");
 
-		menuButton.GetPopup().add
+		//menuButton.GetPopup()
 
     }
 
@@ -34,7 +34,7 @@ public partial class Settings : Panel
 	}
 	public void ApplySettings()
 	{
-
+		//AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Master"), AudioServer.)
 	}
 	public void OnMusicVolumeChanged(float value)
 	{
