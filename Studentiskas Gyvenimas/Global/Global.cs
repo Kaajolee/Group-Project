@@ -10,6 +10,8 @@ public partial class Global : Node
 	public int parkingScore { get; set; } = 0;
 	public int typerScore { get; set; } = 0;
 	public int bookScore { get; set; } = 0;
+	public ScreenType screenType = ScreenType.FullScreen;
+
 
 	public void CurrentScore()
 	{
@@ -20,6 +22,13 @@ public partial class Global : Node
 	public int Sum()
 	{
 		return cockroachTotalScore + parkingTotalScore + typerTotalScore + bookScore;
+	}
+
+	public enum ScreenType
+	{
+		FullScreen,
+		Windowed,
+		Maximized
 	}
 
 }
