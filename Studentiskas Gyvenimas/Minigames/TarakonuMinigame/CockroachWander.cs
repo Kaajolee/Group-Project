@@ -23,7 +23,7 @@ public partial class CockroachWander : Node2D
 		parentNodeScript = GetNode<CockRoachInstantiation>("..");
 
 
-        float random = rnd.Next(8) / 10;
+		float random = rnd.Next(8) / 10;
 		if (random == 0)
 		{
 			timer.WaitTime = 0.3f;

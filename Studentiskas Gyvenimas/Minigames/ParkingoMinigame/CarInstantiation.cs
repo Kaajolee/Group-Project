@@ -32,19 +32,19 @@ public partial class CarInstantiation : Node2D
 	public override void _Ready()
 	{
 		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
-        parkingSpaceScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkingSpace.tscn");
-        pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
+		parkingSpaceScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkingSpace.tscn");
+		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
 
 
 		animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
-        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-        global = GetNode<Global>("/root/Global");
-        animPlayer.Play("fade_in");
+		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		global = GetNode<Global>("/root/Global");
+		animPlayer.Play("fade_in");
 
 
-        menuNode = (Control)pauseMenu.Instantiate();
-        AddChild(menuNode);
-        menuNode.Visible = false;
+		menuNode = (Control)pauseMenu.Instantiate();
+		AddChild(menuNode);
+		menuNode.Visible = false;
 
 
 
@@ -52,12 +52,12 @@ public partial class CarInstantiation : Node2D
 		global.parkingScore = 0; 
 
 
-        customSignals.ParkingMinigameEnded += CarCrashed;
+		customSignals.ParkingMinigameEnded += CarCrashed;
 		customSignals.ParkingMinigamePoint += PointEarned;
 
-        rnd = new Random();
+		rnd = new Random();
 
-        isGameStopped = false;
+		isGameStopped = false;
 
 	}
 	public override void _Process(double delta)
@@ -75,8 +75,8 @@ public partial class CarInstantiation : Node2D
 		parkingSpace.Position = position;
 		AddChild(parkingSpace);
 
-        //masina
-        if (randomInt == 0)
+		//masina
+		if (randomInt == 0)
 		{
 			Sprite2D newSpriteCar = ChangeSprite(scene, true);
 			scene = newSpriteCar;
@@ -119,7 +119,7 @@ public partial class CarInstantiation : Node2D
 		global.parkingTotalScore += totalScore;
 
 
-    }
+	}
 	void InstantiatePlayer()
 	{
 		spawnLocationX = playerCarInstantiation.spawnDestinationX;
