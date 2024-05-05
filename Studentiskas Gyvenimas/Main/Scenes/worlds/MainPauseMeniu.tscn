@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckf0vcgguwnt5"]
+[gd_scene load_steps=5 format=3 uid="uid://ckf0vcgguwnt5"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/MainPauseMeniu.cs" id="1_djm34"]
+[ext_resource type="Script" path="res://Main/Scenes/worlds/Settings.cs" id="2_kbjgf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syqit"]
-bg_color = Color(0, 0, 0, 0.235294)
+bg_color = Color(0, 0, 0, 0.266667)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8ht7"]
+bg_color = Color(0.219608, 0.219608, 0.219608, 1)
 
 [node name="MainPauseMeniu" type="CanvasLayer"]
 process_mode = 3
 
-[node name="Panel" type="Panel" parent="."]
+[node name="MainPanel" type="Panel" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -26,7 +30,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_syqit")
 script = ExtResource("1_djm34")
 metadata/_edit_use_anchors_ = true
 
-[node name="resumeB" type="Button" parent="Panel"]
+[node name="resumeB" type="Button" parent="MainPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.496812
@@ -46,7 +50,7 @@ theme_override_font_sizes/font_size = 28
 text = "Resume"
 metadata/_edit_use_anchors_ = true
 
-[node name="optionsB" type="Button" parent="Panel"]
+[node name="optionsB" type="Button" parent="MainPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.499435
@@ -66,7 +70,7 @@ theme_override_font_sizes/font_size = 28
 text = "Options"
 metadata/_edit_use_anchors_ = true
 
-[node name="SaveGame" type="Button" parent="Panel"]
+[node name="SaveGame" type="Button" parent="MainPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.429271
@@ -86,7 +90,7 @@ theme_override_font_sizes/font_size = 28
 text = "Save Game"
 metadata/_edit_use_anchors_ = true
 
-[node name="LoadGame" type="Button" parent="Panel"]
+[node name="LoadGame" type="Button" parent="MainPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.502329
@@ -106,7 +110,7 @@ theme_override_font_sizes/font_size = 28
 text = "Load Game"
 metadata/_edit_use_anchors_ = true
 
-[node name="exitB" type="Button" parent="Panel"]
+[node name="exitB" type="Button" parent="MainPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.499435
@@ -126,8 +130,104 @@ theme_override_font_sizes/font_size = 28
 text = "Exit"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Panel/resumeB" to="Panel" method="Resume"]
-[connection signal="pressed" from="Panel/optionsB" to="Panel" method="Options"]
-[connection signal="pressed" from="Panel/SaveGame" to="Panel" method="SaveGame"]
-[connection signal="pressed" from="Panel/LoadGame" to="Panel" method="LoadGame"]
-[connection signal="pressed" from="Panel/exitB" to="Panel" method="Exit"]
+[node name="OptionsPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -256.0
+offset_right = -34.0
+offset_bottom = -216.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(9.56, 12.2)
+pivot_offset = Vector2(20, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_g8ht7")
+script = ExtResource("2_kbjgf")
+
+[node name="ScreenSizeContainer" type="VBoxContainer" parent="OptionsPanel"]
+layout_mode = 0
+offset_left = 12.887
+offset_top = 1.88525
+offset_right = 182.887
+offset_bottom = 47.8853
+scale = Vector2(0.0765836, 0.0819672)
+
+[node name="ScreenTypeLabel" type="Label" parent="OptionsPanel/ScreenSizeContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Screen type"
+
+[node name="MenuButton" type="MenuButton" parent="OptionsPanel/ScreenSizeContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Types"
+
+[node name="SoundContainer" type="VBoxContainer" parent="OptionsPanel"]
+layout_mode = 0
+offset_left = 9.85356
+offset_top = 16.3934
+offset_right = 49.8536
+offset_bottom = 56.3934
+scale = Vector2(0.0873667, 0.0787171)
+
+[node name="Masterlabel" type="Label" parent="OptionsPanel/SoundContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Master Volume"
+
+[node name="masterSlider" type="HSlider" parent="OptionsPanel/SoundContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicVolumeLabel" type="Label" parent="OptionsPanel/SoundContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Music volume"
+
+[node name="musicSlider" type="HSlider" parent="OptionsPanel/SoundContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="OptionsPanel/SoundContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "SFX Volume"
+
+[node name="sfxSlider" type="HSlider" parent="OptionsPanel/SoundContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="BottomButtonsContainer" type="HBoxContainer" parent="OptionsPanel"]
+layout_mode = 0
+offset_left = 13.3054
+offset_top = 34.5082
+offset_right = 114.305
+offset_bottom = 74.5082
+scale = Vector2(0.108786, 0.0688525)
+alignment = 1
+
+[node name="ApplyButton" type="Button" parent="OptionsPanel/BottomButtonsContainer"]
+layout_mode = 2
+text = "Apply"
+
+[node name="BackButton" type="Button" parent="OptionsPanel/BottomButtonsContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="MainPanel/resumeB" to="MainPanel" method="Resume"]
+[connection signal="pressed" from="MainPanel/optionsB" to="MainPanel" method="Options"]
+[connection signal="pressed" from="MainPanel/SaveGame" to="MainPanel" method="SaveGame"]
+[connection signal="pressed" from="MainPanel/LoadGame" to="MainPanel" method="LoadGame"]
+[connection signal="pressed" from="MainPanel/exitB" to="MainPanel" method="Exit"]
+[connection signal="value_changed" from="OptionsPanel/SoundContainer/masterSlider" to="OptionsPanel" method="OnMasterVolumeChanged"]
+[connection signal="value_changed" from="OptionsPanel/SoundContainer/musicSlider" to="OptionsPanel" method="OnMusicVolumeChanged"]
+[connection signal="pressed" from="OptionsPanel/BottomButtonsContainer/BackButton" to="OptionsPanel" method="BackButtonPressed"]
