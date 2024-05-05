@@ -1,29 +1,51 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvag0b6cag4nv"]
+[gd_scene load_steps=15 format=3 uid="uid://dvag0b6cag4nv"]
 
 [ext_resource type="Script" path="res://Main/Scenes/main/main.gd" id="1_t8u01"]
 [ext_resource type="Texture2D" uid="uid://bgen51q6ng8ao" path="res://Main/pngfiles/background/game_background3_1_updated.png" id="2_sdxnh"]
-[ext_resource type="Texture2D" uid="uid://djjwo4nxhbqu5" path="res://Main/pngfiles/buttons/play_button.png" id="3_g25yt"]
-[ext_resource type="Texture2D" uid="uid://gyqjrl3at4ix" path="res://Main/pngfiles/buttons/play_button_hover.png" id="4_red14"]
+[ext_resource type="Texture2D" uid="uid://djjwo4nxhbqu5" path="res://Main/pngfiles/buttons/play_button.png" id="3_46cpt"]
 [ext_resource type="Texture2D" uid="uid://c6n1dl2hmwh0g" path="res://Main/pngfiles/buttons/quit_button.png" id="5_aflfp"]
-[ext_resource type="Texture2D" uid="uid://dxn4na53mphj1" path="res://Main/pngfiles/buttons/quit_button_hover.png" id="6_gmi1a"]
+[ext_resource type="Texture2D" uid="uid://c4tabhfnnrgbe" path="res://Main/pngfiles/buttons/game_name_sprite.png" id="7_gvqqs"]
+[ext_resource type="Script" path="res://Main/Scenes/main/GameName.gd" id="8_dbq0v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg2to"]
-texture = ExtResource("3_g25yt")
+texture = ExtResource("3_46cpt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yuhte"]
-texture = ExtResource("4_red14")
+texture = ExtResource("3_46cpt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jmaci"]
-texture = ExtResource("4_red14")
+texture = ExtResource("3_46cpt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adim6"]
 texture = ExtResource("5_aflfp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1hyl1"]
-texture = ExtResource("6_gmi1a")
+texture = ExtResource("5_aflfp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srar4"]
-texture = ExtResource("6_gmi1a")
+texture = ExtResource("5_aflfp")
+
+[sub_resource type="Animation" id="Animation_slxsw"]
+resource_name = "flashing"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 0, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_paqea"]
+_data = {
+"flashing": SubResource("Animation_slxsw")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_t8u01")
@@ -34,10 +56,12 @@ scale = Vector2(1.76073, 1.32924)
 texture = ExtResource("2_sdxnh")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 200.0
-offset_top = 360.0
-offset_right = 536.0
-offset_bottom = 552.0
+texture_filter = 5
+offset_left = 325.0
+offset_top = 400.0
+offset_right = 661.0
+offset_bottom = 592.0
+scale = Vector2(0.65, 0.65)
 theme_override_styles/normal = SubResource("StyleBoxTexture_jg2to")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yuhte")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jmaci")
@@ -45,15 +69,29 @@ text = "
 "
 
 [node name="Quit" type="Button" parent="."]
+texture_filter = 5
 offset_left = 620.0
-offset_top = 360.0
+offset_top = 400.0
 offset_right = 956.0
-offset_bottom = 552.0
+offset_bottom = 592.0
+scale = Vector2(0.65, 0.65)
 theme_override_styles/normal = SubResource("StyleBoxTexture_adim6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1hyl1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_srar4")
 text = "
 "
+
+[node name="GameName" type="Sprite2D" parent="."]
+position = Vector2(582, 225)
+texture = ExtResource("7_gvqqs")
+hframes = 5
+frame = 2
+script = ExtResource("8_dbq0v")
+
+[node name="GameNameAnimation" type="AnimationPlayer" parent="GameName"]
+libraries = {
+"": SubResource("AnimationLibrary_paqea")
+}
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
