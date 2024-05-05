@@ -32,7 +32,10 @@ public partial class CarInstantiation : Node2D
 	public bool isGameStopped;
 	public override void _Ready()
 	{
-		parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
+		//Vector2 screenSize = DisplayServer.ScreenGetSize();
+        //DisplayServer.WindowSetMode(DisplayServer.WindowMode.Maximized);
+
+        parkedCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkedCar.tscn");
 		parkingSpaceScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/parkingSpace.tscn");
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
 
@@ -61,13 +64,13 @@ public partial class CarInstantiation : Node2D
 		isGameStopped = false;
 
 	}
-    public override void _ExitTree()
-    {
-        customSignals.ParkingMinigameEnded -= CarCrashed;
-        customSignals.ParkingMinigamePoint -= PointEarned;
-    }
+	public override void _ExitTree()
+	{
+		customSignals.ParkingMinigameEnded -= CarCrashed;
+		customSignals.ParkingMinigamePoint -= PointEarned;
+	}
 
-    public override void _Process(double delta)
+	public override void _Process(double delta)
 	{
 
 	}
