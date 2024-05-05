@@ -230,3 +230,4 @@ text = "Back"
 [connection signal="pressed" from="MainPanel/exitB" to="MainPanel" method="Exit"]
 [connection signal="value_changed" from="OptionsPanel/SoundContainer/masterSlider" to="OptionsPanel" method="OnMasterVolumeChanged"]
 [connection signal="value_changed" from="OptionsPanel/SoundContainer/musicSlider" to="OptionsPanel" method="OnMusicVolumeChanged"]
+[connection signal="pressed" from="OptionsPanel/BottomButtonsContainer/BackButton" to="OptionsPanel" method="BackButtonPressed"]
