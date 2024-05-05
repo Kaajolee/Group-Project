@@ -81,7 +81,7 @@ shape = SubResource("CapsuleShape2D_susug")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3.09944e-06, 7.62939e-06)
 sprite_frames = SubResource("SpriteFrames_c07e8")
-animation = &"Up"
+animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)

@@ -30,13 +30,13 @@ public partial class CockRoachInstantiation : Node2D
 		cockRoachScene = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/CockRoach.tscn");
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
 
-		animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
-		scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
-		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
-		global = GetNode<Global>("/root/Global");
+        animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
+        scoreLabel = GetNode<Label>("CanvasLayer/Panel/Label");
+        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        global = GetNode<Global>("/root/Global");
 
-		animPlayer.Play("fade_in");
-		menuNode = (Control)pauseMenu.Instantiate();
+        animPlayer.Play("fade_in");
+        menuNode = (Control)pauseMenu.Instantiate();
 		AddChild(menuNode);
 		menuNode.Visible = false;
 
@@ -44,8 +44,8 @@ public partial class CockRoachInstantiation : Node2D
 
 		customSignals.CockroachMinigameEnded += GameEnded;
 		score = totalSpawnAmount;
-		cockroachesLeft = totalSpawnAmount;
-		rnd = new Random();
+        cockroachesLeft = totalSpawnAmount;
+        rnd = new Random();
 
 	}
 
@@ -57,16 +57,16 @@ public partial class CockRoachInstantiation : Node2D
 		{
 			gameEnded = true;
 
-			customSignals.EmitSignal(nameof(CustomSignals.CockroachMinigameEnded));
-		}
+            customSignals.EmitSignal(nameof(CustomSignals.CockroachMinigameEnded));
+        }
 	}
 	void OnTimerTimeout()
 	{
 		if(totalSpawnAmount > 0)
 		{
-			InstantiateCockroach();
+            InstantiateCockroach();
 			totalSpawnAmount--;
-		}
+        }
 		
 	}
 	void InstantiateCockroach()
@@ -111,7 +111,7 @@ public partial class CockRoachInstantiation : Node2D
 	}
 	void GameEnded()
 	{
-		global.cockroachScore = score;
-		global.cockroachTotalScore += score;
-	}
+        global.cockroachScore = score;
+        global.cockroachTotalScore += score;
+    }
 }
