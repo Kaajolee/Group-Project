@@ -1,0 +1,48 @@
+# Inside your DialogueManager or wherever you handle dialogue interactions
+func handle_dialogue_choice(choice_index: int):
+    # This function should handle the logic for the chosen option
+    # Load the scene corresponding to the chosen index
+    # You can use the index to determine which option was chosen
+    # and then load the corresponding scene or perform any other actions
+
+    match choice_index:
+        0:  # Knygos
+            load_and_change_scene("res://Minigames/ShellFolder(Mykolo)/world.tscn")
+        1:  # Greitas rašymas
+            load_and_change_scene("res://Minigames/GreitoRasymoMinigame/ButtonSmasher.tscn")
+        2:  # Tarakonų gaudymas
+            load_and_change_scene("res://Minigames/TarakonuMinigame/HitTheBug.tscn")
+        3:  # Parkingas
+            load_and_change_scene("res://Minigames/ParkingoMinigame/ParkTheCar.tscn")
+        4:  # Pradeti iš naujo
+            reset_dialogue()  # Reset dialogue to its initial state
+        5:  # Pabaigti pokalbį
+            end_dialogue()  # End the dialogue session
+
+# You can define helper functions to load and change scenes
+func load_and_change_scene(scene_path: String):
+    var scene = load(scene_path)
+    if scene != null:
+	get_tree().change_scene(scene)
+    else:
+	print("Error: Failed to load scene:", scene_path)
+
+# In your dialogue file, you need to specify choice indices and the corresponding scene paths
+~ start
+
+Destytojas: [[Labas|Sveiki|Laba diena]], ar galiu kuo nors padėti?
+Destytojas: Štai jūsų pasirinkimai.
+- Knygos
+    Destytojas: Studente?! Kodėl vėluojate???
+    #ResourcePath: "res://Minigames/ShellFolder(Mykolo)/world.tscn"
+- Greitas rašymas
+    Destytojas: Studente?! Kur tavo laboratorinis darbas???
+    #ResourcePath: "res://Minigames/GreitoRasymoMinigame/ButtonSmasher.tscn"
+- Tarakonų gaudymas
+    Destytojas: Kas čia darosi?! Iš kur čia tiek daug tarakonų???
+    #ResourcePath: "res://Minigames/TarakonuMinigame/HitTheBug.tscn"
+- Parkingas
+    Destytojas: Na ir sudėtinga čia su tuo parkingu, galbūt kas nors galit padėti parkuoti mano automobilį?
+    #ResourcePath: "res://Minigames/ParkingoMinigame/ParkTheCar.tscn"
+- Pradeti iš naujo => start
+- Pabaigti pokalbį => END

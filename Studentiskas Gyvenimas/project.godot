@@ -24,6 +24,10 @@ BgMusic="*res://Music/bg_music.tscn"
 InteractionManager="*res://Main/Scenes/interaction/InteractionManager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/states=["Global", "CustomSignals", "Game", "Utils", "BgMusic", "InteractionManager"]
+
 [display]
 
 window/stretch/mode="viewport"
@@ -61,7 +65,7 @@ testButton={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Main.dialogue", "res://main 2.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogai/main_destytojas.dialogue", "res://Dialogai/main2.dialogue")
 
 [layer_names]
 
