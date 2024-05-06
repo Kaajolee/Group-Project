@@ -18,8 +18,8 @@ public partial class Player : CharacterBody2D
 		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		game = GetNode<Node>("/root/Game");
 		customSignals.BookMinigameEnded += () => gameFinished();
-        switch (game.Call("getCharacter").AsString())
-        {
+		switch (game.Call("getCharacter").AsString())
+		{
 			case "a":
 			case "none":
 				animations = GetNode<AnimatedSprite2D>("Berniukas");

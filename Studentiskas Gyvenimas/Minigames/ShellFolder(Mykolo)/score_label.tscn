@@ -16,5 +16,5 @@ offset_top = -3.0
 offset_right = 56.0
 offset_bottom = 20.0
 theme = SubResource("Theme_3qjmy")
-text = "Score: "
+text = "Taškai:"
 script = ExtResource("1_ch2s4")

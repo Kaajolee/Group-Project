@@ -26,7 +26,7 @@ layout_mode = 0
 offset_right = 99.0
 offset_bottom = 49.0
 scale = Vector2(2, 2)
-text = "Game Over"
+text = "Žaidimas pralaimėtas"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel"]
@@ -35,5 +35,5 @@ offset_left = 3.0
 offset_top = 46.0
 offset_right = 201.0
 offset_bottom = 100.0
-text = "Score:"
+text = "Taškai:"
 horizontal_alignment = 1

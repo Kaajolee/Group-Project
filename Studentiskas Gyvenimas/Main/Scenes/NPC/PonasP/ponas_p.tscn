@@ -33,7 +33,7 @@ sprite_frames = SubResource("SpriteFrames_m81hc")
 animation = &"Idle"
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_dipph")]
-action_name = "talk"
+action_name = "bendrauti"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_xki1x")
