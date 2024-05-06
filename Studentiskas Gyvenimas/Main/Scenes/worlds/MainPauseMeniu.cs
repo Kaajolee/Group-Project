@@ -6,13 +6,10 @@ public partial class MainPauseMeniu : Panel
 {
     // Called when the node enters the scene tree for the first time.
     CanvasLayer canvasLayer;
-    Panel optionsPanel;
 	public override void _Ready()
 	{
         canvasLayer = GetNode<CanvasLayer>("..");
-        optionsPanel = GetNode<Panel>("../OptionsPanel");
-        canvasLayer.Visible = false;
-        optionsPanel.Visible = false;
+        //canvasLayer.Visible = false;
 
     }
     public override void _Input(InputEvent @event)
@@ -45,7 +42,6 @@ public partial class MainPauseMeniu : Panel
     void Options()
     {
         Debug.WriteLine("Options button pressed");
-        optionsPanel.Visible = !optionsPanel.Visible;
     }
     void SaveGame()
     {

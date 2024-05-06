@@ -31,7 +31,6 @@ public partial class Settings : Panel
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
 	}
 	public void ApplySettings()
 	{
@@ -46,8 +45,4 @@ public partial class Settings : Panel
         masterSliderValue = value;
 		Debug.WriteLine(value);
     }
-	public void BackButtonPressed()
-	{
-		Visible = !Visible;
-	}
 }
