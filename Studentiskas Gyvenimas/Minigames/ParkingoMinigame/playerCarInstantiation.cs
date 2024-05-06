@@ -11,11 +11,10 @@ public partial class playerCarInstantiation : Node2D
     [Export]
     public float spawnTweenSpeed, spawnTeenDuration;
 
-
     [Export]
     float playerSpawnOffset;
     float fallSpeed;
-    float axisYOffest = 100;
+    float axisYOffest = 80; //250 andriui ok, man 80
 
     public static float spawnDestinationX;
 
@@ -32,7 +31,9 @@ public partial class playerCarInstantiation : Node2D
 
     public override void _Ready()
     {
-        rectSize = GetWindow().Size;
+
+        //GetViewportRect();
+        rectSize = GetViewportRect().Size;
         float startX = rectSize.X / 1.5f;
         spawnDestinationX = startX;
         tweenDestination = new Vector2(startX, Position.Y);
@@ -43,7 +44,7 @@ public partial class playerCarInstantiation : Node2D
         customSignals.ParkingMinigamePoint += PointEarned;
         customSignals.ParkingMinigameBottomLine += OnBottomReached;
 
-        playerSpawnLocation = new Vector2(GetWindow().Size.X / 2, GetWindow().Size.Y);
+        playerSpawnLocation = new Vector2(rectSize.X / 2, rectSize.Y);
         Position = playerSpawnLocation;
 
         playerCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/playerCar.tscn");
@@ -72,7 +73,7 @@ public partial class playerCarInstantiation : Node2D
             //InstantiatePlayerCar();
             Debug.WriteLine("space pressed");
         }
-        if (Position.Y >= rectSize.Y + 85)
+        if (Position.Y >= rectSize.Y)
         {
             customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameBottomLine));
         }
