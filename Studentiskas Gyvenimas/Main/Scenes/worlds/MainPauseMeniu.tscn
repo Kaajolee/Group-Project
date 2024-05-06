@@ -47,7 +47,7 @@ scale = Vector2(0.886691, 0.656059)
 pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Resume"
+text = "Tęsti"
 metadata/_edit_use_anchors_ = true
 
 [node name="optionsB" type="Button" parent="MainPanel"]
@@ -67,7 +67,7 @@ scale = Vector2(0.88669, 0.631492)
 pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Options"
+text = "Nustatymai"
 metadata/_edit_use_anchors_ = true
 
 [node name="SaveGame" type="Button" parent="MainPanel"]
@@ -87,7 +87,7 @@ scale = Vector2(0.689835, 0.619197)
 pivot_offset = Vector2(84, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Save Game"
+text = "Išsaugoti žaidimą"
 metadata/_edit_use_anchors_ = true
 
 [node name="LoadGame" type="Button" parent="MainPanel"]
@@ -107,7 +107,7 @@ scale = Vector2(0.716727, 0.582358)
 pivot_offset = Vector2(79, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Load Game"
+text = "Užkrauti žaidimą"
 metadata/_edit_use_anchors_ = true
 
 [node name="exitB" type="Button" parent="MainPanel"]
@@ -127,7 +127,7 @@ scale = Vector2(0.858365, 0.55779)
 pivot_offset = Vector2(65, 0)
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Exit"
+text = "Išeiti"
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsPanel" type="Panel" parent="."]
@@ -158,7 +158,7 @@ scale = Vector2(0.0765836, 0.0819672)
 [node name="ScreenTypeLabel" type="Label" parent="OptionsPanel/ScreenSizeContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Screen type"
+text = "Ekrano tipai"
 
 [node name="MenuButton" type="MenuButton" parent="OptionsPanel/ScreenSizeContainer"]
 layout_mode = 2
@@ -176,7 +176,7 @@ scale = Vector2(0.0873667, 0.0787171)
 [node name="Masterlabel" type="Label" parent="OptionsPanel/SoundContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Master Volume"
+text = "Pagrindinis garsumas"
 
 [node name="masterSlider" type="HSlider" parent="OptionsPanel/SoundContainer"]
 layout_mode = 2
@@ -187,7 +187,7 @@ value = 1.0
 [node name="MusicVolumeLabel" type="Label" parent="OptionsPanel/SoundContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Music volume"
+text = "Muzikos garsumas"
 
 [node name="musicSlider" type="HSlider" parent="OptionsPanel/SoundContainer"]
 layout_mode = 2
@@ -198,7 +198,7 @@ value = 1.0
 [node name="Label" type="Label" parent="OptionsPanel/SoundContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "SFX Volume"
+text = "SFX garsumas"
 
 [node name="sfxSlider" type="HSlider" parent="OptionsPanel/SoundContainer"]
 layout_mode = 2
@@ -217,11 +217,11 @@ alignment = 1
 
 [node name="ApplyButton" type="Button" parent="OptionsPanel/BottomButtonsContainer"]
 layout_mode = 2
-text = "Apply"
+text = "Pritaikyti"
 
 [node name="BackButton" type="Button" parent="OptionsPanel/BottomButtonsContainer"]
 layout_mode = 2
-text = "Back"
+text = "Atgal"
 
 [connection signal="pressed" from="MainPanel/resumeB" to="MainPanel" method="Resume"]
 [connection signal="pressed" from="MainPanel/optionsB" to="MainPanel" method="Options"]

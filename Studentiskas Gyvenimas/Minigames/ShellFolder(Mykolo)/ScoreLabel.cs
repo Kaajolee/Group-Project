@@ -9,11 +9,11 @@ public partial class ScoreLabel : Label
 	CustomSignals customSignals;
 	public override void _Ready()
 	{
-        customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		customSignals = GetNode<CustomSignals>("/root/CustomSignals");
 		global = GetNode<Global>("/root/Global");
 		customSignals.BookMinigamePoint += () => scorePoint();
-        customSignals.BookMinigamePointDeduct += () => scoreDeduct();
-    }
+		customSignals.BookMinigamePointDeduct += () => scoreDeduct();
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -34,6 +34,6 @@ public partial class ScoreLabel : Label
 			Score--;
 			global.bookScore--;
 		}
-        Text = $"Score: " + Score;
-    }
+		Text = $"Score: " + Score;
+	}
 }

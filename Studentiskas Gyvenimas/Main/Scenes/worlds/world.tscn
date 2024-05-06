@@ -251,7 +251,7 @@ grow_vertical = 2
 scale = Vector2(0.216217, 0.680002)
 pivot_offset = Vector2(87, 0)
 theme_override_font_sizes/font_size = 25
-text = "Total score: 50"
+text = "Visi taškai: 50"
 script = ExtResource("12_32ado")
 
 [node name="TimePanel" type="Panel" parent="CanvasLayer"]
@@ -285,7 +285,7 @@ grow_vertical = 2
 scale = Vector2(0.216217, 0.680002)
 pivot_offset = Vector2(87, 0)
 theme_override_font_sizes/font_size = 25
-text = "Time elapsed
+text = "Trukmė
 11:11"
 horizontal_alignment = 1
 script = ExtResource("14_fdrpy")

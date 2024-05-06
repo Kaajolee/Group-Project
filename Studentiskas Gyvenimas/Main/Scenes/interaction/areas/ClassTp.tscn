@@ -10,7 +10,7 @@ size = Vector2(124, 20)
 script = ExtResource("1_ocb7h")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_6t0gl")]
-action_name = "go to class"
+action_name = "įeiti į klasę"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_db3ts")

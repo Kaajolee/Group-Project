@@ -17,7 +17,7 @@ public partial class Settings : Panel
 
 	public override void _Ready()
 	{
-        global = GetNode<Global>("/root/Global");
+		global = GetNode<Global>("/root/Global");
 
 		musicSlider = GetNode<HSlider>("./SoundContainer/musicSlider");
 		musicSlider = GetNode<HSlider>("./SoundContainer/masterSlider");
@@ -26,7 +26,7 @@ public partial class Settings : Panel
 
 		//menuButton.GetPopup()
 
-    }
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -40,12 +40,12 @@ public partial class Settings : Panel
 	public void OnMusicVolumeChanged(float value)
 	{
 		musicSliderValue = value;
-    }
-    public void OnMasterVolumeChanged(float value)
-    {
-        masterSliderValue = value;
+	}
+	public void OnMasterVolumeChanged(float value)
+	{
+		masterSliderValue = value;
 		Debug.WriteLine(value);
-    }
+	}
 	public void BackButtonPressed()
 	{
 		Visible = !Visible;

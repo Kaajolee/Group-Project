@@ -10,7 +10,7 @@ size = Vector2(118, 100)
 script = ExtResource("1_kld4m")
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_e13lc")]
-action_name = "go up"
+action_name = "užlipti aukštyn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(2, 0)
