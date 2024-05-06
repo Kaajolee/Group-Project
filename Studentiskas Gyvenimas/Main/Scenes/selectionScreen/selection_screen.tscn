@@ -1,26 +1,29 @@
-[gd_scene load_steps=10 format=3 uid="uid://5mmkvqmwnvk0"]
+[gd_scene load_steps=13 format=3 uid="uid://5mmkvqmwnvk0"]
 
 [ext_resource type="Script" path="res://Main/Scenes/selectionScreen/SelectionScreen.gd" id="1_jnpio"]
 [ext_resource type="Texture2D" uid="uid://bgen51q6ng8ao" path="res://Main/pngfiles/background/game_background3_1_updated.png" id="2_732xi"]
-[ext_resource type="Texture2D" uid="uid://cqgul28gtont3" path="res://Main/pngfiles/buttons/selection_button.png" id="3_rihtx"]
+[ext_resource type="Texture2D" uid="uid://bdueyhgm3ekju" path="res://Main/pngfiles/buttons/selection_button_boy.png" id="3_o56b1"]
+[ext_resource type="Texture2D" uid="uid://cphx1uotsf7xs" path="res://Main/pngfiles/buttons/selection_button_boy_hover.png" id="4_vdyof"]
+[ext_resource type="Texture2D" uid="uid://dit3h21usq07b" path="res://Main/pngfiles/buttons/selection_button_girl.png" id="5_02rhm"]
+[ext_resource type="Texture2D" uid="uid://cjxki1vi4jbnf" path="res://Main/pngfiles/buttons/selection_button_girl_hover.png" id="6_tpu6h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nfdgt"]
-texture = ExtResource("3_rihtx")
+texture = ExtResource("3_o56b1")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ba13v"]
-texture = ExtResource("3_rihtx")
+texture = ExtResource("4_vdyof")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87vps"]
-texture = ExtResource("3_rihtx")
+texture = ExtResource("4_vdyof")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cfbtm"]
-texture = ExtResource("3_rihtx")
+texture = ExtResource("5_02rhm")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s8hq3"]
-texture = ExtResource("3_rihtx")
+texture = ExtResource("6_tpu6h")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhqj5"]
-texture = ExtResource("3_rihtx")
+texture = ExtResource("6_tpu6h")
 
 [node name="SelectionScreen" type="Node2D"]
 script = ExtResource("1_jnpio")
@@ -38,7 +41,6 @@ offset_bottom = 442.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_nfdgt")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ba13v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_87vps")
-text = "Type A"
 
 [node name="Type B" type="Button" parent="."]
 offset_left = 620.0
@@ -48,7 +50,6 @@ offset_bottom = 442.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_cfbtm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s8hq3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uhqj5")
-text = "Type B"
 
 [connection signal="pressed" from="Type A" to="." method="_on_type_a_pressed"]
 [connection signal="pressed" from="Type B" to="." method="_on_type_b_pressed"]
