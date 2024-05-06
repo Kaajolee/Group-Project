@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://iiwo5mgdu6cc"
+path="res://.godot/imported/main_destytojas.dialogue-f80c5f757641efb422f6a2e8c6e954ab.tres"
+
+[deps]
+
+source_file="res://Dialogai/main_destytojas.dialogue"
+dest_files=["res://.godot/imported/main_destytojas.dialogue-f80c5f757641efb422f6a2e8c6e954ab.tres"]
+
+[params]
+
+defaults=true
