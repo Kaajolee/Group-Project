@@ -19,9 +19,12 @@ public partial class playerCarInstantiation : Node2D
 
     public static float spawnDestinationX;
 
+    bool carParked = false;
+
     Vector2 tweenDestination;
     Vector2 rectSize;
     Vector2 playerSpawnLocation;
+    Vector2 playerCarFallVector;
     CustomSignals customSignals;
     Tween tween;
 
@@ -74,6 +77,14 @@ public partial class playerCarInstantiation : Node2D
             //InstantiatePlayerCar();
             Debug.WriteLine("space pressed");
         }
+
+        if (carParked)
+        {
+            playerCarFallVector = Position;
+            playerCarFallVector.Y += fallSpeed;
+            Position = playerCarFallVector;
+        }
+
         if (Position.Y >= rectSize.Y + 85)
         {
             customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameBottomLine));
@@ -92,9 +103,7 @@ public partial class playerCarInstantiation : Node2D
     }
     void PointEarned()
     {
-        tween = CreateTween();
-        tween.TweenProperty(this, "position:y", rectSize.Y + axisYOffest, 4.1f / fallSpeed + 0.12);
-
+        carParked = true;
     }
     void InstantiatePlayerCar()
     {
@@ -109,6 +118,7 @@ public partial class playerCarInstantiation : Node2D
     void OnBottomReached()
     {
         Position = playerSpawnLocation;
+        carParked = false;
         MovePlayerCarUpwards();
     }
 }
