@@ -31,6 +31,7 @@ general/states=["Global", "CustomSignals", "Game", "Utils", "BgMusic", "Interact
 [display]
 
 window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [dotnet]
 

@@ -62,15 +62,18 @@ public partial class objectFallScript : Sprite2D
 				customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigamePoint));
 				global.parkingScore += 1;
 				Debug.WriteLine("Point earned");
-				QueueFree();
+                Debug.WriteLine($"Parking space pos: {Position}");
+                QueueFree();
 				//global.CurrentScore();
 			}
 			else
 			{
-				customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameEnded));
+                Debug.WriteLine($"Parked car pos: {Position}");
+                customSignals.EmitSignal(nameof(CustomSignals.ParkingMinigameEnded));
 			}
 
-		}
+
+        }
 
 	}
 }

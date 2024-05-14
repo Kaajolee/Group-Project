@@ -32,7 +32,7 @@ public partial class playerCarInstantiation : Node2D
 
     public override void _Ready()
     {
-        rectSize = GetWindow().Size;
+        rectSize = GetViewportRect().Size;
         float startX = rectSize.X / 1.5f;
         spawnDestinationX = startX;
         tweenDestination = new Vector2(startX, Position.Y);
@@ -43,13 +43,15 @@ public partial class playerCarInstantiation : Node2D
         customSignals.ParkingMinigamePoint += PointEarned;
         customSignals.ParkingMinigameBottomLine += OnBottomReached;
 
-        playerSpawnLocation = new Vector2(GetWindow().Size.X / 2, GetWindow().Size.Y);
+        playerSpawnLocation = new Vector2(rectSize.X / 2, rectSize.Y);
         Position = playerSpawnLocation;
 
         playerCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/playerCar.tscn");
         currentCar = (Area2D)playerCarScene.Instantiate();
         AddChild(currentCar);
 
+        Debug.WriteLine($"Players start pos: {playerSpawnLocation}");
+        Debug.WriteLine($"ViewPortRect size: {rectSize}");
         MovePlayerCarUpwards();
 
     }
