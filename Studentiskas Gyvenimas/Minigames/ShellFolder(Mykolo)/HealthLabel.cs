@@ -47,11 +47,11 @@ public partial class HealthLabel : Label
 
 	void InstantiateWindow()
 	{
-		Node2D gameover = (Node2D)gameOver.Instantiate();
+		/*Node2D gameover = (Node2D)gameOver.Instantiate();
 		gameover.Position = GetViewport().GetVisibleRect().Size / 2;
         Label label = gameover.GetNode<Label>("CanvasLayer/Panel/Label");
         label.Text = string.Format("Score: " + global.bookScore);
-        AddChild(gameover);
+        AddChild(gameover);*/
     }
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dx8qmuoqpiee6"]
+[gd_scene load_steps=11 format=3 uid="uid://dx8qmuoqpiee6"]
 
 [ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/world.cs" id="1_r43t4"]
 [ext_resource type="PackedScene" uid="uid://bnvs6gw20xhfk" path="res://Minigames/ShellFolder(Mykolo)/player.tscn" id="1_vvvir"]
 [ext_resource type="Texture2D" uid="uid://hp7si4gdg664" path="res://Minigames/ShellFolder(Mykolo)/biblioteka.png" id="2_ad54f"]
 [ext_resource type="PackedScene" uid="uid://c8ao14hrf2rnd" path="res://Minigames/ShellFolder(Mykolo)/spawn.tscn" id="3_oa7g8"]
 [ext_resource type="PackedScene" uid="uid://bpr1nn8n11pht" path="res://Minigames/ShellFolder(Mykolo)/score_label.tscn" id="4_sydaf"]
+[ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/GameOverWindowInst.cs" id="5_12t41"]
 [ext_resource type="Script" path="res://Minigames/ShellFolder(Mykolo)/HealthLabel.cs" id="5_bqvrt"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_iyy72"]
@@ -56,27 +57,23 @@ position = Vector2(1184, 555)
 position = Vector2(-2, 30)
 shape = SubResource("RectangleShape2D_xjgao")
 
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("5_12t41")
 
 [node name="ScoreLabel" parent="UI" instance=ExtResource("4_sydaf")]
-layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 52.0
 offset_bottom = 23.0
 
 [node name="HealthLabel" type="Label" parent="UI"]
-layout_mode = 1
+top_level = true
 anchors_preset = -1
 anchor_left = 28.719
 anchor_right = 28.719
-offset_left = -71.76
-offset_top = 7.0
-offset_right = -5.76001
-offset_bottom = 30.0
+offset_left = -32003.3
+offset_top = 13.0
+offset_right = -31937.3
+offset_bottom = 36.0
 text = "❤❤❤"
 script = ExtResource("5_bqvrt")

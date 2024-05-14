@@ -19,8 +19,13 @@ public partial class ScoreLabel : Label
 	public override void _Process(double delta)
 	{
 	}
+    public override void _ExitTree()
+    {
+        customSignals.BookMinigamePoint -= scorePoint;
+        customSignals.BookMinigamePointDeduct -= scoreDeduct;
+    }
 
-	void scorePoint() 
+    void scorePoint() 
 	{ 
 		Score++;
 		global.bookScore++;
