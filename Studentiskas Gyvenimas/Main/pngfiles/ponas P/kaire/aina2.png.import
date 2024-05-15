@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbg1t2215j5y4"
-path="res://.godot/imported/aina1.png-114ec580797cde193e6ae49fafcdc6fa.ctex"
+uid="uid://bexxbwb08dtal"
+path="res://.godot/imported/aina2.png-c2301da7beed1cd7c250ecb519b518bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main/ponas P/priekis/aina1.png"
-dest_files=["res://.godot/imported/aina1.png-114ec580797cde193e6ae49fafcdc6fa.ctex"]
+source_file="res://Main/pngfiles/ponas P/kaire/aina2.png"
+dest_files=["res://.godot/imported/aina2.png-c2301da7beed1cd7c250ecb519b518bd.ctex"]
 
 [params]
 

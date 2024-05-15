@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk68fsxktxpkm"
-path="res://.godot/imported/aina2.png-57dd74242272cb73e3b065a84bac7052.ctex"
+uid="uid://clovrn1vxs4hr"
+path="res://.godot/imported/bback.png-eb585b5512d897406d7d8b4bd34cab47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main/ponas P/nugara/aina2.png"
-dest_files=["res://.godot/imported/aina2.png-57dd74242272cb73e3b065a84bac7052.ctex"]
+source_file="res://Main/pngfiles/ponas P/nugara/bback.png"
+dest_files=["res://.godot/imported/bback.png-eb585b5512d897406d7d8b4bd34cab47.ctex"]
 
 [params]
 

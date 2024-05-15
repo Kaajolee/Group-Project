@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ci200npjdxtk2"]
 
 [ext_resource type="Script" path="res://Main/Scenes/NPC/PonasP/ponas_p.gd" id="1_gm3ue"]
-[ext_resource type="Texture2D" uid="uid://bnvwakbc02mvd" path="res://Main/ponas P/priekis/bfront.png" id="2_6m6yg"]
+[ext_resource type="Texture2D" uid="uid://bnvwakbc02mvd" path="res://Main/pngfiles/ponas P/priekis/bfront.png" id="2_6m6yg"]
 [ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="3_dipph"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hnq4g"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmn2wycepg64a"
-path="res://.godot/imported/ponasP.png-1e0a60e677b522603e630f848b71c0ca.ctex"
+uid="uid://clygwvqn2gjc7"
+path="res://.godot/imported/aina1.png-0f38da732023f4effaaa006825b07952.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main/ponas P/ponasP.png"
-dest_files=["res://.godot/imported/ponasP.png-1e0a60e677b522603e630f848b71c0ca.ctex"]
+source_file="res://Main/pngfiles/ponas P/desine/aina1.png"
+dest_files=["res://.godot/imported/aina1.png-0f38da732023f4effaaa006825b07952.ctex"]
 
 [params]
 
