@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bdcj4rtsjqp3d" path="res://Main/pngfiles/tileset/Placeholder.tres" id="1_i5j8w"]
 [ext_resource type="Script" path="res://Main/Scenes/Bedroom/bedroom.gd" id="1_q2bxe"]
-[ext_resource type="Texture2D" uid="uid://cx361ljvl4pyl" path="res://Main/pngfiles/tileset/PLACEHOLDER/sierrassets furniture pack/furniture/furniture spritesheet.png" id="2_84hco"]
+[ext_resource type="Texture2D" uid="uid://cx361ljvl4pyl" path="res://Main/pngfiles/tileset/Tileset packs/sierrassets furniture pack/furniture/furniture spritesheet.png" id="2_84hco"]
 [ext_resource type="PackedScene" uid="uid://jwobndkl4mb2" path="res://Main/Scenes/interaction/areas/ToUniTp.tscn" id="4_2wmnr"]
 [ext_resource type="Script" path="res://Main/Scenes/interaction/areas/ToUniTp.gd" id="5_1xsqo"]
 

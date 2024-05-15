@@ -13,19 +13,17 @@ public partial class Settings : Panel
 	private MenuButton menuButton;
 
 	private float musicSliderValue = 0;
-	private float masterSliderValue = 0;
+	private int screenType = 0;
+
 
 	public override void _Ready()
 	{
 		global = GetNode<Global>("/root/Global");
 
-		musicSlider = GetNode<HSlider>("./SoundContainer/musicSlider");
-		musicSlider = GetNode<HSlider>("./SoundContainer/masterSlider");
+		musicSlider = GetNode<HSlider>("./Content/musicSlider");
 
-		menuButton = GetNode<MenuButton>("./ScreenSizeContainer/MenuButton");
-
-		//menuButton.GetPopup()
-
+		menuButton = GetNode<MenuButton>("./Content/ScreenTypeButton");
+		menuButton.Connect("id_pressed", new Callable(this, MethodName.ScreenType));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,18 +34,31 @@ public partial class Settings : Panel
 	public void ApplySettings()
 	{
 		//AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Master"), AudioServer.)
+		ScreenTypeSelected(screenType);
 	}
 	public void OnMusicVolumeChanged(float value)
 	{
 		musicSliderValue = value;
 	}
-	public void OnMasterVolumeChanged(float value)
-	{
-		masterSliderValue = value;
-		Debug.WriteLine(value);
-	}
 	public void BackButtonPressed()
 	{
 		Visible = !Visible;
 	}
+	public void ScreenType(int id)
+	{
+		Debug.WriteLine("Screen type button pressed");
+		//screenType = id;
+	}
+	void ScreenTypeSelected(int index)
+	{
+		if (index == 0)
+			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
+
+		else if (index == 1)
+			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Maximized);
+
+		else
+			throw new Exception("Error setting the screen type");
+
+    }
 }
