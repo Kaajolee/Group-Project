@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bdcj4rtsjqp3d"]
 
-[ext_resource type="Texture2D" uid="uid://b8yqvpxvp1dd0" path="res://Main/pngfiles/tileset/PLACEHOLDER/sierrassets furniture pack/floors and walls/floor and walls spritesheet.png" id="2_0eugv"]
+[ext_resource type="Texture2D" uid="uid://b8yqvpxvp1dd0" path="res://Main/pngfiles/tileset/Tileset packs/sierrassets furniture pack/floors and walls/floor and walls spritesheet.png" id="2_0eugv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7u5h"]
 texture = ExtResource("2_0eugv")
