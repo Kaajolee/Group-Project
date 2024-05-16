@@ -61,13 +61,13 @@ public partial class CarInstantiation : Node2D
 		isGameStopped = false;
 
 	}
-    public override void _ExitTree()
-    {
-        customSignals.ParkingMinigameEnded -= CarCrashed;
-        customSignals.ParkingMinigamePoint -= PointEarned;
-    }
+	public override void _ExitTree()
+	{
+		customSignals.ParkingMinigameEnded -= CarCrashed;
+		customSignals.ParkingMinigamePoint -= PointEarned;
+	}
 
-    public override void _Process(double delta)
+	public override void _Process(double delta)
 	{
 
 	}

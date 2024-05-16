@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://b7t7icucgrvre" path="res://Main/Player/PlayerB/mergina/nugara/aina2.png" id="10_7tt03"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_susug"]
-radius = 5.0
-height = 10.0
+radius = 3.99849
+height = 11.9955
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c07e8"]
 animations = [{
@@ -76,6 +76,7 @@ script = ExtResource("1_evlpv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
+rotation = -1.5433
 shape = SubResource("CapsuleShape2D_susug")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

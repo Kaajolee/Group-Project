@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cspxtllym2xnq"]
+
+[ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="1_1lrie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe1hv"]
+size = Vector2(14, 25)
+
+[node name="UniTp" type="Node2D"]
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_1lrie")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_qe1hv")
