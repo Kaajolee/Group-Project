@@ -23,7 +23,7 @@ public partial class Settings : Panel
 		musicSlider = GetNode<HSlider>("./Content/musicSlider");
 
 		menuButton = GetNode<MenuButton>("./Content/ScreenTypeButton");
-		menuButton.Connect("id_pressed", new Callable(this, MethodName.ScreenType));
+		//menuButton.Connect("id_pressed", new Callable(this, MethodName.ScreenType));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,7 +33,7 @@ public partial class Settings : Panel
 	}
 	public void ApplySettings()
 	{
-		//AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Master"), AudioServer.)
+		AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Master"), Mathf.LinearToDb(musicSliderValue));
 		ScreenTypeSelected(screenType);
 	}
 	public void OnMusicVolumeChanged(float value)
@@ -51,14 +51,14 @@ public partial class Settings : Panel
 	}
 	void ScreenTypeSelected(int index)
 	{
-		if (index == 0)
+		/*if (index == 0)
 			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
 
 		else if (index == 1)
 			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Maximized);
 
 		else
-			throw new Exception("Error setting the screen type");
+			throw new Exception("Error setting the screen type");*/
 
     }
 }

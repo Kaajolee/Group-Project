@@ -57,20 +57,6 @@ theme_override_font_sizes/font_size = 28
 text = "Nustatymai"
 metadata/_edit_use_anchors_ = true
 
-[node name="SaveGame" type="Button" parent="MainPanel/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
-theme_override_font_sizes/font_size = 28
-text = "Išsaugoti žaidimą"
-metadata/_edit_use_anchors_ = true
-
-[node name="LoadGame" type="Button" parent="MainPanel/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
-theme_override_font_sizes/font_size = 28
-text = "Užkrauti žaidimą"
-metadata/_edit_use_anchors_ = true
-
 [node name="exitB" type="Button" parent="MainPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
@@ -132,7 +118,7 @@ vertical_alignment = 1
 [node name="musicSlider" type="HSlider" parent="OptionsPanel/Content"]
 layout_mode = 2
 max_value = 1.0
-step = 0.01
+step = 0.001
 value = 1.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="OptionsPanel/Content"]
@@ -151,8 +137,7 @@ text = "Atgal"
 
 [connection signal="pressed" from="MainPanel/VBoxContainer/resumeB" to="MainPanel" method="Resume"]
 [connection signal="pressed" from="MainPanel/VBoxContainer/optionsB" to="MainPanel" method="Options"]
-[connection signal="pressed" from="MainPanel/VBoxContainer/SaveGame" to="MainPanel" method="SaveGame"]
-[connection signal="pressed" from="MainPanel/VBoxContainer/LoadGame" to="MainPanel" method="LoadGame"]
 [connection signal="pressed" from="MainPanel/VBoxContainer/exitB" to="MainPanel" method="Exit"]
 [connection signal="value_changed" from="OptionsPanel/Content/musicSlider" to="OptionsPanel" method="OnMusicVolumeChanged"]
+[connection signal="pressed" from="OptionsPanel/Content/HBoxContainer/ApplyButton" to="OptionsPanel" method="ApplySettings"]
 [connection signal="pressed" from="OptionsPanel/Content/HBoxContainer/BackButton" to="OptionsPanel" method="BackButtonPressed"]
