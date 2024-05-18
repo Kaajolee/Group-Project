@@ -20,6 +20,7 @@
     - Daužyti ant ekrano lakstančius tarakonus.
     - Kuo greičiau parašyti rašto darbą.
     - Gaudyti krentančias knygas.
+    
 ***Komandą "Giedrius" sudaro***
 
 * Karolis Latoža
