@@ -11,7 +11,8 @@
 *  [Aseprite vaizdų rengyklė](https://www.aseprite.org/)
 *  [Adobe Photoshop grafikos rengyklė](https://www.adobe.com/products/photoshop.html)
 
-**Komandą "Giedrius" sudaro**
+## :joystick: Funkcijos
+***Komandą "Giedrius" sudaro***
 
 * Karolis Latoža
 * Mykolas Pėtelis
@@ -22,15 +23,15 @@
 
 
 ##
+Techninė užduotis
 
 
 
+##
+
+Architektūra
 
 
-This is a repository for our group project
-fff
-tttt
-adas
-sss
-bezde123
-bezde321
+##
+
+Testavimas ir jo rezultatai
