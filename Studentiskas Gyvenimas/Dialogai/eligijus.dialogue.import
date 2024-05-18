@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bp4kfou852l81"
+path="res://.godot/imported/eligijus.dialogue-04c6b5fd7ece68b40473f04295d089be.tres"
+
+[deps]
+
+source_file="res://Dialogai/eligijus.dialogue"
+dest_files=["res://.godot/imported/eligijus.dialogue-04c6b5fd7ece68b40473f04295d089be.tres"]
+
+[params]
+
+defaults=true

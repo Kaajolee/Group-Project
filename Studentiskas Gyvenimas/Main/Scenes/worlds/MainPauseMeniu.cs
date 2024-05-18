@@ -57,9 +57,9 @@ public partial class MainPauseMeniu : Panel
 	}
 	void Exit()
 	{
-		Debug.WriteLine("Exit button pressed");
-		PackedScene mainMenu = ResourceLoader.Load<PackedScene>("res://Main/Scenes/main/main.tscn");
-		GetTree().ChangeSceneToPacked(mainMenu);
-		//GetTree().Quit();
+		//Debug.WriteLine("Exit button pressed");
+		//PackedScene mainMenu = ResourceLoader.Load<PackedScene>("res://Main/Scenes/main/main.tscn");
+		//GetTree().ChangeSceneToPacked(mainMenu);
+		GetTree().Quit();
 	}
 }

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cruyrc7tmlsfe"
+path="res://.godot/imported/gameend.dialogue-cf4696fee417e0a951afa5ad7c4fbec9.tres"
+
+[deps]
+
+source_file="res://Dialogai/gameend.dialogue"
+dest_files=["res://.godot/imported/gameend.dialogue-cf4696fee417e0a951afa5ad7c4fbec9.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://tdfv6e3atbtd"
+path="res://.godot/imported/gamestart.dialogue-91f376d441d19ce055cd43c0f97cec22.tres"
+
+[deps]
+
+source_file="res://Dialogai/gamestart.dialogue"
+dest_files=["res://.godot/imported/gamestart.dialogue-91f376d441d19ce055cd43c0f97cec22.tres"]
+
+[params]
+
+defaults=true

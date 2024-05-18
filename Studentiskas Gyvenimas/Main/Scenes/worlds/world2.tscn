@@ -1,11 +1,21 @@
-[gd_scene load_steps=12 format=3 uid="uid://djqcg62e08fm"]
+[gd_scene load_steps=12 format=3 uid="uid://dtc2jbt26bw0w"]
 
-[ext_resource type="Script" path="res://Main/Scenes/worlds/world2.gd" id="1_5qwb8"]
 [ext_resource type="Texture2D" uid="uid://3jnyweimqcrg" path="res://Main/pngfiles/tileset/tiles 1/Tileset_inside_base.png" id="1_ekain"]
 [ext_resource type="Texture2D" uid="uid://cvbfv3eyir7nc" path="res://Main/pngfiles/tileset/tiles 1/TileSet_inside_props.png" id="2_pt0j8"]
 [ext_resource type="Texture2D" uid="uid://lr8k0k55s4ho" path="res://Main/pngfiles/tileset/tiles 1/TileSet_outside_base.png" id="3_bt4v6"]
 [ext_resource type="PackedScene" uid="uid://wt2mcq3tufmr" path="res://Main/Scenes/interaction/areas/GroundFloorTp.tscn" id="5_f7vwn"]
 [ext_resource type="TileSet" uid="uid://bdcj4rtsjqp3d" path="res://Main/pngfiles/tileset/Placeholder.tres" id="5_hm4xk"]
+
+[sub_resource type="GDScript" id="GDScript_3f38h"]
+script/source = "extends Node2D
+
+
+func _ready():
+	var player = load(Game.selected_character).instantiate()
+	add_child(player)
+	Game.last_location = \"first_floor\"
+	player.position = Vector2(-125, -125)
+"
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_niymr"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -173,7 +183,7 @@ sources/2 = SubResource("TileSetAtlasSource_d4mg7")
 sources/1 = SubResource("TileSetAtlasSource_0oxql")
 
 [node name="World2" type="Node2D"]
-script = ExtResource("1_5qwb8")
+script = SubResource("GDScript_3f38h")
 
 [node name="TileMapGround" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_at6t0")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://0pfsh4b8d7w7"
+path="res://.godot/imported/tomas.dialogue-777dfcbb1b5c7b2f7d594b9884e0bea9.tres"
+
+[deps]
+
+source_file="res://Dialogai/tomas.dialogue"
+dest_files=["res://.godot/imported/tomas.dialogue-777dfcbb1b5c7b2f7d594b9884e0bea9.tres"]
+
+[params]
+
+defaults=true

@@ -6,6 +6,7 @@ var character = "a"
 var last_location ="bedroom"
 var cordx = -1600
 var cordy = -30
+var dialogue = "GameStart"
 
 func getCharacter():
 	
