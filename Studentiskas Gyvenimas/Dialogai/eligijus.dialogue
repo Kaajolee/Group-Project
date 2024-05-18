@@ -1,13 +1,12 @@
 ~ this_is_a_node_title
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Eligijus: [[Labas|Sveiki|Laba diena]], kuo galėčiau padėti?
+Eligijus: Štai tavo pasirinkimai.
+- Projektinio darbo nukėlimas
+	Eligijus: Projektinio darbo nukelt negalima, sėkmės kitamet.
+- Jira pildymas 
+	Eligijus: Jira pildymas yra privaloma atsakomybė kiekvieno komandos nario.
+- Pradėti iš naujo => this_is_a_node_title
+- Užbaigti pokalbį => END
 
 => END
