@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Main/Scenes/worlds/Settings.cs" id="2_kbjgf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syqit"]
-bg_color = Color(0, 0, 0, 0.266667)
+bg_color = Color(0.219608, 0.219608, 0.219608, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8ht7"]
 bg_color = Color(0.219608, 0.219608, 0.219608, 1)
@@ -18,17 +18,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -190.63
-offset_top = -257.0
-offset_right = 79.3705
-offset_bottom = 43.0
+offset_left = -135.0
+offset_top = -280.0
+offset_right = 135.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.41207, 1.62819)
 pivot_offset = Vector2(135, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_syqit")
 script = ExtResource("1_djm34")
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
 layout_mode = 1
@@ -71,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -74.0
-offset_top = -256.0
-offset_right = -34.0
-offset_bottom = -216.0
+offset_left = -20.0
+offset_top = -281.0
+offset_right = 20.0
+offset_bottom = -241.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(9.56, 12.2)
