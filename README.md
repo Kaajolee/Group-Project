@@ -1,4 +1,4 @@
-[Pavadinimo gif’as](Assets.gif)
+![Pavadinimo gif’as](Assets.gif)
 
 # Studentiškas Gyvenimas
 
