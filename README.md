@@ -1,8 +1,11 @@
 # Studentiškas Gyvenimas
 
+
 <p align="center">
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif" />
 </p>
+
+
 
 ## :question: Kas tai?
 
