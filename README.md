@@ -1,4 +1,4 @@
-![Pavadinimo gif’as](Assets.gif)
+![Pavadinimo gif’as](https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif)
 
 # Studentiškas Gyvenimas
 
