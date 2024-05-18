@@ -4,15 +4,6 @@
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif" />
 </p>
 
-<p align="center">
-  <a href="#Kas tai?">Kas tai?</a> •
-  <a href="#Funkcijos">Funkcijos</a> •
-  <a href="#Architektūra">Architektūra</a> •
-  <a href="#Testavimas ir jo rezultatai">Testavimas ir jo rezultatai</a> •
-  <a href="#Autoriai">Autoriai</a> •
-  <a href="#Pasidalink su draugais!">Pasidalink su draugais!</a> •
-</p>
-
 ## :question: Kas tai?
 
 Šis projektas yra kompiuterinis žaidimas, kuriame yra įdomia ir interaktyvia forma vaizduojamas studento kasdieninis gyvenimas, šio produkto išvaizda yra paremta pikseliuota grafika ir pasižymi vaizdingais vartotojo sąsajos objektais. Projekto kūrimo eigoje, komanda susidūrė su begale iššūkių, tokių kaip, poreikis išmokti dirbti su nauja programine įranga, komandiniu darbu ir komunikacija tarpusavyje. Viso to deka, kiekvienas komandos narys iš produkto kūrimo eigos pasisavino naujų įgūdžių ir patirčių. Ateityje yra tikimasi, jog žaidimo funkcionalumas ir vartotojo patirtis bus išplėsti, o esami bus patobulinti.
@@ -146,16 +137,19 @@ Bezde321
   </tr>
 </table>
 
-## :speaking-head: Pasidalink su draugais!
+## :speaking_head: Pasidalink su draugais!
 
 *Jei tau patiko projektas, pasidalink su draugais!*
 
 <div align="center">
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/Kaajolee/Group-Project&text=Check%20out%20this%20awesome%20project%20on%20GitHub!%20🚀%20%23GitHub%20%23OpenSource">
-    <img src="https://img.shields.io/twitter/url/https://github.com/Kaajolee/Group-Project.svg?style=social" alt="Pasidalink Twitter!">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Kaajolee/Group-Project" style="display:inline-block;">
+    <img src="https://img.shields.io/badge/share-on%20facebook-green" alt="Pasidalink Facebook" width="120">
   </a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Kaajolee/Group-Project">
-    <img src="https://img.shields.io/badge/share-on%20facebook-white" alt="Pasidalink Facebook!">
+  <a href="https://www.linkedin.com/shareArticle?url=https://github.com/Kaajolee/Group-Project&title=Check%20out%20this%20awesome%20project%20on%20GitHub!&summary=Share%20this%20cool%20project%20with%20your%20connections%20on%20LinkedIn.&source=GitHub" style="display:inline-block;">
+    <img src="https://img.shields.io/badge/share-on%20linkedin-green" alt="Pasidalink LinkedIn" width="120">
+  </a>
+  <a href="mailto:?subject=Check%20out%20this%20awesome%20project%20on%20GitHub!&body=Hey,%0D%0A%0D%0ACheck%20out%20this%20awesome%20project%20on%20GitHub:%20https://github.com/yourusername/yourrepository%0D%0A%0D%0AEnjoy!" style="display:inline-block;">
+    <img src="https://img.shields.io/badge/share-by%20email-green" alt="Pasidalink Email" width="120">
   </a>
 </div>
 
