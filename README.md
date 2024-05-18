@@ -1,6 +1,8 @@
-![Pavadinimo gif’as](Assets.gif)
-
 # Studentiškas Gyvenimas
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif" />
+</p>
 
 ## :question: Kas tai?
 
@@ -18,7 +20,7 @@
 *1.* Galimybė vartotojui valdyti veikėją dvimatėje erdvėje.
 2. Apžiūrėti universiteto struktūrą.
 3. Gebėjimas sužaisti keturis mini žaidimus:
-- Parkuoti mašiną gatvėje.
+-Parkuoti mašiną gatvėje.
 -Daužyti ant ekrano lakstančius tarakonus.
 -Kuo greičiau parašyti rašto darbą.
 -Gaudyti krentančias knygas.
@@ -149,6 +151,7 @@ Veikėjas juda į pagal mygtuką nustatytą kryptį.
 Trumpa naudotojo dokumentacija
 
 Įvadas: Kas tai per žaidimas?
+
 Sistemos reikalavimai
 Operacinė sistema: Windows 10, macOS 10.15??
 Procesorius: Intel Celeron
@@ -156,18 +159,45 @@ RAM: 64 gb….
 Grafikos plokštė: RTX 4090
 Laisvos vietos standžiajame diske: 1tb 
 Instaliacija
+
 Kaip žaisti?
 Kontrolės
 Klaviatūra:
 Judėjimas: rodyklių klavišai (arrow keys??)
 Sąveikavimas su objektais/veikėjais: E klavišas
 Pagrindinis meniu
-Žaist
+Prasidėjus žaidimui būsite nukelti į pagrindinį žaidimo meniu. Ten jūsų lauks du pasirinkimai - žaisti žaidimą arba iš jo išeiti.
+Žaisti
+Šis pasirinkimas jus nuves į žaidimą.
+Išeiti
+Šis pasirinkimas uždarys žaidimo langą…
+Sustabdymo meniu
+
+
 Pagrindiniai žaidimo veikėjai
-	Studentė
-	Studentas
-Žaidimo aplinka/vietos
-Mini žaidimai (tikslai)
+Studentė
+Studentas
+Kiti veikėjai (NPCs)
+Dėstytojas 1
+Dėstytojas 2
+Studentai
+Žaidimo aplinka/vietos (detalesni aprašymai)
+Bendrabučio kambarys
+
+Universitetas
+Pirmas aukštas
+Antras aukštas
+
+Universiteto išorė
+Mini žaidimai (tikslai, detalesni aprašymai)
+Parkavimas
+
+Tarakonų daužymas
+
+Darbo rašymo speedrun
+
+Knygų gaudymas
+
 
 
 This is a repository for our group project
@@ -180,7 +210,7 @@ Bezde321
 
 
 
-## Autoriai
+## :crown: Autoriai
 
 **Didelis ačiū žmonėms prisidėjusiems prie šio projekto**
 
@@ -188,26 +218,37 @@ Bezde321
   <tr>
     <td align="center">
       <img src="https://github.com/Kaajolee.png" width="100px;" alt="John Doe"/><br />
-      <sub><b>John Doe</b></sub><br />
-      Initial design and feedback.
+      <sub><b>Karolis Latoža</b></sub><br />
+      Žaidimo mechanikos ir implementacija.
     </td>
     <td align="center">
       <img src="https://github.com/Chaosas.png" width="100px;" alt="Jane Smith"/><br />
-      <sub><b>Jane Smith</b></sub><br />
-      Main game logic and performance optimization.
+      <sub><b>Giedrius Zajančauskas</b></sub><br />
+      Žaidimo mechanikos ir implementacija.
     </td>
     <td align="center">
       <img src="https://github.com/andriussimk.png" width="100px;" alt="Alice Johnson"/><br />
-      <sub><b>Alice Johnson</b></sub><br />
-      UI/UX design and graphics.
+      <sub><b>Andrius Šimkus</b></sub><br />
+      UI/UX dizainas ir grafikos.
+    </td>
+    <td align="center">
+      <img src="https://github.com/myk0ls.png" width="100px;" alt="Bob Brown"/><br />
+      <sub><b>Mykolas Pėtelis</b></sub><br />
+      Žaidimo mechanikos ir implementacija.
     </td>
     <td align="center">
       <img src="https://github.com/3m1lija.png" width="100px;" alt="Bob Brown"/><br />
-      <sub><b>Bob Brown</b></sub><br />
-      Debugging and testing.
+      <sub><b>Emilija Buivydaitė</b></sub><br />
+      UI/UX dizainas ir grafikos.
+    </td>
+    <td align="center">
+      <img src="https://github.com/Ju5t3.png" width="100px;" alt="Bob Brown"/><br />
+      <sub><b>Justė Janikūnaitė</b></sub><br />
+      UI/UX dizainas ir grafikos.
     </td>
   </tr>
 </table>
+
 
 
 
