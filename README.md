@@ -17,15 +17,15 @@
 
 ## :joystick: Funkcijos
 
-1. Galimybė vartotojui valdyti veikėją dvimatėje erdvėje.
+*1.* Galimybė vartotojui valdyti veikėją dvimatėje erdvėje.
 2. Apžiūrėti universiteto struktūrą.
 3. Gebėjimas sužaisti keturis mini žaidimus:
-    - Parkuoti mašiną gatvėje.
-    - Daužyti ant ekrano lakstančius tarakonus.
-    - Kuo greičiau parašyti rašto darbą.
-    - Gaudyti krentančias knygas.
+-Parkuoti mašiną gatvėje.
+-Daužyti ant ekrano lakstančius tarakonus.
+-Kuo greičiau parašyti rašto darbą.
+-Gaudyti krentančias knygas.
 
-## :triangular-ruler: Architektūra
+## :triangular_ruler: Architektūra
 
 
 
@@ -136,6 +136,20 @@ Bezde321
     </td>
   </tr>
 </table>
+
+## :speaking-head: Pasidalink su draugais!
+
+*Jei tau patiko projektas, pasidalink su draugais!*
+
+<div align="center">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/yourusername/yourrepository&text=Check%20out%20this%20awesome%20project%20on%20GitHub!%20🚀%20%23GitHub%20%23OpenSource">
+    <img src="https://img.shields.io/twitter/url/https/github.com/yourusername/yourrepository.svg?style=social" alt="Share on Twitter">
+  </a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/yourusername/yourrepository">
+    <img src="https://img.shields.io/badge/share-on%20facebook-blue" alt="Share on Facebook">
+  </a>
+</div>
+
 
 
 
