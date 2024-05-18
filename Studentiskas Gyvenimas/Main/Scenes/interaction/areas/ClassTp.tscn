@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="2_6t0gl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db3ts"]
-size = Vector2(124, 20)
+size = Vector2(16.5, 27.5)
 
 [node name="ClassTp" type="Node2D"]
 script = ExtResource("1_ocb7h")
@@ -13,4 +13,5 @@ script = ExtResource("1_ocb7h")
 action_name = "įeiti į klasę"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(1.75, 0)
 shape = SubResource("RectangleShape2D_db3ts")

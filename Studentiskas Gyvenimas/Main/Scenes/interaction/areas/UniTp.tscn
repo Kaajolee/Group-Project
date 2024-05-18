@@ -8,6 +8,7 @@ size = Vector2(14, 25)
 [node name="UniTp" type="Node2D"]
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_1lrie")]
+action_name = "keliauti į universitetą"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_qe1hv")
