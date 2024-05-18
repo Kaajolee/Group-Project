@@ -1,6 +1,8 @@
-![Pavadinimo gif’as](https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif)
-
 # Studentiškas Gyvenimas
+
+<div style="text-align: center;">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif" alt="Example GIF">
+</div>
 
 ## :question: Kas tai?
 
