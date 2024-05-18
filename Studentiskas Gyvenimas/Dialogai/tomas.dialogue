@@ -1,13 +1,12 @@
 ~ this_is_a_node_title
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Tomas: [[Labas|Sveiki|Laba diena]], turite klausimų?
+Tomas: Štai tavo pasirinkimai.
+- Kontrolinis darbas
+	Tomas: Kontrolinis darbas bus vykdomas kovo 25 dieną.
+- Egzaminas 
+	Tomas: Egzaminas vyks birželio 6 dieną.
+- Pradėti iš naujo => this_is_a_node_title
+- Užbaigti pokalbį => END
 
 => END
