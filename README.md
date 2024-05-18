@@ -25,22 +25,7 @@
     - Kuo greičiau parašyti rašto darbą.
     - Gaudyti krentančias knygas.
 
-***Komandą "Giedrius" sudaro***
-
-* Karolis Latoža
-* Mykolas Pėtelis
-* Giedrius Zajančauskas
-* Emilija Buivydaitė
-* Justė Janikūnaitė
-* Andrius Šimkus
-
-
-## Techninė užduotis
-
-
-
-
-## :triangular_ruler: Architektūra
+## :triangular-ruler: Architektūra
 
 
 
@@ -48,104 +33,7 @@
 ## :wrench: Testavimas ir jo rezultatai
 
 
-
-Testavimo procese buvo tikrinamas UI veikimas bei pagrindinės žaidimo mechanikos.
-
-Pirmasis testas tikrina, ar teisingai pradedamas žaidimas su pasirinktu veikėju.
-Žaidimo paleidimas su pasirinktu veikėju
-Aprašymas
-Tikėtinas rezultatas
-Žingsnis 1
-Paspaudžiamas mygtukas “Žaisti”.
-Įjungiamas UI su veikėjo pasirinkimu.
-Žingsnis 2
-
-
-Pasirenkamas norimas veikėjas iš dviejų pasirinkimų.
-Įjungiamas žaidimas su pasirinktu veikėju.
-Žingsnis 3
-Žaidžiamas žaidimas su pasirinktu veikėju.
-
-
-
-
-Antras testas tikrina, ar žaidimo garsumas pasikeičia ir išsisaugo.
-Žaidimo muzikos garsumas
-Aprašymas
-Tikėtinas rezultatas
-Žingsnis 1
-Paspaudžiamas mygtukas “Žaisti”.
-
-
-Žingsnis 2
-Pasirenkamas norimas veikėjas iš dviejų pasirinkimų.
-
-
-Žingsnis 3
-Paspaudžiamas klaviatūros mygtukas “ESC”.
-Įjungiamas pauzės meniu UI 
-Žingsnis 4
-Paspaudžiamas UI mygtukas “Nustatymai”.
-Įjungiamas nustatymų meniu.
-Žingsnis 5
-Koreguojamas muzikos garsumo lygis pasinaudojant slankikliu.
-Muzika garsėja arba tylėja.
-Žingsnis 6
-Paspaudžiamas mygtukas “Pritaikyti”.
-Išsaugomas pasirinkimas.
-Žingsnis 7
-Paspaudžiamas mygtukas “Atgal”.
-Muzikos garsumas bus pakeistas ir grįšime į main menu.
-Žingsnis 8
-Paspaudžiamas mygtukas “Tęsti”.
-Muzikos garsumas bus pakeistas.
-
-
-Trečias testas tikrina, ar yra skiriami taškai už taisyklingai priparkuotą automobilį parkavimo mini žaidime.
-Taškų skyrimas už taisyklingai priparkuotą automobilį
-Aprašymas
-Tikėtinas rezultatas
-Žingsnis 1
-Paspaudžiamas mygtukas “Žaisti”.
-
-
-Žingsnis 2
-Pasirenkamas norimas veikėjas iš dviejų pasirinkimų.
-
-
-Žingsnis 3
-Išeinama iš pradinės scenos paspaudus klaviatūros mygtuką “E” prie durų.
-Užkraunamas parkavimo mini žaidimas.
-Žingsnis 4
-Atitaikius laisvą parkavimo vietą spaudžiamas klaviatūros mygtukas “Space”.
-Automobilis juda į laisvą vietą, jeigu sėkminga skiriamas taškas.
-
-
-Ketvirtas testas tikrina, ar veikėją galima valdyti universitete.
-Taškų skyrimas už taisyklingai priparkuotą automobilį
-Aprašymas
-Tikėtinas rezultatas
-Žingsnis 1
-Paspaudžiamas mygtukas “Žaisti”.
-
-
-Žingsnis 2
-Pasirenkamas norimas veikėjas iš dviejų pasirinkimų.
-
-
-Žingsnis 3
-Išeinama iš pradinės scenos paspaudus klaviatūros mygtuką “E” prie durų.
-
-
-Žingsnis 4
-Sužaidžiamas parkavimo mini žaidimas.
-
-
-Žingsnis 5
-Spaudžiamas kuris nors klaviatūros mygtukas “ArrowUp” “ArrowDown” “ArrowLeft” “ArrowRight”.
-Veikėjas juda į pagal mygtuką nustatytą kryptį.
-
-
+[Nuoroda į testavimus ir jų rezultatus](https://docs.google.com/document/d/1Bwbzwy5xBFgIjS-Ff6P7oa0SjcefK0C-YVdEAVp6Hzo)
 ## :book: Trumpa naudotojo dokumentacija
 
 
@@ -248,6 +136,7 @@ Bezde321
     </td>
   </tr>
 </table>
+
 
 
 
