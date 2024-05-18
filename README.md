@@ -40,7 +40,7 @@
 
 
 
-## :triangular-ruler: Architektūra
+## :triangular_ruler: Architektūra
 
 
 
