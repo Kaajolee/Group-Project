@@ -142,11 +142,17 @@ Bezde321
 *Jei tau patiko projektas, pasidalink su draugais!*
 
 <div align="center">
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/yourusername/yourrepository&text=Check%20out%20this%20awesome%20project%20on%20GitHub!%20🚀%20%23GitHub%20%23OpenSource">
-    <img src="https://img.shields.io/twitter/url/https/github.com/yourusername/yourrepository.svg?style=social" alt="Share on Twitter">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/Kaajolee/Group-Project&text=Check%20out%20this%20awesome%20project%20on%20GitHub!%20🚀%20%23GitHub%20%23OpenSource" style="display:inline-block;">
+    <img src="https://img.shields.io/twitter/url/https://github.com/Kaajolee/Group-Project.svg?style=social" alt="Share on Twitter" width="120">
   </a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/yourusername/yourrepository">
-    <img src="https://img.shields.io/badge/share-on%20facebook-blue" alt="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Kaajolee/Group-Project" style="display:inline-block;">
+    <img src="https://img.shields.io/badge/share-on%20facebook-blue" alt="Share on Facebook" width="120">
+  </a>
+  <a href="https://www.linkedin.com/shareArticle?url=https://github.com/Kaajolee/Group-Project&title=Check%20out%20this%20awesome%20project%20on%20GitHub!&summary=Share%20this%20cool%20project%20with%20your%20connections%20on%20LinkedIn.&source=GitHub" style="display:inline-block;">
+    <img src="https://img.shields.io/badge/share-on%20linkedin-blue" alt="Share on LinkedIn" width="120">
+  </a>
+  <a href="mailto:?subject=Check%20out%20this%20awesome%20project%20on%20GitHub!&body=Hey,%0D%0A%0D%0ACheck%20out%20this%20awesome%20project%20on%20GitHub:%20https://github.com/Kaajolee/Group-Project%0D%0A%0D%0AEnjoy!" style="display:inline-block;">
+    <img src="https://img.shields.io/badge/share-by%20email-blue" alt="Share by Email" width="120">
   </a>
 </div>
 
