@@ -5,7 +5,7 @@
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif" />
 </p>
 
-
+![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=feature-1)
 
 ## :question: Kas tai?
 
