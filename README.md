@@ -137,9 +137,9 @@ Bezde321
   </tr>
 </table>
 
-## :speaking-head: Pasidalink su draugais!
+## :speaking_head: Pasidalink su draugais!
 
-*Jei tau patiko projektas, pasidalink su draugais!*
+**Jei tau patiko projektas, pasidalink su draugais!**
 
 <div align="center">
   <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Kaajolee/Group-Project" style="display:inline-block;">
