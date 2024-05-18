@@ -35,19 +35,19 @@
 * Andrius Šimkus
 
 
-##
-Techninė užduotis
+## Techninė užduotis
 
 
 
-##
 
-Architektūra
+## :triangular-ruler: Architektūra
 
 
-##
 
-Testavimas ir jo rezultatai
+
+## :wrench: Testavimas ir jo rezultatai
+
+
 
 Testavimo procese buvo tikrinamas UI veikimas bei pagrindinės žaidimo mechanikos.
 
@@ -146,9 +146,8 @@ Spaudžiamas kuris nors klaviatūros mygtukas “ArrowUp” “ArrowDown” “A
 Veikėjas juda į pagal mygtuką nustatytą kryptį.
 
 
-##
+## :book: Trumpa naudotojo dokumentacija
 
-Trumpa naudotojo dokumentacija
 
 Įvadas: Kas tai per žaidimas?
 
@@ -158,6 +157,7 @@ Procesorius: Intel Celeron
 RAM: 64 gb….
 Grafikos plokštė: RTX 4090
 Laisvos vietos standžiajame diske: 1tb 
+
 Instaliacija
 
 Kaip žaisti?
@@ -232,7 +232,7 @@ Bezde321
       UI/UX dizainas ir grafikos.
     </td>
     <td align="center">
-      <img src="https://github.com/myk0ls.png" width="100px;" alt="Bob Brown"/><br />
+      <img src="https://github.com/myk0ls.png" width="100px;" alt="bezde123"/><br />
       <sub><b>Mykolas Pėtelis</b></sub><br />
       Žaidimo mechanikos ir implementacija.
     </td>
@@ -248,6 +248,7 @@ Bezde321
     </td>
   </tr>
 </table>
+
 
 
 
