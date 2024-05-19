@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://5mmkvqmwnvk0"]
+[gd_scene load_steps=15 format=3 uid="uid://5mmkvqmwnvk0"]
 
 [ext_resource type="Script" path="res://Main/Scenes/selectionScreen/SelectionScreen.gd" id="1_jnpio"]
 [ext_resource type="Texture2D" uid="uid://bgen51q6ng8ao" path="res://Main/pngfiles/background/game_background3_1_updated.png" id="2_732xi"]
@@ -16,6 +16,9 @@ texture = ExtResource("4_vdyof")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87vps"]
 texture = ExtResource("4_vdyof")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_isfyn"]
+texture = ExtResource("4_vdyof")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cfbtm"]
 texture = ExtResource("5_02rhm")
 
@@ -23,6 +26,9 @@ texture = ExtResource("5_02rhm")
 texture = ExtResource("6_tpu6h")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhqj5"]
+texture = ExtResource("6_tpu6h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ui4ai"]
 texture = ExtResource("6_tpu6h")
 
 [node name="SelectionScreen" type="Node2D"]
@@ -41,6 +47,7 @@ offset_bottom = 442.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_nfdgt")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ba13v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_87vps")
+theme_override_styles/focus = SubResource("StyleBoxTexture_isfyn")
 
 [node name="Type B" type="Button" parent="."]
 offset_left = 620.0
@@ -50,6 +57,7 @@ offset_bottom = 442.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_cfbtm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s8hq3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uhqj5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ui4ai")
 
 [connection signal="pressed" from="Type A" to="." method="_on_type_a_pressed"]
 [connection signal="pressed" from="Type B" to="." method="_on_type_b_pressed"]

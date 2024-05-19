@@ -1,13 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckf0vcgguwnt5"]
+[gd_scene load_steps=25 format=3 uid="uid://ckf0vcgguwnt5"]
 
+[ext_resource type="Texture2D" uid="uid://cebcn7ptioq6u" path="res://Main/pngfiles/buttons/pause_meniu_empty.png" id="1_1scy7"]
 [ext_resource type="Script" path="res://Main/Scenes/worlds/MainPauseMeniu.cs" id="1_djm34"]
 [ext_resource type="Script" path="res://Main/Scenes/worlds/Settings.cs" id="2_kbjgf"]
+[ext_resource type="Texture2D" uid="uid://c17t4flutoik7" path="res://Main/pngfiles/buttons/continue_button.png" id="3_tgior"]
+[ext_resource type="Texture2D" uid="uid://cjl3apffumlvd" path="res://Main/pngfiles/buttons/options_button.png" id="4_phdv0"]
+[ext_resource type="Texture2D" uid="uid://b4lokly6yl2vt" path="res://Main/pngfiles/buttons/quitpause_button.png" id="5_3fpe2"]
+[ext_resource type="Texture2D" uid="uid://dmbc2yc3k0iq2" path="res://Main/pngfiles/buttons/window_types.png" id="7_p3p00"]
+[ext_resource type="Texture2D" uid="uid://dhayww5cwykd0" path="res://Main/pngfiles/buttons/music_volume.png" id="8_ftius"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syqit"]
-bg_color = Color(0.219608, 0.219608, 0.219608, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v25f3"]
+texture = ExtResource("1_1scy7")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8ht7"]
-bg_color = Color(0.219608, 0.219608, 0.219608, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avvbi"]
+texture = ExtResource("3_tgior")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6sido"]
+texture = ExtResource("3_tgior")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frx4y"]
+texture = ExtResource("3_tgior")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ovbwl"]
+texture = ExtResource("3_tgior")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y7r8b"]
+texture = ExtResource("4_phdv0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ago7"]
+texture = ExtResource("4_phdv0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sliwt"]
+texture = ExtResource("4_phdv0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dg01l"]
+texture = ExtResource("4_phdv0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5mx2"]
+texture = ExtResource("5_3fpe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wrod"]
+texture = ExtResource("5_3fpe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cv2ig"]
+texture = ExtResource("5_3fpe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m4jxn"]
+texture = ExtResource("5_3fpe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ejhmu"]
+texture = ExtResource("1_1scy7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoe85"]
+texture = ExtResource("7_p3p00")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t76pc"]
+texture = ExtResource("8_ftius")
 
 [node name="MainPauseMeniu" type="CanvasLayer"]
 process_mode = 3
@@ -26,7 +74,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.41207, 1.62819)
 pivot_offset = Vector2(135, 0)
-theme_override_styles/panel = SubResource("StyleBoxFlat_syqit")
+theme_override_styles/panel = SubResource("StyleBoxTexture_v25f3")
 script = ExtResource("1_djm34")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
@@ -34,8 +82,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.72465
-offset_right = 3.72464
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.660074, 0.729761)
@@ -44,27 +90,37 @@ alignment = 1
 
 [node name="resumeB" type="Button" parent="MainPanel/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Tęsti"
+theme_override_styles/normal = SubResource("StyleBoxTexture_avvbi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6sido")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_frx4y")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ovbwl")
+text = " "
 metadata/_edit_use_anchors_ = true
 
 [node name="optionsB" type="Button" parent="MainPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Nustatymai"
+theme_override_styles/normal = SubResource("StyleBoxTexture_y7r8b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6ago7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sliwt")
+theme_override_styles/focus = SubResource("StyleBoxTexture_dg01l")
+text = " "
 metadata/_edit_use_anchors_ = true
 
 [node name="exitB" type="Button" parent="MainPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 theme_override_font_sizes/font_size = 28
-text = "Išeiti"
+theme_override_styles/normal = SubResource("StyleBoxTexture_j5mx2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1wrod")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cv2ig")
+theme_override_styles/focus = SubResource("StyleBoxTexture_m4jxn")
+text = " "
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsPanel" type="Panel" parent="."]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -78,7 +134,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(9.56, 12.2)
 pivot_offset = Vector2(20, 0)
-theme_override_styles/panel = SubResource("StyleBoxFlat_g8ht7")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ejhmu")
 script = ExtResource("2_kbjgf")
 
 [node name="Content" type="VBoxContainer" parent="OptionsPanel"]
@@ -93,7 +149,8 @@ alignment = 1
 [node name="ScreenTypeLabel" type="Label" parent="OptionsPanel/Content"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Ekrano tipai"
+theme_override_styles/normal = SubResource("StyleBoxTexture_qoe85")
+text = " "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -110,7 +167,8 @@ popup/item_1/id = 1
 [node name="MusicVolumeLabel" type="Label" parent="OptionsPanel/Content"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
-text = "Muzikos garsumas"
+theme_override_styles/normal = SubResource("StyleBoxTexture_t76pc")
+text = " "
 horizontal_alignment = 1
 vertical_alignment = 1
 

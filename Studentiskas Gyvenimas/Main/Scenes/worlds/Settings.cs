@@ -60,5 +60,5 @@ public partial class Settings : Panel
 		else
 			throw new Exception("Error setting the screen type");*/
 
-    }
+	}
 }

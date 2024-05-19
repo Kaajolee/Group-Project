@@ -14,9 +14,9 @@ public partial class pauseMeniuInstantiation : Node2D
 		AddChild(menuNode);
 		menuNode.Visible = false;
 
-        bg_music.Instance.Play("Song2");
+		bg_music.Instance.Play("Song2");
 
-        animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
+		animPlayer = GetNode<AnimationPlayer>("./CanvasLayer/AnimationPlayer");
 		animPlayer.Play("fade_in");
 	}
 
