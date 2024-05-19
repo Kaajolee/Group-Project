@@ -14,10 +14,10 @@
 1. Galimybė vartotojui valdyti veikėją dvimatėje erdvėje.
 2. Apžiūrėti universiteto struktūrą.
 3. Gebėjimas sužaisti keturis mini žaidimus:
-  - Parkuoti mašiną gatvėje.
-  - Daužyti ant ekrano lakstančius tarakonus.
-  - Kuo greičiau parašyti rašto darbą.
-  - Gaudyti krentančias knygas.
+    - Parkuoti mašiną gatvėje.
+    - Daužyti ant ekrano lakstančius tarakonus.
+    - Kuo greičiau parašyti rašto darbą.
+    - Gaudyti krentančias knygas.
 
 ## :triangular_ruler: Architektūra
 
