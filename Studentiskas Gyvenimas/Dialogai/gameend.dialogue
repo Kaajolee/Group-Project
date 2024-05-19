@@ -1,13 +1,9 @@
-~ this_is_a_node_title
+~ start
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
-
+Žaidimas: Laikas atsikvėpti po intensyvių akademinių išbandymų. 
+Žaidimas: Tu įrodei, kad esi pasirengęs įveikti bet kokį iššūkį, kurį universiteto gyvenimas tau meta. 
+Žaidimas: Tavo įdėtos pastangos ne tik akademinėje, bet ir asmeninėje plėtroje padėjo tau išaugti kaip žmogui.
+Žaidimas: Šis žaidimas tik pradžia – laukia dar daug nuotykių ir galimybių, kurias atrasi universiteto gyvenime. 
+Žaidimas: Tad šventink savo pegalę ir paruošk save ateinantiems iššūkiams ir išbandymams.
+do get_tree().quit()
 => END
