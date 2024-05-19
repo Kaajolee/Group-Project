@@ -95,7 +95,7 @@ Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto asp
 ## :wrench: Testavimas ir jo rezultatai
 
 
-[Nuoroda į testavimus ir jų rezultatus](https://docs.google.com/document/d/1Bwbzwy5xBFgIjS-Ff6P7oa0SjcefK0C-YVdEAVp6Hzo)
+[Nuoroda į testavimus ir jų rezultatus](https://docs.google.com/document/d/1Bwbzwy5xBFgIjS-Ff6P7oa0SjcefK0C-YVdEAVp6Hzo/edit?usp=sharing)
 ## :book: Trumpa naudotojo dokumentacija
 
 
