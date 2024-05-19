@@ -65337,6 +65337,7 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("10_oioys")
 
 [node name="CockroachMinigameTrigger" type="Area2D" parent="."]
+visible = false
 position = Vector2(-1178, -100)
 collision_layer = 3
 collision_mask = 2
