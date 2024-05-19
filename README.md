@@ -105,54 +105,55 @@ Sveiki atvykę į "Studento Gyvenimą"! Čia prasideda Jūsų pažinimo kelionė
 
 ### Instaliavimas
 
-Minimalūs sistemos reikalavimai
+**Minimalūs sistemos reikalavimai**
 
-Operacinė sistema: Windows 7, macOS 10.13 arba vėlesnės
-Procesorius: Intel Core 2 Duo E8200, Apple M1
-RAM: 4 GB
-Grafikos plokštė: Intel HD Graphics 5500 (Broadwell) arba AMD Radeon R5 Graphics (Kaveri)
-Laisvos vietos standžiajame diske: 500 MB
+   - Operacinė sistema: Windows 7, macOS 10.13 arba vėlesnės
+   - Procesorius: Intel Core 2 Duo E8200, Apple M1
+   - RAM: 4 GB
+   - Grafikos plokštė: Intel HD Graphics 5500 (Broadwell) arba AMD Radeon R5 Graphics (Kaveri)
+   - Laisvos vietos standžiajame diske: 500 MB
 
-Rekomenduojami sistemos reikalavimai
+**Rekomenduojami sistemos reikalavimai**
 
-Operacinė sistema: Windows 10, macOS 10.15 arba vėlesnės
-Procesorius: Intel Core i5-6600K arba AMD Ryzen 5 1600
-RAM: 8 GB
-Grafikos plokštė: NVIDIA GeForce GTX 1050 (Pascal) arba AMD Radeon RX 460 (GCN 4.0)
-Laisvos vietos standžiajame diske: 1.5 GB
+   - Operacinė sistema: Windows 10, macOS 10.15 arba vėlesnės
+   - Procesorius: Intel Core i5-6600K arba AMD Ryzen 5 1600
+   - RAM: 8 GB
+   - Grafikos plokštė: NVIDIA GeForce GTX 1050 (Pascal) arba AMD Radeon RX 460 (GCN 4.0)
+   - Laisvos vietos standžiajame diske: 1.5 GB
 
 Suinstaliavimo žingsniai
 
-Atsisiuntimas: ...
-Diegimo programos paleidimas: ...
-Paleidimas: įdiegus žaidimą, paleiskite "Studento gyvenimas".
+1. Atsisiuntimas: ...
+2. Diegimo programos paleidimas: ...
+3. Paleidimas: įdiegus žaidimą, paleiskite "Studento gyvenimas".
 
 ### Kaip žaisti?
 
-Kontrolės
+**Kontrolės**
 
-Klaviatūra:
-	Pagrindinis/Sustabydmo/Veikėjo pasirinkimo meniu:
-	Sąveikavimas su mygtukais: kairysis pelės mygtukas
-	Sustabdymas: "escape" mygtukas
+1. Klaviatūra:
+	- Pagrindinis/Sustabydmo/Veikėjo pasirinkimo meniu:
+	  Sąveikavimas su mygtukais: kairysis pelės mygtukas
+	  Sustabdymas: "escape" mygtukas
 	
-	Universitetas/bendrabutis:
-	Judėjimas: rodyklių mygtukai
-	Sąveikavimas su objektais/veikėjais: E mygtukas
+	- Universitetas/bendrabutis:
+	  Judėjimas: rodyklių mygtukai
+	  Sąveikavimas su objektais/veikėjais: E mygtukas
 
-	Mini žaidimai:
-	Tarakonų mušimas: kairysis pelės mygtukas
-	Prisiparkavimas: "space" mygtukas
-	Judėjimas: kairės ir dešinės rodyklių mygtukai
-	Rašymas: bet kuris raidės ar simbolio mygtukas
+	- Mini žaidimai:
+	  Tarakonų mušimas: kairysis pelės mygtukas
+	  Prisiparkavimas: "space" mygtukas
+	  Judėjimas: kairės ir dešinės rodyklių mygtukai
+	  Rašymas: bet kuris raidės ar simbolio mygtukas
 
 ### Pagrindinis meniu
 
 Prasidėjus žaidimui būsite nukelti į pagrindinį žaidimo meniu. Ten jūsų lauks du pasirinkimai - žaisti žaidimą arba iš jo išeiti.
-Žaisti
-Šis pasirinkimas nuves į Jūsų studento gyvenimą!
-Išeiti
-Šis pasirinkimas uždarys žaidimo langą...
+
+   - Žaisti
+     Šis pasirinkimas nuves į Jūsų studento gyvenimą!
+   - Išeiti
+     Šis pasirinkimas uždarys žaidimo langą...
 
 ### Veikėjo pasirinkimo meniu
 
@@ -164,45 +165,51 @@ Paspaudus mygtuką "Žaisti", atsivers veikėjo pasirinkimo langas. Jame galėsi
 
 ### Nustatymai
 
-Ekrano tipas
-Galimas pasirinkimas tarp dviejų tipų: "fullscreen" arba "windowed".
+Šiame lange galite pakeisti pagrindinius žaidimo nustatymus:
+   1. Ekrano tipas
+      Galimas pasirinkimas tarp dviejų tipų: "fullscreen" arba "windowed".
 
-Muzikos garsumas
-Galimas muzikos garso pamažinimas arba padidinimas.
+   2. Muzikos garsumas
+      Galimas muzikos garso pamažinimas arba padidinimas.
 
 ### Pagrindiniai žaidimo veikėjai
 
-Studentė
-Studentas
+   - Studentė
+   - Studentas
 
 ### Kiti veikėjai
 
-Dėstytojai
-Studentai
+   - Dėstytojai
+   - Studentai
 
 ### Žaidimo aplinka/vietos
 
-Bendrabučio kambarys: vieta, kur prasideda pati pirmoji studento diena. Nenorite per ilgai čia užsibūti - darbai patys nepasidarys! Čia taip pat galite susipažinti su savo kambario draugais, kurie gali tapti puikiais bičiuliais ir studijų partneriais.
-Universitetas: čia renkasi studentai ir dėstytojai. Su šia vieta apsipraskite kuo greičiau - ji taps Jūsų antraisiais namais.
-Biblioteka: čia rasite visą reikalingą literatūrą ir studijų medžiagą. Nesidrovėkite uždavinėti klausimų – šioje vietoje visada atsiranda žmonių, pasirengusių padėti.
-Valgykla: vieta, kurioje galite skaniai pavalgyti ir atgauti visą energiją.
-Laisvalaikio erdvė: čia rasite visko - nuo stalo teniso iki žaidimų konsolių! Tai vieta, kuri padės atsigauti po ilgų ir sunkių paskaitų bei dar sunkesnių egzaminų.
-Klasės: čia vyks laboratoriniai darbai ir praktinės paskaitos. Nepamirškite laiku į jas atvykti ir būti pasiruošę – aktyvus dalyvavimas ir dėstytojų pateiktų užduočių įvykdymas padės sklandžiau pereiti studijų iššūkius!
+   - Bendrabučio kambarys: vieta, kur prasideda pati pirmoji studento diena. Nenorite per ilgai čia užsibūti - darbai patys nepasidarys! Čia taip pat galite susipažinti su savo kambario draugais, kurie gali tapti puikiais bičiuliais ir studijų partneriais.
+
+   - Universitetas: čia renkasi studentai ir dėstytojai. Su šia vieta apsipraskite kuo greičiau - ji taps Jūsų antraisiais namais.
+
+   - Biblioteka: čia rasite visą reikalingą literatūrą ir studijų medžiagą. Nesidrovėkite uždavinėti klausimų – šioje vietoje visada atsiranda žmonių, pasirengusių padėti.
+
+   - Valgykla: vieta, kurioje galite skaniai pavalgyti ir atgauti visą energiją.
+
+   - Laisvalaikio erdvė: čia rasite visko - nuo stalo teniso iki žaidimų konsolių! Tai vieta, kuri padės atsigauti po ilgų ir sunkių paskaitų bei dar sunkesnių egzaminų.
+
+   - Klasės: čia vyks laboratoriniai darbai ir praktinės paskaitos. Nepamirškite laiku į jas atvykti ir būti pasiruošę – aktyvus dalyvavimas ir dėstytojų pateiktų užduočių įvykdymas padės sklandžiau pereiti studijų iššūkius!
 
 ### Mini žaidimai
 
 Žaidimas susideda iš keturių mini žaidimų, kurių kiekvieno metu galite gauti taškų. Tikslas - surinkti kuo daugiau!
 
-Parkavimas
+***Prisiparkuok mašiną***
 Čia galite šbandyti savo vairavimo įgūdžius. Tikslas – kuo tiksliau priparkuoti automobilį bet kurioje laisvoje vietoje, nepažeidžiant kitų automobilių. Kuo daugiau automobilių priparkuosite, tuo daugiau surinksite taškų. Pasiruoškite...Pirmyn!
 
-Tarakonų daužymas
+***Sunaikink tarakonus***
 Pasiruoškite greitai reaguoti ir tiksliai smogti, nes Jūsų tikslas – pritėkšti kuo daugiau tarakonų! Šie mažieji kenkėjai nepastebimai atsiranda iš įvairiausių kampų, tad būkite labai budrūs! Kiekvienas pritrėkštas tarakonas Jums duoda po tašką ir...išsilaisvinimą nuo šių nepageidaujamų svečių.
 
-Darbo rašymas
+***Parašyk esė***
 Jūs tik dabar prisiminėte, kad turite parašyti akademinį darbą! Šiame žaidime turite kuo greičiau parašyti tekstą. Kiekviena sekundė kainuos taškų, todėl būkite kuo greitesni. Pasistenkite surinkti kuo daugiau žodžių per ribotą laiką, kad spėtumėte pateikti darbą dėstytojui!
 
-Knygų gaudymas
+***Pagauk knygas***
 Šiame žaidime turite sugauti iš lentynų krentančias knygas. Kiekviena pagauta knyga suteiks taškų, o kiekviena pamesta - gyvybę. Žaidimo pradžioje turite tris gyvybes, tad būkite atsargūs ir atidūs, jei praleisite per daug knygų - žaidimą pralaimėsite...
 
 
