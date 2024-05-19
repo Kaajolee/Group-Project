@@ -9,6 +9,7 @@ public partial class world : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		bg_music.Instance.Play("Song2");
 		Score = 0;
 		pauseMenu = ResourceLoader.Load<PackedScene>("res://Minigames/TarakonuMinigame/PauseMeniuInGame.tscn");
 

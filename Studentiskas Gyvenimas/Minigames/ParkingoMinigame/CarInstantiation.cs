@@ -47,7 +47,7 @@ public partial class CarInstantiation : Node2D
 		AddChild(menuNode);
 		menuNode.Visible = false;
 
-
+		bg_music.Instance.Play("Song2");
 
 		//totalScore = 0;
 		global.parkingScore = 0;

@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://hkvf2ro1hpn3"]
+[gd_scene load_steps=4 format=3 uid="uid://hkvf2ro1hpn3"]
 
-[ext_resource type="AudioStream" uid="uid://g0ta1g14x773" path="res://Music/wondrous-waters-119518.wav" id="1_dga4f"]
+[ext_resource type="AudioStream" uid="uid://cgdwt4ogk8l2i" path="res://Music/main.wav" id="1_q47cd"]
+[ext_resource type="Script" path="res://Music/bg_music.cs" id="1_uml2x"]
+[ext_resource type="AudioStream" uid="uid://cxr522nmljcpr" path="res://Music/carparking.wav" id="2_sbdlw"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_dga4f")
-autoplay = true
+[node name="BGMusic" type="Node"]
+script = ExtResource("1_uml2x")
+
+[node name="Song1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_q47cd")
+
+[node name="Song2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sbdlw")
