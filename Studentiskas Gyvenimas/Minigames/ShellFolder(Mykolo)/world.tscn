@@ -65,6 +65,7 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 52.0
 offset_bottom = 23.0
+text = "Knygos:"
 
 [node name="HealthLabel" type="Label" parent="UI"]
 top_level = true

@@ -7,6 +7,7 @@ Destytojas: Štai jūsų pasirinkimai.
 	#var req_scene = load("res://Minigames/ShellFolder(Mykolo)/world.tscn")
 	#do get_tree().change_scene_to_packed("res://Minigames/ShellFolder(Mykolo)/world.tscn")
 	#ResourcePath: "res://Minigames/ShellFolder(Mykolo)/world.tscn"
+	do SceneChanger.handle_dialogue_choice(0)
 	
 	=> END
 - Greitas rašymas
@@ -14,18 +15,21 @@ Destytojas: Štai jūsų pasirinkimai.
 	#var req_scene = load("res://Minigames/ShellFolder(Mykolo)/world.tscn")
 	#do get_tree().change_scene_to_packed("res://Minigames/GreitoRasymoMinigame/ButtonSmasher.tscn")
 	#ResourcePath: "res://Minigames/GreitoRasymoMinigame/ButtonSmasher.tscn"
+	do SceneChanger.handle_dialogue_choice(1)
 	=> END
 - Tarakonų gaudymas
 	Destytojas: Kas čia darosi?! Iš kur čia tiek daug tarakonų??? 
 	#var req_scene = load("res://Minigames/ShellFolder(Mykolo)/world.tscn")
 	#do get_tree().change_scene_to_packed("res://Minigames/TarakonuMinigame/HitTheBug.tscn")
 	#ResourcePath: res://Minigames/TarakonuMinigame/HitTheBug.tscn"
+	do SceneChanger.handle_dialogue_choice(2)
 	=> END
 - Parkingas:
 	Destytojas: Na ir sudėtinga čia su tuo parkingu, galbūt kas nors galit padėti parkuoti mano automobilį? 
 	#var req_scene = load("res://Minigames/ShellFolder(Mykolo)/world.tscn")
 	#do get_tree().change_scene_to_packed("res://Minigames/ParkingoMinigame/ParkTheCar.tscn")
 	#ResourcePath: "res://Minigames/ParkingoMinigame/ParkTheCar.tscn"
+	do SceneChanger.handle_dialogue_choice(3)
 	=> END
 - Pradeti iš naujo => start
 - Pabaigti pokalbį => END

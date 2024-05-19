@@ -29,7 +29,7 @@ public partial class ScoreLabel : Label
 	{ 
 		Score++;
 		global.bookScore++;
-		Text = $"Score: " + Score;
+		Text = $"Knygos: " + Score;
 	}
 
 	void scoreDeduct()
@@ -39,6 +39,6 @@ public partial class ScoreLabel : Label
 			Score--;
 			global.bookScore--;
 		}
-		Text = $"Score: " + Score;
+		Text = $"Knygos: " + Score;
 	}
 }

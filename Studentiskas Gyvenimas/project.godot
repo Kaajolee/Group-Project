@@ -23,6 +23,7 @@ CustomSignals="*res://Global/CustomSignals.cs"
 InteractionManager="*res://Main/Scenes/interaction/InteractionManager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 BgMusic="*res://Music/bg_music.tscn"
+SceneChanger="*res://Global/scene_changer.tscn"
 
 [dialogue_manager]
 
