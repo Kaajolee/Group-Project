@@ -157,11 +157,23 @@ Prasidėjus žaidimui būsite nukelti į pagrindinį žaidimo meniu. Ten jūsų 
      - Šis pasirinkimas nuves į Jūsų studento gyvenimą!
    - Išeiti
      - Šis pasirinkimas uždarys žaidimo langą...
+    
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/main_menu.png" />
+</p>
+
+*Pagrindinio meniu lango vaizdas*
 
 
 ### Veikėjo pasirinkimo meniu
 
 Paspaudus mygtuką "Žaisti", atsivers veikėjo pasirinkimo langas. Jame galėsite pasirinkti tarp dviejų pagrindinių žaidimo veikėjų - Studento ir Studentės.
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/selection_menu.png" />
+</p>
+
+*Veikėjo pasirinkimo meniu lango vaizdas*
 
 
 ### Žaidimo sustabdymo meniu
@@ -211,17 +223,17 @@ Paspaudus mygtuką "Žaisti", atsivers veikėjo pasirinkimo langas. Jame galėsi
 
 ### Žaidimo aplinka/vietos
 
-   - Bendrabučio kambarys: vieta, kur prasideda pati pirmoji studento diena. Nenorite per ilgai čia užsibūti - darbai patys nepasidarys! Čia taip pat galite susipažinti su savo kambario draugais, kurie gali tapti puikiais bičiuliais ir studijų partneriais.
+   - **Bendrabučio kambarys**: vieta, kur prasideda pati pirmoji studento diena. Nenorite per ilgai čia užsibūti - darbai patys nepasidarys! Čia taip pat galite susipažinti su savo kambario draugais, kurie gali tapti puikiais bičiuliais ir studijų partneriais.
 
-   - Universitetas: čia renkasi studentai ir dėstytojai. Su šia vieta apsipraskite kuo greičiau - ji taps Jūsų antraisiais namais.
+   - **Universitetas**: čia renkasi studentai ir dėstytojai. Su šia vieta apsipraskite kuo greičiau - ji taps Jūsų antraisiais namais.
 
-   - Biblioteka: čia rasite visą reikalingą literatūrą ir studijų medžiagą. Nesidrovėkite uždavinėti klausimų – šioje vietoje visada atsiranda žmonių, pasirengusių padėti.
+   - **Biblioteka**: čia rasite visą reikalingą literatūrą ir studijų medžiagą. Nesidrovėkite uždavinėti klausimų – šioje vietoje visada atsiranda žmonių, pasirengusių padėti.
 
-   - Valgykla: vieta, kurioje galite skaniai pavalgyti ir atgauti visą energiją.
+   - **Valgykla**: vieta, kurioje galite skaniai pavalgyti ir atgauti visą energiją.
 
-   - Laisvalaikio erdvė: čia rasite visko - nuo stalo teniso iki žaidimų konsolių! Tai vieta, kuri padės atsigauti po ilgų ir sunkių paskaitų bei dar sunkesnių egzaminų.
+   - **Laisvalaikio erdvė**: čia rasite visko - nuo stalo teniso iki žaidimų konsolių! Tai vieta, kuri padės atsigauti po ilgų ir sunkių paskaitų bei dar sunkesnių egzaminų.
 
-   - Klasės: čia vyks laboratoriniai darbai ir praktinės paskaitos. Nepamirškite laiku į jas atvykti ir būti pasiruošę – aktyvus dalyvavimas ir dėstytojų pateiktų užduočių įvykdymas padės sklandžiau pereiti studijų iššūkius!
+   - **Klasės**: čia vyks laboratoriniai darbai ir praktinės paskaitos. Nepamirškite laiku į jas atvykti ir būti pasiruošę – aktyvus dalyvavimas ir dėstytojų pateiktų užduočių įvykdymas padės sklandžiau pereiti studijų iššūkius!
 
 
 ### Mini žaidimai
