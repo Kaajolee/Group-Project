@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbq7dwul2dwc5"]
+[gd_scene load_steps=10 format=3 uid="uid://bbq7dwul2dwc5"]
 
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/CarInstantiation.cs" id="1_5kfo6"]
+[ext_resource type="Script" path="res://Minigames/ParkingoMinigame/BackGroundInstantiation.cs" id="2_12pqm"]
 [ext_resource type="PackedScene" uid="uid://b2lf5lgb76o21" path="res://Minigames/ParkingoMinigame/player.tscn" id="2_ojtgv"]
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/scoreUpdate.cs" id="3_6jn87"]
+[ext_resource type="Texture2D" uid="uid://lvjtpttxw2jh" path="res://Minigames/ParkingoMinigame/PNG/auto.png" id="3_f76m1"]
 [ext_resource type="Script" path="res://Minigames/GreitoRasymoMinigame/GameOverWindowInst.cs" id="4_je3wd"]
-[ext_resource type="Texture2D" uid="uid://dua3jx5yed20m" path="res://Minigames/ParkingoMinigame/PNG/asfaltas.png" id="4_w4q05"]
 
 [sub_resource type="Animation" id="Animation_tecy7"]
 resource_name = "fade_in"
@@ -59,11 +60,17 @@ scale = Vector2(1, 0.993593)
 script = ExtResource("1_5kfo6")
 parkingSpaceOffset = 70.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(507, -342.192)
-scale = Vector2(0.8, 1)
-texture = ExtResource("4_w4q05")
+[node name="BackGround" type="Node2D" parent="."]
+script = ExtResource("2_12pqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGround"]
+position = Vector2(576, 26.1677)
+scale = Vector2(0.599999, 0.59742)
+texture = ExtResource("3_f76m1")
 offset = Vector2(-1.25, 500.204)
+
+[node name="Node2D" type="Node2D" parent="BackGround"]
+position = Vector2(576, -606.888)
 
 [node name="Player" parent="." instance=ExtResource("2_ojtgv")]
 rotation = 0.0
@@ -121,6 +128,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/AnimationPlayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
