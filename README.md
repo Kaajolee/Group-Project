@@ -29,7 +29,7 @@ Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto asp
 
 *  [Godot žaidimų variklis](https://godotengine.org/)
 
-***Programinis kodui redaguoti***
+***Programiniam kodui redaguoti***
 
 *  [Microsoft Visual Studio integruota kūrimo aplinka](https://visualstudio.microsoft.com/)
 *  [Microsoft visual Studio Code šaltinio kodo rengyklė](https://code.visualstudio.com/)
