@@ -34,7 +34,7 @@ Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto asp
 *  [Microsoft Visual Studio integruota kūrimo aplinka](https://visualstudio.microsoft.com/)
 *  [Microsoft visual Studio Code šaltinio kodo rengyklė](https://code.visualstudio.com/)
 
-***Grafiniai vaizdam kurti ir redaguoti***
+***Grafiniam vaizdam kurti ir redaguoti***
 
 *  [Krita grafikos rengyklė](https://krita.org/lt/)
 *  [Aseprite vaizdų rengyklė](https://www.aseprite.org/)
