@@ -49,7 +49,6 @@ Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto asp
 
 *  [Godot žaidimų variklio dokumentacija](https://docs.godotengine.org/en/stable/)
 *  [Stackoverlfow forumas](https://stackoverflow.com/questions/tagged/godot)
-*  [Adobe Photoshop grafikos rengyklė](https://www.adobe.com/products/photoshop.html)
 
 ### Diagramos
 
