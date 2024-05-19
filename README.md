@@ -229,16 +229,16 @@ Paspaudus mygtuką "Žaisti", atsivers veikėjo pasirinkimo langas. Jame galėsi
 Žaidimas susideda iš keturių mini žaidimų, kurių kiekvieno metu galite gauti taškų. Tikslas - surinkti kuo daugiau!
 
 ***Prisiparkuok mašiną***
-   - Čia galite šbandyti savo vairavimo įgūdžius. Tikslas – kuo tiksliau priparkuoti automobilį bet kurioje laisvoje vietoje, nepažeidžiant kitų automobilių. Kuo daugiau automobilių priparkuosite, tuo daugiau surinksite taškų. Pasiruoškite...Pirmyn!
+Čia galite šbandyti savo vairavimo įgūdžius. Tikslas – kuo tiksliau priparkuoti automobilį bet kurioje laisvoje vietoje, nepažeidžiant kitų automobilių. Kuo daugiau automobilių priparkuosite, tuo daugiau surinksite taškų. Pasiruoškite...Pirmyn!
 
 ***Sunaikink tarakonus***
-   - Pasiruoškite greitai reaguoti ir tiksliai smogti, nes Jūsų tikslas – pritėkšti kuo daugiau tarakonų! Šie mažieji kenkėjai nepastebimai atsiranda iš įvairiausių kampų, tad būkite labai budrūs! Kiekvienas pritrėkštas tarakonas Jums duoda po tašką ir...išsilaisvinimą nuo šių nepageidaujamų svečių.
+Pasiruoškite greitai reaguoti ir tiksliai smogti, nes Jūsų tikslas – pritėkšti kuo daugiau tarakonų! Šie mažieji kenkėjai nepastebimai atsiranda iš įvairiausių kampų, tad būkite labai budrūs! Kiekvienas pritrėkštas tarakonas Jums duoda po tašką ir...išsilaisvinimą nuo šių nepageidaujamų svečių.
 
 ***Parašyk esė***
-   - Jūs tik dabar prisiminėte, kad turite parašyti akademinį darbą! Šiame žaidime turite kuo greičiau parašyti tekstą. Kiekviena sekundė kainuos taškų, todėl būkite kuo greitesni. Pasistenkite surinkti kuo daugiau žodžių per ribotą laiką, kad spėtumėte pateikti darbą dėstytojui!
+Jūs tik dabar prisiminėte, kad turite parašyti akademinį darbą! Šiame žaidime turite kuo greičiau parašyti tekstą. Kiekviena sekundė kainuos taškų, todėl būkite kuo greitesni. Pasistenkite surinkti kuo daugiau žodžių per ribotą laiką, kad spėtumėte pateikti darbą dėstytojui!
 
 ***Pagauk knygas***
-   - Šiame žaidime turite sugauti iš lentynų krentančias knygas. Kiekviena pagauta knyga suteiks taškų, o kiekviena pamesta - gyvybę. Žaidimo pradžioje turite tris gyvybes, tad būkite atsargūs ir atidūs, jei praleisite per daug knygų - žaidimą pralaimėsite...
+Šiame žaidime turite sugauti iš lentynų krentančias knygas. Kiekviena pagauta knyga suteiks taškų, o kiekviena pamesta - gyvybę. Žaidimo pradžioje turite tris gyvybes, tad būkite atsargūs ir atidūs, jei praleisite per daug knygų - žaidimą pralaimėsite...
 
 
 
