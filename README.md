@@ -39,8 +39,28 @@
 > [!NOTE]
 > Projektui tobulėjant, panaudos atvėjų diagrama gali ne visiškai atitikti žaidimo galimybių, dėl naujai atsiradusių funkcijų.
 
+***Žemiau nurodytos individualių mini žaidimų sekų diagramos apibūdinančios jų struktūrą ir veikimą***
 
 
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/ParkingoDiagrama.PNG" />
+</p>
+*Priparkuoti mašiną" mini žaidimo diagrama*
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/RasimoDiagrama.PNG" />
+</p>
+*"Parašyk esė" mini žaidimo diagrama*
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/TarakonuDiagrama.PNG" />
+</p>
+*"Sunaikink tarakonus" mini žaidimo diagrama*
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/books.png" />
+</p>
+*"Pagauk knygas" mini žaidimo diagrama*
 
 ## :wrench: Testavimas ir jo rezultatai
 
