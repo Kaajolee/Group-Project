@@ -45,21 +45,25 @@
 <p align="center">
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/ParkingoDiagrama.PNG" />
 </p>
-*Priparkuoti mašiną" mini žaidimo diagrama*
+
+*"Priparkuoti" mašiną mini žaidimo diagrama*
 
 <p align="center">
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/RasimoDiagrama.PNG" />
 </p>
+
 *"Parašyk esė" mini žaidimo diagrama*
 
 <p align="center">
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/TarakonuDiagrama.PNG" />
 </p>
+
 *"Sunaikink tarakonus" mini žaidimo diagrama*
 
 <p align="center">
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/books.png" />
 </p>
+
 *"Pagauk knygas" mini žaidimo diagrama*
 
 ## :wrench: Testavimas ir jo rezultatai
