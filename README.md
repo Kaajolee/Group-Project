@@ -103,6 +103,7 @@ Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto asp
 
 Sveiki atvykę į "Studento Gyvenimą"! Čia prasideda Jūsų pažinimo kelionė, kurios metu išvysite plačias, pilnas studentų auditorijas, knygų ir žinių pripildytą biblioteką ir netgi savo bendrabučio kambarį. Kaip daugelis sako, ši kelionė nebus tik rožėmis klota, todėl, kad šioje netikėtumų pilnoje vietoje greičiau apsiprastumėte - šis vartotojo vadovas Jums padės įveikti net sunkiausias dėstytojų pateiktas užduotis. Tad pirmyn!
 
+
 ### Instaliavimas
 
 **Minimalūs sistemos reikalavimai**
@@ -127,60 +128,86 @@ Suinstaliavimo žingsniai
 2. Diegimo programos paleidimas: ...
 3. Paleidimas: įdiegus žaidimą, paleiskite "Studento gyvenimas".
 
+
 ### Kaip žaisti?
 
 **Kontrolės**
 
 1. Klaviatūra:
 	- Pagrindinis/Sustabydmo/Veikėjo pasirinkimo meniu:
-	  Sąveikavimas su mygtukais: kairysis pelės mygtukas
-	  Sustabdymas: "escape" mygtukas
+	  - Sąveikavimas su mygtukais: kairysis pelės mygtukas
+	  - Sustabdymas: "escape" mygtukas
 	
 	- Universitetas/bendrabutis:
-	  Judėjimas: rodyklių mygtukai
-	  Sąveikavimas su objektais/veikėjais: E mygtukas
+	  - Judėjimas: rodyklių mygtukai
+	  - Sąveikavimas su objektais/veikėjais: E mygtukas
 
 	- Mini žaidimai:
-	  Tarakonų mušimas: kairysis pelės mygtukas
-	  Prisiparkavimas: "space" mygtukas
-	  Judėjimas: kairės ir dešinės rodyklių mygtukai
-	  Rašymas: bet kuris raidės ar simbolio mygtukas
+	  - Tarakonų mušimas: kairysis pelės mygtukas
+	  - Prisiparkavimas: "space" mygtukas
+	  - Judėjimas: kairės ir dešinės rodyklių mygtukai
+	  - Rašymas: bet kuris raidės ar simbolio mygtukas
+
 
 ### Pagrindinis meniu
 
 Prasidėjus žaidimui būsite nukelti į pagrindinį žaidimo meniu. Ten jūsų lauks du pasirinkimai - žaisti žaidimą arba iš jo išeiti.
 
    - Žaisti
-     Šis pasirinkimas nuves į Jūsų studento gyvenimą!
+     - Šis pasirinkimas nuves į Jūsų studento gyvenimą!
    - Išeiti
-     Šis pasirinkimas uždarys žaidimo langą...
+     - Šis pasirinkimas uždarys žaidimo langą...
+
 
 ### Veikėjo pasirinkimo meniu
 
 Paspaudus mygtuką "Žaisti", atsivers veikėjo pasirinkimo langas. Jame galėsite pasirinkti tarp dviejų pagrindinių žaidimo veikėjų - Studento ir Studentės.
 
+
 ### Žaidimo sustabdymo meniu
 
 Šį meniu galite pasiekti bet kuriuo žaidimo metu, kai norite sustabdyti veiksmą, pakeisti žaidimo nustatymus arba visiškai išeiti iš žaidimo.
+
 
 ### Nustatymai
 
 Šiame lange galite pakeisti pagrindinius žaidimo nustatymus:
    1. Ekrano tipas
-      Galimas pasirinkimas tarp dviejų tipų: "fullscreen" arba "windowed".
+      - Galimas pasirinkimas tarp dviejų tipų: "fullscreen" arba "windowed".
 
    2. Muzikos garsumas
-      Galimas muzikos garso pamažinimas arba padidinimas.
+      - Galimas muzikos garso pamažinimas arba padidinimas.
+
 
 ### Pagrindiniai žaidimo veikėjai
 
    - Studentė
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/student2.png" />
+</p>
+
    - Studentas
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/student1.png" />
+</p>
+
 
 ### Kiti veikėjai
 
    - Dėstytojai
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/Professor.png" />
+</p>
+
    - Studentai
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/Student.png" />
+</p>
+
 
 ### Žaidimo aplinka/vietos
 
