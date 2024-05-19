@@ -21,7 +21,7 @@
 
 ## :triangular_ruler: Architektūra
 
-Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto aspektai yra parasšyti su GD script [Godot](https://godotengine.org/) žaidimų variklio vidine kalba.
+Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto aspektai yra parašyti su GD script [Godot](https://godotengine.org/) žaidimų variklio vidine kalba.
 
 ### Programinė įranga
 
