@@ -4,12 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="2_pos60"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dyry"]
-size = Vector2(74, 12)
+size = Vector2(74, 27)
 
 [node name="EndGame" type="Node2D"]
 script = ExtResource("1_okbcf")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_pos60")]
+action_name = "užbaigti dieną"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_6dyry")
