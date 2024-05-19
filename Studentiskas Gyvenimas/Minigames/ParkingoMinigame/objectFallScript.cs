@@ -31,7 +31,7 @@ public partial class objectFallScript : Sprite2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
 	{
-		screenBottomY = GetViewportRect().Size.Y;
+		screenBottomY = GetViewportRect().Size.Y + 100;
 
 		var position = Position;
 		var deltaY = speed * (float)delta * 50;

@@ -22,7 +22,7 @@ public partial class parkingSpaceFallScript : Sprite2D
     }
     public override void _Process(double delta)
 	{
-        screenBottomY = GetViewport().GetVisibleRect().Size.Y;
+        screenBottomY = GetViewport().GetVisibleRect().Size.Y + 100;
 
         var position = Position;
         var deltaY = speed * (float)delta * 50;

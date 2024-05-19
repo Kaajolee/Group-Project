@@ -75,11 +75,12 @@ public partial class CarInstantiation : Node2D
 	{
 		int randomInt = rnd.Next(2);
 		spawnLocationX = playerCarInstantiation.spawnDestinationX;
-		Vector2 position = new Vector2(spawnLocationX, 0);
+		Vector2 position = new Vector2(spawnLocationX, -100);
+		Vector2 positionParkingSpace = new Vector2(spawnLocationX, -125);
 		Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
 
 		Sprite2D parkingSpace = (Sprite2D)parkingSpaceScene.Instantiate();
-		parkingSpace.Position = position;
+		parkingSpace.Position = positionParkingSpace;
 		AddChild(parkingSpace);
 
 		//masina
