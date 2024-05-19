@@ -54,4 +54,5 @@ public partial class SceneTransitionTrigger : Area2D
 		else
 			Debug.Fail("Ivyko klaida uzkraunant scena" + Name);
 	}
+	
 }

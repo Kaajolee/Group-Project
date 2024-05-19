@@ -1,12 +1,11 @@
-~ this_is_a_node_title
+~ start
 
 Tomas: [[Labas|Sveiki|Laba diena]], turite klausimų?
-Tomas: Štai tavo pasirinkimai.
 - Kontrolinis darbas
 	Tomas: Kontrolinis darbas bus vykdomas kovo 25 dieną.
 - Egzaminas 
 	Tomas: Egzaminas vyks birželio 6 dieną.
-- Pradėti iš naujo => this_is_a_node_title
+- Pradėti iš naujo => start
 - Užbaigti pokalbį => END
 
 => END

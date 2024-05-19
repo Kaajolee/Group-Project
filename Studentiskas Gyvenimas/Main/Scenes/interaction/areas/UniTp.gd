@@ -10,5 +10,5 @@ func _ready():
 func _on_interact():
 	get_tree().change_scene_to_file("res://Minigames/ParkingoMinigame/ParkTheCar.tscn")
 	Game.cordx = 0
-	Game.cordy = 0
+	Game.cordy = 150
 

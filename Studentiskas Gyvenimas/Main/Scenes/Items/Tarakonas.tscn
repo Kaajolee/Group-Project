@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbha110og8po0"]
+
+[ext_resource type="Script" path="res://Main/Scenes/Items/Tarakonas.gd" id="1_nhbc7"]
+[ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="2_pqhgr"]
+[ext_resource type="Texture2D" uid="uid://b8bb0euojlax4" path="res://Minigames/TarakonuMinigame/PNG/cockroach.png" id="3_382y8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0vis8"]
+radius = 20.025
+
+[node name="Tarakonas" type="Node2D"]
+script = ExtResource("1_nhbc7")
+
+[node name="Cockroach" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, -1.90735e-06)
+scale = Vector2(0.028, 0.0526563)
+texture = ExtResource("3_382y8")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_pqhgr")]
+action_name = "Gaudyti tarakonus"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_0vis8")

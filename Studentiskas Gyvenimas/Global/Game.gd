@@ -8,6 +8,7 @@ var cordx = -1600
 var cordy = -30
 var dialogue = "GameStart"
 var books = "0"
+var bug = "0"
 
 func getCharacter():
 	
