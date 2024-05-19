@@ -46,7 +46,7 @@ public partial class playerCarInstantiation : Node2D
         customSignals.ParkingMinigamePoint += PointEarned;
         customSignals.ParkingMinigameBottomLine += OnBottomReached;
 
-        playerSpawnLocation = new Vector2(rectSize.X / 2, rectSize.Y);
+        playerSpawnLocation = new Vector2(rectSize.X / 2 + 55, rectSize.Y);
         Position = playerSpawnLocation;
 
         playerCarScene = ResourceLoader.Load<PackedScene>("res://Minigames/ParkingoMinigame/playerCar.tscn");

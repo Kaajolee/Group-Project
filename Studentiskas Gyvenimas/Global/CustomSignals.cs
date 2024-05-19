@@ -15,7 +15,10 @@ public partial class CustomSignals : Node
 	[Signal]
 	public delegate void ParkingMinigameBottomLineEventHandler();
 
-	[Signal]
+    [Signal]
+    public delegate void ParkingMinigameBackgroundDeletedEventHandler();
+
+    [Signal]
 	public delegate void CockroachMinigameEndedEventHandler();
 
 	[Signal]
