@@ -1,11 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://bge30hxqq6hr0"]
 
-[ext_resource type="Texture2D" uid="uid://lvjtpttxw2jh" path="res://Minigames/ParkingoMinigame/PNG/auto.png" id="1_nyb6y"]
 [ext_resource type="Script" path="res://Minigames/ParkingoMinigame/BackgroundFall.cs" id="2_csxbw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jpav4"]
+load_path = "res://.godot/imported/auto.png-733127b259533d750b658b3ad4854698.ctex"
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(576, 24)
-scale = Vector2(0.599999, 0.63742)
-texture = ExtResource("1_nyb6y")
+scale = Vector2(0.599999, 0.59742)
+texture = SubResource("CompressedTexture2D_jpav4")
 offset = Vector2(-1.25, 500.204)
 script = ExtResource("2_csxbw")

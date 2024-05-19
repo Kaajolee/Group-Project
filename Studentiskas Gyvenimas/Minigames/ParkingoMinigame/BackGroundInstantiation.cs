@@ -19,14 +19,19 @@ public partial class BackGroundInstantiation : Node2D
         rectSize = GetViewportRect().Size;
 
 
-        Instantiatebackground(new Vector2(rectSize.X /2, 0), backgroundScene);
+        Instantiatebackground(new Vector2(rectSize.X /2, 30), backgroundScene);
         Instantiatebackground(instPos, backgroundScene);
 
         customSignals.ParkingMinigameBackgroundDeleted += () => Instantiatebackground(new Vector2(instPos.X, instPos.Y), backgroundScene);
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    public override void _ExitTree()
+    {
+        customSignals.ParkingMinigameBackgroundDeleted -= () => Instantiatebackground(new Vector2(instPos.X, instPos.Y), backgroundScene);
+    }
+
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 
     }
