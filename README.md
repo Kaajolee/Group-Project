@@ -33,7 +33,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/UseCaseDiagrama.png" />
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/UseCaseDiagrama.PNG" />
 </p>
 
 > [!NOTE]
