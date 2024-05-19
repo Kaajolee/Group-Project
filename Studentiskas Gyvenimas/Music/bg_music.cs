@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Xml.Linq;
 
 public partial class bg_music : Node
 {
@@ -17,6 +18,12 @@ public partial class bg_music : Node
         foreach (Node child in GetChildren())
         {
             music.Add(child.Name, (AudioStreamPlayer)child);
+
+        }
+
+        foreach (KeyValuePair<string, AudioStreamPlayer> entry in music)
+        {
+            entry.Value.Finished += () => Instance.Play(entry.Key);
         }
 
         Instance.Play("Song1");
