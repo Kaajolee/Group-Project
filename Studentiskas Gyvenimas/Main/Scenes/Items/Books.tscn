@@ -533,6 +533,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-1, 786432, 15, 65535, 786432, 16, -65536, 851968, 15, 0, 851968, 16)
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_bv5oc")]
+action_name = "surinkti knygas"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_73q1r")

@@ -16,7 +16,7 @@ scale = Vector2(0.028, 0.0526563)
 texture = ExtResource("3_382y8")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_pqhgr")]
-action_name = "Gaudyti tarakonus"
+action_name = "gaudyti tarakonus"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_0vis8")

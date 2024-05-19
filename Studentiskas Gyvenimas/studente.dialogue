@@ -1,6 +1,6 @@
 ~ start
 
-Studentė: Labas, ar galėtum man padėti.
+Studentė: Labas, ar galėtum man padėti?
 Studentas: 
 - Žinoma
 	Studentė: Aš pamečiau savo knygas mokymosi kambaryje ar galėtum jas surinkti? 
@@ -8,9 +8,4 @@ Studentas:
 	- Be problemų
 - Vėliau
 	 => END
-=> END
-
-~ end
-Studentė: OHO, mano knygos! 
-Studentas: Smagu padėti.
 => END

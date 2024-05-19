@@ -10,4 +10,6 @@ func _ready():
 	
 func _on_interact():
 	Game.books = "1"
+	Game.cordx = 200
+	Game.cordy = -150
 	get_tree().change_scene_to_file("res://Minigames/ShellFolder(Mykolo)/world.tscn")
