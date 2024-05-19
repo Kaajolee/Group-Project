@@ -122,7 +122,7 @@ Sveiki atvykę į "Studento Gyvenimą"! Čia prasideda Jūsų pažinimo kelionė
    - Grafikos plokštė: NVIDIA GeForce GTX 1050 (Pascal) arba AMD Radeon RX 460 (GCN 4.0)
    - Laisvos vietos standžiajame diske: 1.5 GB
 
-Suinstaliavimo žingsniai
+**Suinstaliavimo žingsniai**
 
 1. Atsisiuntimas: ...
 2. Diegimo programos paleidimas: ...
