@@ -40,7 +40,7 @@ public partial class CockRoachInstantiation : Node2D
 		AddChild(menuNode);
 		menuNode.Visible = false;
 
-
+		bg_music.Instance.Play("Song2");
 
 		customSignals.CockroachMinigameEnded += GameEnded;
 		score = totalSpawnAmount;

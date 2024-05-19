@@ -20,9 +20,9 @@ Game="*res://Global/Game.gd"
 Utils="*res://Global/Utils.gd"
 Global="*res://Global/Global.cs"
 CustomSignals="*res://Global/CustomSignals.cs"
-BgMusic="*res://Music/bg_music.tscn"
 InteractionManager="*res://Main/Scenes/interaction/InteractionManager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+BgMusic="*res://Music/bg_music.tscn"
 
 [dialogue_manager]
 
