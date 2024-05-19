@@ -37,7 +37,7 @@
 </p>
 
 > [!NOTE]
-> Projektui tobulėjant, panaudos atvėjų diagrama gali ne visiškai atitikti žaidimo galimybių, dėl naujai atsiradusių funkcijų.
+> Projektui tobulėjant, panaudos atvėjų diagrama gali ne visiškai atitikti žaidimo galimybes, dėl naujai atsiradusių funkcijų.
 
 ***Žemiau nurodytos individualių mini žaidimų sekų diagramos apibūdinančios jų struktūrą ir veikimą***
 
