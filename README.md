@@ -27,6 +27,17 @@
 
 ## :triangular_ruler: Architektūra
 
+### Diagramos
+
+***Panaudos atvėjų diagrama abstrakčiai abibūdinanti žaidimo galimybes***
+
+
+<p align="center">
+  <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/UseCaseDiagrama.png" />
+</p>
+
+> **Note**: Projektui tobulėjant, panaudos atvėjų diagrama gali ne visiškai atitikti žaidimo galimybių, dėl naujai atsiradusių funkcijų.
+
 
 
 
