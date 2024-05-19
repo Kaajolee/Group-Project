@@ -4,28 +4,39 @@
   <img src="https://github.com/Kaajolee/Group-Project/blob/main/Assets/LogoGIF.gif" />
 </p>
 
+
 ## :question: Kas tai?
 
 Šis projektas yra kompiuterinis žaidimas, kuriame yra įdomia ir interaktyvia forma vaizduojamas studento kasdieninis gyvenimas, šio produkto išvaizda yra paremta pikseliuota grafika ir pasižymi vaizdingais vartotojo sąsajos objektais. Projekto kūrimo eigoje, komanda susidūrė su begale iššūkių, tokių kaip, poreikis išmokti dirbti su nauja programine įranga, komandiniu darbu ir komunikacija tarpusavyje. Viso to deka, kiekvienas komandos narys iš produkto kūrimo eigos pasisavino naujų įgūdžių ir patirčių. Ateityje yra tikimasi, jog žaidimo funkcionalumas ir vartotojo patirtis bus išplėsti, o esami bus patobulinti.
-
-***Projektuojant ir kuriant šį projektą, buvo naudojami įrankiai šie įrankiai***
-
-*  [Godot žaidimų variklis](https://godotengine.org/)
-*  [Krita grafikos rengyklė](https://krita.org/lt/)
-*  [Aseprite vaizdų rengyklė](https://www.aseprite.org/)
-*  [Adobe Photoshop grafikos rengyklė](https://www.adobe.com/products/photoshop.html)
 
 ## :joystick: Funkcijos
 
 1. Galimybė vartotojui valdyti veikėją dvimatėje erdvėje.
 2. Apžiūrėti universiteto struktūrą.
 3. Gebėjimas sužaisti keturis mini žaidimus:
-    - Parkuoti mašiną gatvėje.
-    - Daužyti ant ekrano lakstančius tarakonus.
-    - Kuo greičiau parašyti rašto darbą.
-    - Gaudyti krentančias knygas.
+  - Parkuoti mašiną gatvėje.
+  - Daužyti ant ekrano lakstančius tarakonus.
+  - Kuo greičiau parašyti rašto darbą.
+  - Gaudyti krentančias knygas.
 
 ## :triangular_ruler: Architektūra
+
+### Programinė įranga
+
+***Projektui sukompiliuoti ir redaguoti naudojome***
+
+*  [Godot žaidimų variklis](https://godotengine.org/)
+
+***Programinis kodas buvo redaguojamas pasitelkiant***
+
+*  [Microsoft Visual Studio integruota kūrimo aplinka](https://visualstudio.microsoft.com/)
+*  [Microsoft visual Studio Code šaltinio kodo rengyklė](https://code.visualstudio.com/)
+
+***Grafiniai vaizdai buvo kuriami ir redaguojami su***
+
+*  [Krita grafikos rengyklė](https://krita.org/lt/)
+*  [Aseprite vaizdų rengyklė](https://www.aseprite.org/)
+*  [Adobe Photoshop grafikos rengyklė](https://www.adobe.com/products/photoshop.html)
 
 ### Diagramos
 
@@ -66,6 +77,9 @@
 
 *"Pagauk knygas" mini žaidimo diagrama*
 
+
+
+
 ## :wrench: Testavimas ir jo rezultatai
 
 
@@ -78,41 +92,42 @@
 Sistemos reikalavimai
 Operacinė sistema: Windows 10, macOS 10.15??
 Procesorius: Intel Celeron
-RAM: 64 gb….
+RAM: 64 GB
 Grafikos plokštė: RTX 4090
-Laisvos vietos standžiajame diske: 1tb 
+Laisvos vietos standžiajame diske: 10 TB 
 
 Instaliacija
 
 Kaip žaisti?
 Kontrolės
 Klaviatūra:
-Judėjimas: rodyklių klavišai (arrow keys??)
+Judėjimas: rodyklių klavišais (arrow keys)
 Sąveikavimas su objektais/veikėjais: E klavišas
 Pagrindinis meniu
 Prasidėjus žaidimui būsite nukelti į pagrindinį žaidimo meniu. Ten jūsų lauks du pasirinkimai - žaisti žaidimą arba iš jo išeiti.
 Žaisti
 Šis pasirinkimas jus nuves į žaidimą.
 Išeiti
-Šis pasirinkimas uždarys žaidimo langą…
+Šis pasirinkimas uždarys žaidimo langą.
 Sustabdymo meniu
 
 
 Pagrindiniai žaidimo veikėjai
 Studentė
 Studentas
-Kiti veikėjai (NPCs)
+Kiti veikėjai (NPC’s)
 Dėstytojas 1
 Dėstytojas 2
 Studentai
 Žaidimo aplinka/vietos (detalesni aprašymai)
 Bendrabučio kambarys
-
 Universitetas
-Pirmas aukštas
-Antras aukštas
+Valgykla
+Laisvalaikio erdvė
+Klasės
 
-Universiteto išorė
+
+
 Mini žaidimai (tikslai, detalesni aprašymai)
 Parkavimas
 
@@ -178,16 +193,14 @@ Bezde321
 *Jei tau patiko projektas, pasidalink su draugais!*
 
 <div align="center">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Kaajolee/Group-Project" style="display:inline-block;">
-    <img src="https://img.shields.io/badge/share-on%20facebook-green" alt="Pasidalink Facebook" width="120">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/Kaajolee/Group-Project&text=Check%20out%20this%20awesome%20project%20on%20GitHub!%20🚀%20%23GitHub%20%23OpenSource">
+    <img src="https://img.shields.io/twitter/url/https/github.com/yourusername/yourrepository.svg?style=social" alt="Pasidalink Twitter!">
   </a>
-  <a href="https://www.linkedin.com/shareArticle?url=https://github.com/Kaajolee/Group-Project&title=Check%20out%20this%20awesome%20project%20on%20GitHub!&summary=Share%20this%20cool%20project%20with%20your%20connections%20on%20LinkedIn.&source=GitHub" style="display:inline-block;">
-    <img src="https://img.shields.io/badge/share-on%20linkedin-green" alt="Pasidalink LinkedIn" width="120">
-  </a>
-  <a href="mailto:?subject=Check%20out%20this%20awesome%20project%20on%20GitHub!&body=Hey,%0D%0A%0D%0ACheck%20out%20this%20awesome%20project%20on%20GitHub:%20https://github.com/yourusername/yourrepository%0D%0A%0D%0AEnjoy!" style="display:inline-block;">
-    <img src="https://img.shields.io/badge/share-by%20email-green" alt="Pasidalink Email" width="120">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Kaajolee/Group-Project">
+    <img src="https://img.shields.io/badge/share-on%20facebook-white" alt="Pasidalink Facebook!">
   </a>
 </div>
+
 
 
 
