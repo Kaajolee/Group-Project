@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://lc44p3vr681d"]
+
+[ext_resource type="Script" path="res://Main/Scenes/interaction/areas/EndGame.gd" id="1_okbcf"]
+[ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="2_pos60"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dyry"]
+size = Vector2(74, 12)
+
+[node name="EndGame" type="Node2D"]
+script = ExtResource("1_okbcf")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_pos60")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_6dyry")

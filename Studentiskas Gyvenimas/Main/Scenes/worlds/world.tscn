@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=93 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="Texture2D" uid="uid://o2rvuf8bb15k" path="res://Main/pngfiles/tileset/Tileset packs/modern pack/Exterior/Water_Tileset_16x16.png" id="2_jkcry"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://8dnc53pki54" path="res://Main/Scenes/interaction/areas/BackToUni.tscn" id="39_oshhm"]
 [ext_resource type="Script" path="res://Main/Scenes/interaction/areas/BackToUni.gd" id="40_wi4lb"]
 [ext_resource type="Script" path="res://Main/Scenes/interaction/areas/UniTp.gd" id="40_xym0j"]
+[ext_resource type="PackedScene" uid="uid://lc44p3vr681d" path="res://Main/Scenes/interaction/areas/EndGame.tscn" id="43_sl2ci"]
 [ext_resource type="PackedScene" uid="uid://wlallqogl1mp" path="res://Main/Scenes/NPC/Studentai/Studentas.tscn" id="51_62jbv"]
 [ext_resource type="PackedScene" uid="uid://8e3mj31w8i3q" path="res://Main/Scenes/NPC/Studentai/Studentas2.tscn" id="52_iv13c"]
 
@@ -65195,7 +65196,6 @@ _data = {
 script = ExtResource("1_48re0")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_tpdd0")
 format = 2
 layer_0/name = "Ground1"
@@ -65218,6 +65218,9 @@ layer_6/tile_data = PackedInt32Array(655345, 65554, 26, 262117, 131090, 19, 3931
 [node name="PonasP" parent="." instance=ExtResource("5_2rsdg")]
 position = Vector2(-16, -436)
 
+[node name="Studentas2" parent="." instance=ExtResource("52_iv13c")]
+position = Vector2(110, -186)
+
 [node name="Tomas" parent="." instance=ExtResource("37_kohst")]
 position = Vector2(784, -301)
 
@@ -65227,6 +65230,12 @@ position = Vector2(-396, -1356)
 [node name="UniTp" parent="." instance=ExtResource("39_jd42r")]
 position = Vector2(-1529, -110)
 script = ExtResource("40_xym0j")
+
+[node name="ClassTp" parent="." instance=ExtResource("39_jjmvy")]
+position = Vector2(-235, -510)
+
+[node name="EndGame" parent="." instance=ExtResource("43_sl2ci")]
+position = Vector2(0, 263)
 
 [node name="BackToUni" parent="." instance=ExtResource("39_oshhm")]
 position = Vector2(-298, -1095)
@@ -65245,6 +65254,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="TyperMinigameTrigger/AnimationPlayer"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -65273,6 +65283,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="ParkingMinigameTrigger/AnimationPlayer"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -65297,6 +65308,7 @@ collision_mask = 2
 script = ExtResource("7_w8u6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BookMinigameTrigger"]
+visible = false
 shape = SubResource("CircleShape2D_x77au")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BookMinigameTrigger"]
@@ -65305,6 +65317,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="BookMinigameTrigger/AnimationPlayer"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -65314,6 +65327,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="BookMinigameTrigger"]
+visible = false
 position = Vector2(1, 0)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("10_oioys")
@@ -65334,6 +65348,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CockroachMinigameTrigger/AnimationPlayer"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -65350,9 +65365,6 @@ color = Color(0, 0, 0, 1)
 position = Vector2(-3, 0)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("11_0ounr")
-
-[node name="ClassTp" parent="." instance=ExtResource("39_jjmvy")]
-position = Vector2(-235, -510)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("12_s8fu4")
@@ -65391,11 +65403,8 @@ theme_override_font_sizes/font_size = 25
 text = "Visi taškai: 50"
 script = ExtResource("12_32ado")
 
-[node name="PonasP2" parent="." instance=ExtResource("51_62jbv")]
+[node name="Studentas1" parent="." instance=ExtResource("51_62jbv")]
 position = Vector2(-361, 99)
-
-[node name="PonasP3" parent="." instance=ExtResource("52_iv13c")]
-position = Vector2(185, -156)
 
 [connection signal="body_entered" from="TyperMinigameTrigger" to="TyperMinigameTrigger" method="OnBodyEntered"]
 [connection signal="animation_finished" from="TyperMinigameTrigger/AnimationPlayer" to="TyperMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]
