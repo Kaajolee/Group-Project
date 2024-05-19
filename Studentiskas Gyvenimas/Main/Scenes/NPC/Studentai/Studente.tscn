@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://8e3mj31w8i3q"]
 
-[ext_resource type="Script" path="res://Main/Scenes/NPC/PonasP/ponas_p.gd" id="1_f7j65"]
+[ext_resource type="Script" path="res://Main/Scenes/NPC/Studentai/Studente.gd" id="1_nqgtn"]
 [ext_resource type="Texture2D" uid="uid://cq5en4lhrp372" path="res://Main/pngfiles/npc/npc 3/mergina/priekis/mfront.png" id="2_g0wer"]
 [ext_resource type="PackedScene" uid="uid://cstudpffv8upg" path="res://Main/Scenes/interaction/interaction area/interaction_area.tscn" id="3_jdb53"]
 
@@ -22,8 +22,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xki1x"]
 radius = 42.4382
 
-[node name="PonasP" type="CharacterBody2D"]
-script = ExtResource("1_f7j65")
+[node name="Studente" type="CharacterBody2D"]
+script = ExtResource("1_nqgtn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_hnq4g")

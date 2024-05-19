@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c4tilhv7t8eo2"
+path="res://.godot/imported/studente2.dialogue-0119d4b146f7862758839889078e27c2.tres"
+
+[deps]
+
+source_file="res://Dialogai/studente2.dialogue"
+dest_files=["res://.godot/imported/studente2.dialogue-0119d4b146f7862758839889078e27c2.tres"]
+
+[params]
+
+defaults=true
