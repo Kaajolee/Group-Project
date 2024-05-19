@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://njw16isxh37a"]
+[gd_scene load_steps=92 format=3 uid="uid://njw16isxh37a"]
 
 [ext_resource type="Script" path="res://Main/Scenes/worlds/world.gd" id="1_48re0"]
 [ext_resource type="Texture2D" uid="uid://o2rvuf8bb15k" path="res://Main/pngfiles/tileset/Tileset packs/modern pack/Exterior/Water_Tileset_16x16.png" id="2_jkcry"]
@@ -43,11 +43,15 @@
 [ext_resource type="Texture2D" uid="uid://8sgdcnj1453b" path="res://Main/pngfiles/tileset/Tileset packs/modern pack/Interior/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="32_sjtp3"]
 [ext_resource type="Texture2D" uid="uid://cyd5uxdqgt0iy" path="res://Main/pngfiles/tileset/Tileset packs/modern pack/Interior/Theme_Sorter_Shadowless/4_Bedroom_Shadowless.png" id="33_hi5qn"]
 [ext_resource type="Texture2D" uid="uid://qm1dk3mamren" path="res://Main/pngfiles/tileset/Tileset packs/modern pack/Interior/Theme_Sorter_Shadowless/5_Classroom_and_library_Shadowless.png" id="34_wxdpe"]
+[ext_resource type="PackedScene" uid="uid://btegwnwsw11vv" path="res://Main/Scenes/NPC/Tomas/Tomas.tscn" id="37_kohst"]
+[ext_resource type="PackedScene" uid="uid://brb6knmmjnoks" path="res://Main/Scenes/NPC/Eligijus/Eligijus.tscn" id="38_eo02y"]
 [ext_resource type="PackedScene" uid="uid://cspxtllym2xnq" path="res://Main/Scenes/interaction/areas/UniTp.tscn" id="39_jd42r"]
 [ext_resource type="PackedScene" uid="uid://gaat1x6xm0cn" path="res://Main/Scenes/interaction/areas/ClassTp.tscn" id="39_jjmvy"]
 [ext_resource type="PackedScene" uid="uid://8dnc53pki54" path="res://Main/Scenes/interaction/areas/BackToUni.tscn" id="39_oshhm"]
 [ext_resource type="Script" path="res://Main/Scenes/interaction/areas/BackToUni.gd" id="40_wi4lb"]
 [ext_resource type="Script" path="res://Main/Scenes/interaction/areas/UniTp.gd" id="40_xym0j"]
+[ext_resource type="PackedScene" uid="uid://wlallqogl1mp" path="res://Main/Scenes/NPC/Studentai/Studentas.tscn" id="51_62jbv"]
+[ext_resource type="PackedScene" uid="uid://8e3mj31w8i3q" path="res://Main/Scenes/NPC/Studentai/Studentas2.tscn" id="52_iv13c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qggbi"]
 texture = ExtResource("2_jkcry")
@@ -65130,7 +65134,7 @@ resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:self_modulate")
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -65142,7 +65146,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:visible")
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -65157,7 +65161,7 @@ resource_name = "fade_out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:self_modulate")
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -65169,7 +65173,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../ParkingMinigameTrigger/AnimationPlayer/ColorRect:visible")
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -65212,7 +65216,13 @@ layer_6/name = "2Object7"
 layer_6/tile_data = PackedInt32Array(655345, 65554, 26, 262117, 131090, 19, 393189, 327698, 20, 327653, 327698, 19, 65507, 917522, 13, 131043, 917522, 14, 131056, 458770, 8, 196592, 458770, 9, 131057, 524306, 8, 196593, 524306, 9, 131058, 589842, 8, 196594, 589842, 9, -21, 786450, 0, 65515, 786450, 1, 131051, 196624, 40, 655331, 851984, 13, 720867, 851984, 14, 655332, 851984, 13, 720868, 851984, 14, 524279, 65550, 5, 589815, 65550, 6, 131046, 65550, 5, 196582, 65550, 6, 458723, 131086, 5, 524259, 131086, 6, 589803, 196622, 5, 655339, 196622, 6, 196596, 196622, 5, 262132, 196622, 6, 589799, 14, 5, 655335, 14, 6, -131091, 131086, 4, -131090, 196622, 4, -131089, 262158, 4, -131093, 14, 4, -131092, 65550, 4, -65560, 196626, 23, -24, 196626, 24, 65512, 196626, 25, -2031638, 720926, 26, -1966102, 720926, 27, -1638421, 786462, 35, -1638415, 851998, 34, -1572879, 851998, 35, -2031641, 917534, 26, -1966105, 917534, 27, -2031640, 983070, 26, -1966104, 983070, 27, -1572891, 1310751, 11, -2162697, 786463, 3, -2097161, 786463, 4, -2162696, 851999, 3, -2097160, 851999, 4, -1835038, 327698, 4, -1769502, 327698, 5, -1703966, 327698, 6, -1835037, 393234, 4, -1769501, 393234, 5, -1703965, 393234, 6, -1572874, 327689, 5, -1507338, 327689, 6, -1572886, 327689, 5, -1507350, 327689, 6, -1572890, 196617, 3, -1507354, 196617, 4, -1900566, 65545, 3, -1835030, 65545, 4, -1769487, 9, 0, -1703951, 9, 1, -393191, 393232, 32, -327655, 393232, 33, -393190, 458768, 32, -327654, 458768, 33, -393189, 524304, 32, -327653, 524304, 33, -5570584, 524305, 4, -5505048, 524305, 5, -5570583, 589841, 4, -5505047, 589841, 5, -5570582, 655377, 4, -5505046, 655377, 5, -5570581, 720913, 4, -5505045, 720913, 5, -5570580, 458774, 14, -5505044, 458774, 15, -5308450, 917534, 39, -5373985, 983070, 38, -5308449, 983070, 39, -5046299, 65545, 3, -4980763, 65545, 4, -5046296, 65545, 3, -4980760, 65545, 4, -5046295, 65545, 3, -4980759, 65545, 4, -5046292, 65545, 3, -4980756, 65545, 4, -4653083, 65545, 3, -4587547, 65545, 4, -4653082, 65545, 3, -4587546, 65545, 4, -4653077, 65545, 3, -4587541, 65545, 4, -4849691, 65545, 3, -4784155, 65545, 4, -4849688, 65545, 3, -4784152, 65545, 4, -4849685, 65545, 3, -4784149, 65545, 4, -327781, 851989, 1, 65435, 262175, 268435473, 65436, 196639, 268435473, -65633, 786462, 22, -97, 786462, 23, 65439, 786462, 24, -65632, 983070, 15, -96, 983070, 16, -851928, 655390, 35, -786392, 655390, 36, -262104, 786462, 35, -655308, 720926, 35, -589772, 720926, 36, -851916, 983070, 15, -786380, 983070, 16, -851922, 983070, 15, -786386, 983070, 16, -1441740, 589854, 12, -1376204, 589854, 13, -1441739, 655390, 12, -1376203, 655390, 13, -589778, 1310751, 12, -524242, 1310751, 13, -720856, 1048607, 0, -655320, 1048607, 1, -1441751, 1114143, 0, -1441750, 1179679, 0, -1441769, 1114143, 0, -1441768, 1179679, 0, -1441781, 1114143, 0, -1441780, 1179679, 0, -2228217, 1114143, 0, -2228216, 1179679, 0, -2162714, 1114143, 0, -2162713, 1179679, 0, -5701663, 1114143, 0, -5701662, 1179679, 0, -131098, 1114143, 0, -65562, 1114143, 1, -131097, 1179679, 0, -65561, 1179679, 1, -131081, 1114143, 0, -65545, 1114143, 1, -131080, 1179679, 0, -65544, 1179679, 1, -2097178, 1114143, 1, -2097177, 1179679, 1, -2162681, 1114143, 1, -2162680, 1179679, 1, -1376233, 1114143, 1, -1376232, 1179679, 1, -1376245, 1114143, 1, -1376244, 1179679, 1, -1376215, 1114143, 1, -1376214, 1179679, 1, -5636127, 1114143, 1, -5636126, 1179679, 1, -2097159, 917535, 2, -2031623, 917535, 3, -1966087, 917535, 4, -2097158, 983071, 2, -2031622, 983071, 3, -1966086, 983071, 4, 262188, 917535, 2, 327724, 917535, 3, 393260, 917535, 4, 262189, 983071, 2, 327725, 983071, 3, 393261, 983071, 4, 262169, 1048607, 2, 327705, 1048607, 3, 393241, 1048607, 4, 262170, 1114143, 2, 327706, 1114143, 3, 393242, 1114143, 4, 262152, 1048607, 2, 327688, 1048607, 3, 393224, 1048607, 4, 262153, 1114143, 2, 327689, 1114143, 3, 393225, 1114143, 4, -1769450, 1048607, 2, -1703914, 1048607, 3, -1638378, 1048607, 4, -1769449, 1114143, 2, -1703913, 1114143, 3, -1638377, 1114143, 4, -1769426, 1048607, 2, -1703890, 1048607, 3, -1638354, 1048607, 4, -1769425, 1114143, 2, -1703889, 1114143, 3, -1638353, 1114143, 4, -327775, 196639, 17, -327774, 262175, 17)
 
 [node name="PonasP" parent="." instance=ExtResource("5_2rsdg")]
-position = Vector2(149, -467)
+position = Vector2(-16, -436)
+
+[node name="Tomas" parent="." instance=ExtResource("37_kohst")]
+position = Vector2(784, -301)
+
+[node name="Eligijus" parent="." instance=ExtResource("38_eo02y")]
+position = Vector2(-396, -1356)
 
 [node name="UniTp" parent="." instance=ExtResource("39_jd42r")]
 position = Vector2(-1529, -110)
@@ -65221,9 +65231,6 @@ script = ExtResource("40_xym0j")
 [node name="BackToUni" parent="." instance=ExtResource("39_oshhm")]
 position = Vector2(-298, -1095)
 script = ExtResource("40_wi4lb")
-
-[node name="ClassTp" parent="." instance=ExtResource("39_jjmvy")]
-position = Vector2(-235, -510)
 
 [node name="TyperMinigameTrigger" type="Area2D" parent="."]
 visible = false
@@ -65344,6 +65351,9 @@ position = Vector2(-3, 0)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("11_0ounr")
 
+[node name="ClassTp" parent="." instance=ExtResource("39_jjmvy")]
+position = Vector2(-235, -510)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("12_s8fu4")
 
@@ -65380,6 +65390,12 @@ pivot_offset = Vector2(87, 0)
 theme_override_font_sizes/font_size = 25
 text = "Visi taškai: 50"
 script = ExtResource("12_32ado")
+
+[node name="PonasP2" parent="." instance=ExtResource("51_62jbv")]
+position = Vector2(-361, 99)
+
+[node name="PonasP3" parent="." instance=ExtResource("52_iv13c")]
+position = Vector2(185, -156)
 
 [connection signal="body_entered" from="TyperMinigameTrigger" to="TyperMinigameTrigger" method="OnBodyEntered"]
 [connection signal="animation_finished" from="TyperMinigameTrigger/AnimationPlayer" to="TyperMinigameTrigger" method="OnAnimationPlayerAnimationFinished"]
