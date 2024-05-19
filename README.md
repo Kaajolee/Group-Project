@@ -25,19 +25,30 @@ Projektas yra kurtas ir tobulintas C# programavimo kalba, kai kurie projekto asp
 
 ### Programinė įranga
 
-***Projektui sukompiliuoti ir redaguoti naudojome***
+***Projektui sukompiliuoti ir objektam redaguoti***
 
 *  [Godot žaidimų variklis](https://godotengine.org/)
 
-***Programinis kodas buvo redaguojamas pasitelkiant***
+***Programinis kodui redaguoti***
 
 *  [Microsoft Visual Studio integruota kūrimo aplinka](https://visualstudio.microsoft.com/)
 *  [Microsoft visual Studio Code šaltinio kodo rengyklė](https://code.visualstudio.com/)
 
-***Grafiniai vaizdai buvo kuriami ir redaguojami su***
+***Grafiniai vaizdam kurti ir redaguoti***
 
 *  [Krita grafikos rengyklė](https://krita.org/lt/)
 *  [Aseprite vaizdų rengyklė](https://www.aseprite.org/)
+*  [Adobe Photoshop grafikos rengyklė](https://www.adobe.com/products/photoshop.html)
+
+***Projektuoti ir diagramoms braižyti***
+
+*  [StarUML inžinerijos įrankis](https://staruml.io/)
+*  [Magic Systems of Systems Architect modeliavimo įrankis](https://docs.nomagic.com/display/MSOSA190SP3/Magic+Systems+of+Systems+Architect+Home+Page)
+
+***Papildomi šaltiniai***
+
+*  [Godot žaidimų variklio dokumentacija](https://docs.godotengine.org/en/stable/)
+*  [Stackoverlfow forumas](https://stackoverflow.com/questions/tagged/godot)
 *  [Adobe Photoshop grafikos rengyklė](https://www.adobe.com/products/photoshop.html)
 
 ### Diagramos
