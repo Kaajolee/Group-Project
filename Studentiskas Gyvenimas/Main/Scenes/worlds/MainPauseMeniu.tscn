@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ckf0vcgguwnt5"]
+[gd_scene load_steps=35 format=3 uid="uid://ckf0vcgguwnt5"]
 
 [ext_resource type="Texture2D" uid="uid://cebcn7ptioq6u" path="res://Main/pngfiles/buttons/pause_meniu_empty.png" id="1_1scy7"]
 [ext_resource type="Script" path="res://Main/Scenes/worlds/MainPauseMeniu.cs" id="1_djm34"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b4lokly6yl2vt" path="res://Main/pngfiles/buttons/quitpause_button.png" id="5_3fpe2"]
 [ext_resource type="Texture2D" uid="uid://dmbc2yc3k0iq2" path="res://Main/pngfiles/buttons/window_types.png" id="7_p3p00"]
 [ext_resource type="Texture2D" uid="uid://dhayww5cwykd0" path="res://Main/pngfiles/buttons/music_volume.png" id="8_ftius"]
+[ext_resource type="Texture2D" uid="uid://djypmx4wq480w" path="res://Main/pngfiles/buttons/apply_button.png" id="9_lft81"]
+[ext_resource type="Texture2D" uid="uid://ckiu0biyhpvlk" path="res://Main/pngfiles/buttons/goback_button.png" id="10_oeiwh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v25f3"]
 texture = ExtResource("1_1scy7")
@@ -56,6 +58,30 @@ texture = ExtResource("7_p3p00")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t76pc"]
 texture = ExtResource("8_ftius")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgvqu"]
+texture = ExtResource("9_lft81")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jmoh4"]
+texture = ExtResource("9_lft81")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guq1w"]
+texture = ExtResource("9_lft81")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_it75o"]
+texture = ExtResource("9_lft81")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_on552"]
+texture = ExtResource("10_oeiwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m74ig"]
+texture = ExtResource("10_oeiwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6528r"]
+texture = ExtResource("10_oeiwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xn1gj"]
+texture = ExtResource("10_oeiwh")
 
 [node name="MainPauseMeniu" type="CanvasLayer"]
 process_mode = 3
@@ -185,12 +211,20 @@ alignment = 1
 [node name="ApplyButton" type="Button" parent="OptionsPanel/Content/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Pritaikyti"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kgvqu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jmoh4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_guq1w")
+theme_override_styles/focus = SubResource("StyleBoxTexture_it75o")
+text = " "
 
 [node name="BackButton" type="Button" parent="OptionsPanel/Content/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Atgal"
+theme_override_styles/normal = SubResource("StyleBoxTexture_on552")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m74ig")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6528r")
+theme_override_styles/focus = SubResource("StyleBoxTexture_xn1gj")
+text = " "
 
 [connection signal="pressed" from="MainPanel/VBoxContainer/resumeB" to="MainPanel" method="Resume"]
 [connection signal="pressed" from="MainPanel/VBoxContainer/optionsB" to="MainPanel" method="Options"]

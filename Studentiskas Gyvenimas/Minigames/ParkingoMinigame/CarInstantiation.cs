@@ -61,7 +61,7 @@ public partial class CarInstantiation : Node2D
 		rnd = new Random();
 
 		trafficSpawnVector = new Vector2(GetViewportRect().Size.X/2 - 75, -150);
-        isGameStopped = false;
+		isGameStopped = false;
 
 	}
 	public override void _ExitTree()
@@ -106,25 +106,25 @@ public partial class CarInstantiation : Node2D
 	}
 	void InstantiateTraffic()
 	{
-        int randomInt = rnd.Next(3);
+		int randomInt = rnd.Next(3);
 
 		if(randomInt == 1)
 		{
-            Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
+			Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
 			scene = ChangeSprite(scene, true);
-            scene.Position = trafficSpawnVector;
-            scene.Rotate(Mathf.DegToRad(180));
-            Debug.WriteLine($"{scene.Position}");
-            AddChild(scene);
-        }
-    }
+			scene.Position = trafficSpawnVector;
+			scene.Rotate(Mathf.DegToRad(180));
+			Debug.WriteLine($"{scene.Position}");
+			AddChild(scene);
+		}
+	}
 	void OnTimerTimeout()
 	{
 		if (isGameStopped == false)
 		{
-            InstantiateCar();
+			InstantiateCar();
 			InstantiateTraffic();
-        }
+		}
 			
 
 	}
