@@ -2,6 +2,7 @@ using Godot;
 using Godot.Collections;
 using System;
 using System.Diagnostics;
+using System.Xml.Schema;
 
 public partial class CarInstantiation : Node2D
 {
@@ -17,6 +18,7 @@ public partial class CarInstantiation : Node2D
 	PackedScene parkingSpaceScene;
 	PackedScene pauseMenu;
 
+	Vector2 trafficSpawnVector;
 	CustomSignals customSignals;
 
 	Texture2D parkingSpaceTexture;
@@ -58,7 +60,8 @@ public partial class CarInstantiation : Node2D
 
 		rnd = new Random();
 
-		isGameStopped = false;
+		trafficSpawnVector = new Vector2(GetViewportRect().Size.X/2 - 75, -150);
+        isGameStopped = false;
 
 	}
 	public override void _ExitTree()
@@ -101,10 +104,28 @@ public partial class CarInstantiation : Node2D
 		AddChild(scene);
 
 	}
+	void InstantiateTraffic()
+	{
+        int randomInt = rnd.Next(3);
+
+		if(randomInt == 1)
+		{
+            Sprite2D scene = (Sprite2D)parkedCarScene.Instantiate();
+			scene = ChangeSprite(scene, true);
+            scene.Position = trafficSpawnVector;
+            scene.Rotate(Mathf.DegToRad(180));
+            Debug.WriteLine($"{scene.Position}");
+            AddChild(scene);
+        }
+    }
 	void OnTimerTimeout()
 	{
 		if (isGameStopped == false)
-			InstantiateCar();
+		{
+            InstantiateCar();
+			InstantiateTraffic();
+        }
+			
 
 	}
 	Sprite2D ChangeSprite(Sprite2D currentSprite, bool isACar)
